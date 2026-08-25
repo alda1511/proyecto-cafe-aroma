@@ -28,26 +28,56 @@ header {
 
 
 
-nav { 
-    background-color: var(--color-secundario); 
-    display: flex; 
-    justify-content: center; 
-    padding: 15px; 
-    gap: 20px; 
+nav {
+    background-color: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    gap: 20px;
 }
 
-nav a { 
-    color: var(--color-texto); 
-    text-decoration: none; 
-    font-weight: bold; 
+nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: bold;
 }
 
-section { 
-    width: 90%; 
-    max-width: 1000px; 
-    margin: 30px auto; 
-    padding: 30px; 
-    background-color: var(--color-blanco); 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
+section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: var(--color-blanco);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#nosotros {
+    text-align: center;
+    background-color: var(--color-secundario);
+}
+
+#nosotros h2 {
+    color: var(--color-principal);
+    margin-bottom: var(--espacio);
+}
+
+#nosotros h3 {
+    color: var(--color-principal);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#nosotros p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+#nosotros ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+#nosotros li {
+    margin-bottom: 8px;
 }

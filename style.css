@@ -81,3 +81,77 @@ section {
 #nosotros li {
     margin-bottom: 8px;
 }
+
+/* SECCIÓN CONTACTO */
+
+#contacto {
+    text-align: center;
+}
+
+#contacto h2 {
+    color: var(--color-principal);
+    margin-bottom: var(--espacio);
+}
+
+#contacto p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+#contacto address {
+    background-color: var(--color-secundario);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-style: normal;
+}
+
+#contacto address strong {
+    color: var(--color-principal);
+}
+
+#contacto h3 {
+    color: var(--color-principal);
+    margin: 25px 0 15px;
+}
+
+#contacto form {
+    text-align: left;
+}
+
+#contacto label {
+    display: block;
+    color: var(--color-principal);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contacto input,
+#contacto select,
+#contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+#contacto textarea {
+    resize: vertical;
+}
+
+#contacto button {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contacto button:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+}

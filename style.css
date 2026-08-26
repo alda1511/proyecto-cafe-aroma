@@ -103,13 +103,7 @@ section {
     line-height: 1.6;
 }
 
-<<<<<<< HEAD
-/* Texto introductorio */
-
-#productos>p {
-=======
 #productos > p {
->>>>>>> 09e2a5d (ajustes en productos)
     grid-column: 1 / -1;
     max-width: 650px;
     margin: 0 auto 20px;

@@ -70,7 +70,7 @@ section {
 
 #nosotros p {
     margin-bottom: 15px;
-    line-height: 1.6;
+    line-height: 1;
 }
 
 #nosotros ul {
@@ -100,13 +100,13 @@ section {
 
 #productos p {
     margin-bottom: 15px;
-    line-height: 1.6;
+    line-height: 1;
 }
 
 #productos > p {
     grid-column: 1 / -1;
     max-width: 650px;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
     text-align: center;
 }
 

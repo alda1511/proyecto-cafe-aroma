@@ -14,8 +14,8 @@ Café Aroma es una página web de una cafetería donde se puede conocer el negoc
 
 ## Tecnologías utilizadas 💻
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - Git
 - GitHub
 

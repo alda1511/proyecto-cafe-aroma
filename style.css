@@ -1,0 +1,255 @@
+:root {
+    --color-principal: #6f4e37;
+    --color-secundario: #d9b38c;
+    --color-fondo: #f5f0eb;
+    --color-blanco: white;
+    --color-texto: #333;
+    --espacio: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Merriweather, serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+header {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+nav {
+    background-color: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: var(--color-blanco);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#nosotros {
+    text-align: center;
+    background-color: var(--color-secundario);
+}
+
+#nosotros h2 {
+    color: var(--color-principal);
+    margin-bottom: var(--espacio);
+}
+
+#nosotros h3 {
+    color: var(--color-principal);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#nosotros p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+#nosotros ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+#nosotros li {
+    margin-bottom: 8px;
+}
+
+/* SECCIÓN PRODUCTOS */
+
+#productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+#productos>h2 {
+    grid-column: 1 / -1;
+    color: var(--color-principal);
+    margin-bottom: 5px;
+}
+
+#productos p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+#productos > p {
+    grid-column: 1 / -1;
+    max-width: 650px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+#productos article {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#productos img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+#productos h3 {
+    color: var(--color-principal);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* SECCIÓN SERVICIOS */
+
+#servicios {
+    text-align: center;
+}
+
+#servicios h2 {
+    color: var(--color-principal);
+    margin-bottom: var(--espacio);
+}
+
+#servicios>p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+#servicios article {
+    background-color: var(--color-secundario);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#servicios h3 {
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+#servicios article p {
+    line-height: 1.6;
+}
+
+/* SECCIÓN CONTACTO */
+
+#contacto {
+    text-align: center;
+}
+
+#contacto h2 {
+    color: var(--color-principal);
+    margin-bottom: var(--espacio);
+}
+
+#contacto p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+#contacto address {
+    background-color: var(--color-secundario);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-style: normal;
+}
+
+#contacto address strong {
+    color: var(--color-principal);
+}
+
+#contacto h3 {
+    color: var(--color-principal);
+    margin: 25px 0 15px;
+}
+
+#contacto form {
+    text-align: left;
+}
+
+#contacto label {
+    display: block;
+    color: var(--color-principal);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contacto input,
+#contacto select,
+#contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+#contacto textarea {
+    resize: vertical;
+}
+
+#contacto button {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contacto button:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+}
+
+footer {
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    #productos {
+        grid-template-columns: 1fr;
+    }
+    section {
+        width: 95%;
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+}

@@ -26,8 +26,6 @@ header {
     padding: 40px 20px;
 }
 
-
-
 nav {
     background-color: var(--color-secundario);
     display: flex;

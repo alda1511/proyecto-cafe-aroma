@@ -1,3 +1,4 @@
+/*
 :root {
     --color-principal: #6f4e37;
     --color-secundario: #d9b38c;
@@ -80,7 +81,7 @@ section {
     margin-bottom: 8px;
 }
 
-/* SECCIÓN PRODUCTOS */
+ SECCIÓN PRODUCTOS 
 
 #productos {
     display: grid;
@@ -126,7 +127,7 @@ section {
     margin-bottom: 10px;
 }
 
-/* SECCIÓN SERVICIOS */
+ SECCIÓN SERVICIOS 
 
 #servicios {
     text-align: center;
@@ -159,7 +160,7 @@ section {
     line-height: 1.6;
 }
 
-/* SECCIÓN CONTACTO */
+ SECCIÓN CONTACTO 
 
 #contacto {
     text-align: center;
@@ -253,3 +254,4 @@ footer {
         font-size: 2em;
     }
 }
+*/

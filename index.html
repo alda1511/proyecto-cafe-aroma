@@ -1,44 +1,186 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Café Aroma | Cafetería y productos artesanales</title>
-    <meta name="description" content="Café Aroma es una cafetería dedicada a ofrecer café de calidad, productos artesanales y un espacio agradable para disfrutar.">
-    <meta name="keywords" content="Café Aroma, cafetería, café, café artesanal, espresso, café con leche, medialunas, cafetería Tucumán">
+
+    <meta name="description"
+        content="Café Aroma es una cafetería dedicada a ofrecer café de calidad, productos artesanales y un espacio agradable para disfrutar.">
+
+    <meta name="keywords"
+        content="Café Aroma, cafetería, café, café artesanal, espresso, café con leche, medialunas, cafetería Tucumán">
+
     <meta name="author" content="Café Aroma">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Herr+Von+Muellerhoff&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Herr+Von+Muellerhoff&family=Qwitcher+Grypen:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <!-- PERSONALIZACIÓN DE PRODUCTOS -->
+    <style>
+        #productos .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #productos .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.22) !important;
+        }
+
+        #productos .card-img-top {
+            transition: transform 0.35s ease;
+            cursor: pointer;
+        }
+
+        #productos .card:hover .card-img-top {
+            transform: scale(1.08);
+        }
+    </style>
+
 </head>
 
-<body style="font-family: 'Merriweather', serif; background-color: #e8d8c8; color: #333;">
+
+<body
+    style="font-family: 'Merriweather', serif; background-color: #e8d8c8; color: #333;">
+
+
+    <!-- HEADER -->
+
     <header class="p-4" style="background-color: #6f4e37;">
+
         <div class="container text-center">
-            <h1 class="display-2 mb-1" style="color: #f5f0eb; font-family: 'Qwitcher Grypen', cursive; font-weight: 700;"> Café Aroma </h1>
+
+            <h1
+                class="display-2 mb-1"
+                style="
+                    color: #f5f0eb;
+                    font-family: 'Qwitcher Grypen', cursive;
+                    font-weight: 700;
+                ">
+
+                Café Aroma
+
+            </h1>
+
         </div>
+
     </header>
 
-   <nav class="sticky-top d-flex justify-content-center flex-wrap gap-2 gap-md-4 py-2" style="background-color: #d9b38c;">
-        <a href="#inicio" class="text-decoration-none fw-bold fs-6 px-2 text-uppercase" style="color: #6f4e37;">Inicio</a>
-        <a href="#nosotros" class="text-decoration-none fw-bold fs-6 px-2 text-uppercase" style="color: #6f4e37;">Nosotros</a>
-        <a href="#productos" class="text-decoration-none fw-bold fs-6 px-2 text-uppercase" style="color: #6f4e37;">Productos</a>
-        <a href="#servicios" class="text-decoration-none fw-bold fs-6 px-2 text-uppercase" style="color: #6f4e37;">Servicios</a>
-        <a href="#contacto" class="text-decoration-none fw-bold fs-6 px-2 text-uppercase" style="color: #6f4e37;">Contacto</a>
+
+    <!-- NAVEGACIÓN -->
+
+    <nav
+        class="sticky-top d-flex justify-content-center flex-wrap gap-2 gap-md-4 py-2"
+        style="background-color: #d9b38c;">
+
+        <a
+            href="#inicio"
+            class="text-decoration-none fw-bold fs-6 px-2 text-uppercase"
+            style="color: #6f4e37;">
+            Inicio
+        </a>
+
+        <a
+            href="#nosotros"
+            class="text-decoration-none fw-bold fs-6 px-2 text-uppercase"
+            style="color: #6f4e37;">
+            Nosotros
+        </a>
+
+        <a
+            href="#productos"
+            class="text-decoration-none fw-bold fs-6 px-2 text-uppercase"
+            style="color: #6f4e37;">
+            Productos
+        </a>
+
+        <a
+            href="#servicios"
+            class="text-decoration-none fw-bold fs-6 px-2 text-uppercase"
+            style="color: #6f4e37;">
+            Servicios
+        </a>
+
+        <a
+            href="#contacto"
+            class="text-decoration-none fw-bold fs-6 px-2 text-uppercase"
+            style="color: #6f4e37;">
+            Contacto
+        </a>
+
     </nav>
 
+
     <main>
-        <section id="inicio" class="p-5 mb-5 text-center border-0" style="background-color: #6f4e37;">
-            <h2 class="display-6 fw-bold mb-3" style="color: #f5f0eb;">Bienvenidos a Café Aroma</h2>
-            
-            <p class="lead fw-normal mb-4" style="color: #d9b38c;"> Somos una cafetería dedicada a ofrecer café de calidad y productos artesanales. </p>
-            
+
+
+        <!-- SECCIÓN INICIO -->
+
+        <section
+            id="inicio"
+            class="p-5 mb-5 text-center border-0"
+            style="background-color: #6f4e37;">
+
+            <h2
+                class="display-6 fw-bold mb-3"
+                style="color: #f5f0eb;">
+
+                Bienvenidos a Café Aroma
+
+            </h2>
+
+            <p
+                class="lead fw-normal mb-4"
+                style="color: #d9b38c;">
+
+                Somos una cafetería dedicada a ofrecer café de calidad
+                y productos artesanales.
+
+            </p>
+
             <div class="row justify-content-center">
+
                 <div class="col-md-10">
-                    <p class="fs-5 mb-3" style="color: #f5f0eb;"> En Café Aroma buscamos crear un espacio cómodo y agradable donde nuestros clientes puedan disfrutar de un buen café, acompañados de productos frescos y deliciosos. </p>
-                    <p class="fs-5 mb-0" style="color: #ebd8c3;"> Nuestro objetivo es que cada visita sea una experiencia especial y que nuestros clientes puedan sentirse como en casa.</p>
+
+                    <p
+                        class="fs-5 mb-3"
+                        style="color: #f5f0eb;">
+
+                        En Café Aroma buscamos crear un espacio cómodo y agradable
+                        donde nuestros clientes puedan disfrutar de un buen café,
+                        acompañados de productos frescos y deliciosos.
+
+                    </p>
+
+                    <p
+                        class="fs-5 mb-0"
+                        style="color: #ebd8c3;">
+
+                        Nuestro objetivo es que cada visita sea una experiencia
+                        especial y que nuestros clientes puedan sentirse como en casa.
+
+                    </p>
+
                 </div>
+
             </div>
+
         </section>
+
+
+
+        <!-- SECCIÓN NOSOTROS -->
 
         <section id="nosotros">
 
@@ -55,7 +197,6 @@
                 cercana, buscando que cada cliente tenga una buena experiencia.
             </p>
 
-
             <h3>Nuestro objetivo</h3>
 
             <p>
@@ -63,63 +204,88 @@
                 cómodo, agradable y pensado para nuestros clientes.
             </p>
 
-
             <h3>Nuestros valores</h3>
 
             <ul>
-
                 <li>Calidad</li>
-
                 <li>Atención al cliente</li>
-
                 <li>Productos frescos</li>
-
                 <li>Compromiso</li>
-
                 <li>Responsabilidad</li>
-
             </ul>
 
         </section>
 
-        <section id="productos" class="container my-5">
 
-            <h2 class="text-center mb-3">
-                Nuestros productos
-            </h2>
 
-            <p class="text-center mx-auto mb-5">
+        <!-- =========================================
+             SECCIÓN PRODUCTOS
+             TP3 - BOOTSTRAP + INTERACCIÓN HOVER
+        ========================================== -->
 
-                Conocé algunos de los productos que podés encontrar
-                en Café Aroma.
+        <section
+            id="productos"
+            class="container py-5 my-5 rounded-4 shadow-sm"
+            style="background-color: #f5f0eb;">
 
-            </p>
+            <div class="text-center mb-5">
+
+                <h2
+                    class="display-6 fw-bold mb-3"
+                    style="color: #6f4e37;">
+
+                    Nuestros productos
+
+                </h2>
+
+                <p
+                    class="lead mx-auto mb-0"
+                    style="max-width: 650px; color: #555;">
+
+                    Conocé algunos de los productos que podés encontrar
+                    en Café Aroma.
+
+                </p>
+
+            </div>
+
 
             <div class="row g-4">
 
+
+                <!-- PRODUCTO 1 -->
+
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <article class="card h-100 shadow-sm">
+                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
 
                         <img
                             src="imagenes/img1.jpg"
-                            class="card-img-top"
+                            class="card-img-top object-fit-cover"
                             alt="Café espresso artesanal servido en una taza"
-                        >
+                            style="height: 220px;">
 
-                        <div class="card-body text-center">
+                        <div class="card-body d-flex flex-column text-center p-4">
 
-                            <h3 class="card-title h5">
+                            <h3
+                                class="card-title h5 fw-bold mb-3"
+                                style="color: #6f4e37;">
+
                                 Café Espresso
+
                             </h3>
 
-                            <p class="card-text">
+                            <p class="card-text flex-grow-1">
                                 Café intenso y aromático, preparado con granos
                                 seleccionados para disfrutar su sabor.
                             </p>
 
-                            <p class="fw-bold mb-0">
-                                Precio: $2000
+                            <p
+                                class="fw-bold fs-5 mb-0"
+                                style="color: #6f4e37;">
+
+                                $2000
+
                             </p>
 
                         </div>
@@ -127,34 +293,41 @@
                     </article>
 
                 </div>
-
 
 
                 <!-- PRODUCTO 2 -->
 
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <article class="card h-100 shadow-sm">
+                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
 
                         <img
                             src="imagenes/img9.jpg"
-                            class="card-img-top"
+                            class="card-img-top object-fit-cover"
                             alt="Café con leche caliente servido en una taza"
-                        >
+                            style="height: 220px;">
 
-                        <div class="card-body text-center">
+                        <div class="card-body d-flex flex-column text-center p-4">
 
-                            <h3 class="card-title h5">
+                            <h3
+                                class="card-title h5 fw-bold mb-3"
+                                style="color: #6f4e37;">
+
                                 Café con leche
+
                             </h3>
 
-                            <p class="card-text">
+                            <p class="card-text flex-grow-1">
                                 Una combinación de café y leche caliente,
                                 ideal para comenzar el día.
                             </p>
 
-                            <p class="fw-bold mb-0">
-                                Precio: $2500
+                            <p
+                                class="fw-bold fs-5 mb-0"
+                                style="color: #6f4e37;">
+
+                                $2500
+
                             </p>
 
                         </div>
@@ -162,34 +335,41 @@
                     </article>
 
                 </div>
-
 
 
                 <!-- PRODUCTO 3 -->
 
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <article class="card h-100 shadow-sm">
+                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
 
                         <img
                             src="imagenes/img3.jpg"
-                            class="card-img-top"
+                            class="card-img-top object-fit-cover"
                             alt="Medialunas recién horneadas de Café Aroma"
-                        >
+                            style="height: 220px;">
 
-                        <div class="card-body text-center">
+                        <div class="card-body d-flex flex-column text-center p-4">
 
-                            <h3 class="card-title h5">
+                            <h3
+                                class="card-title h5 fw-bold mb-3"
+                                style="color: #6f4e37;">
+
                                 Medialunas
+
                             </h3>
 
-                            <p class="card-text">
+                            <p class="card-text flex-grow-1">
                                 Medialunas recién horneadas, ideales para
                                 acompañar nuestros cafés.
                             </p>
 
-                            <p class="fw-bold mb-0">
-                                Precio: $500
+                            <p
+                                class="fw-bold fs-5 mb-0"
+                                style="color: #6f4e37;">
+
+                                $500
+
                             </p>
 
                         </div>
@@ -197,34 +377,41 @@
                     </article>
 
                 </div>
-
 
 
                 <!-- PRODUCTO 4 -->
 
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <article class="card h-100 shadow-sm">
+                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
 
                         <img
                             src="imagenes/img4.jpg"
-                            class="card-img-top"
+                            class="card-img-top object-fit-cover"
                             alt="Taza de café americano artesanal de Café Aroma"
-                        >
+                            style="height: 220px;">
 
-                        <div class="card-body text-center">
+                        <div class="card-body d-flex flex-column text-center p-4">
 
-                            <h3 class="card-title h5">
+                            <h3
+                                class="card-title h5 fw-bold mb-3"
+                                style="color: #6f4e37;">
+
                                 Café Americano
+
                             </h3>
 
-                            <p class="card-text">
+                            <p class="card-text flex-grow-1">
                                 Café suave y equilibrado para quienes prefieren
                                 disfrutar una bebida de sabor más ligero.
                             </p>
 
-                            <p class="fw-bold mb-0">
-                                Precio: $2200
+                            <p
+                                class="fw-bold fs-5 mb-0"
+                                style="color: #6f4e37;">
+
+                                $2200
+
                             </p>
 
                         </div>
@@ -232,34 +419,41 @@
                     </article>
 
                 </div>
-
 
 
                 <!-- PRODUCTO 5 -->
 
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <article class="card h-100 shadow-sm">
+                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
 
                         <img
                             src="imagenes/img5.jpg"
-                            class="card-img-top"
+                            class="card-img-top object-fit-cover"
                             alt="Café frío artesanal preparado por Café Aroma"
-                        >
+                            style="height: 220px;">
 
-                        <div class="card-body text-center">
+                        <div class="card-body d-flex flex-column text-center p-4">
 
-                            <h3 class="card-title h5">
+                            <h3
+                                class="card-title h5 fw-bold mb-3"
+                                style="color: #6f4e37;">
+
                                 Café Frío
+
                             </h3>
 
-                            <p class="card-text">
+                            <p class="card-text flex-grow-1">
                                 Una opción refrescante para disfrutar el sabor
                                 del café en los días más calurosos.
                             </p>
 
-                            <p class="fw-bold mb-0">
-                                Precio: $2800
+                            <p
+                                class="fw-bold fs-5 mb-0"
+                                style="color: #6f4e37;">
+
+                                $2800
+
                             </p>
 
                         </div>
@@ -269,32 +463,39 @@
                 </div>
 
 
-
                 <!-- PRODUCTO 6 -->
 
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <article class="card h-100 shadow-sm">
+                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
 
                         <img
                             src="imagenes/img6.jpg"
-                            class="card-img-top"
+                            class="card-img-top object-fit-cover"
                             alt="Productos de panadería artesanal frescos de Café Aroma"
-                        >
+                            style="height: 220px;">
 
-                        <div class="card-body text-center">
+                        <div class="card-body d-flex flex-column text-center p-4">
 
-                            <h3 class="card-title h5">
+                            <h3
+                                class="card-title h5 fw-bold mb-3"
+                                style="color: #6f4e37;">
+
                                 Panificados
+
                             </h3>
 
-                            <p class="card-text">
+                            <p class="card-text flex-grow-1">
                                 Productos de panadería frescos para acompañar
                                 tu café favorito.
                             </p>
 
-                            <p class="fw-bold mb-0">
-                                Precio desde: $500
+                            <p
+                                class="fw-bold fs-5 mb-0"
+                                style="color: #6f4e37;">
+
+                                Desde $500
+
                             </p>
 
                         </div>
@@ -321,7 +522,6 @@
                 nuestros clientes.
             </p>
 
-
             <article>
 
                 <h3>Atención en el local</h3>
@@ -333,7 +533,6 @@
 
             </article>
 
-
             <article>
 
                 <h3>Pedidos para llevar</h3>
@@ -344,7 +543,6 @@
                 </p>
 
             </article>
-
 
             <article>
 
@@ -372,7 +570,6 @@
                 pedidos o conocer más sobre Café Aroma.
             </p>
 
-
             <address>
 
                 <p>
@@ -395,7 +592,6 @@
 
             <h3>Formulario de contacto</h3>
 
-
             <form>
 
                 <div>
@@ -409,14 +605,11 @@
                         id="nombre"
                         name="nombre"
                         placeholder="Ingresá tu nombre"
-                        required
-                    >
+                        required>
 
                 </div>
 
-
                 <br>
-
 
                 <div>
 
@@ -429,14 +622,11 @@
                         id="email"
                         name="email"
                         placeholder="Ingresá tu email"
-                        required
-                    >
+                        required>
 
                 </div>
 
-
                 <br>
-
 
                 <div>
 
@@ -448,14 +638,11 @@
                         type="tel"
                         id="telefono"
                         name="telefono"
-                        placeholder="Ingresá tu teléfono"
-                    >
+                        placeholder="Ingresá tu teléfono">
 
                 </div>
 
-
                 <br>
-
 
                 <div>
 
@@ -485,9 +672,7 @@
 
                 </div>
 
-
                 <br>
-
 
                 <div>
 
@@ -502,14 +687,11 @@
                         name="mensaje"
                         rows="5"
                         cols="40"
-                        placeholder="Escribí tu mensaje">
-                    </textarea>
+                        placeholder="Escribí tu mensaje"></textarea>
 
                 </div>
 
-
                 <br>
-
 
                 <button type="submit">
                     Enviar mensaje
@@ -524,6 +706,8 @@
 
 
 
+    <!-- FOOTER -->
+
     <footer>
 
         <h2>Café Aroma</h2>
@@ -537,7 +721,6 @@
         </p>
 
     </footer>
-
 
 
     <!-- Bootstrap JavaScript -->

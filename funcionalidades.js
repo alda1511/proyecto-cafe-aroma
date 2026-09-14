@@ -29,6 +29,39 @@ if (btnRecomendacion !== null && textoRecomendacion !== null) {
 }
 });
 
+//SECCION NOSOTROS//
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const btnNosotros = document.getElementById("btn-nosotros");
+    const textoExtra = document.getElementById("texto-extra-nosotros");
+
+    if (btnNosotros !== null && textoExtra !== null) {
+        btnNosotros.addEventListener("click", () => {
+            textoExtra.classList.toggle("d-none");
+            if (textoExtra.classList.contains("d-none")) {
+                btnNosotros.textContent = "Conocé más sobre nosotros";
+            } else {
+                btnNosotros.textContent = "Mostrar menos";
+            }
+        });
+    }
+
+    const valores = document.querySelectorAll(".valor-nosotros");
+    const descripcionValor = document.getElementById("descripcion-valor");
+
+    if (valores.length > 0 && descripcionValor !== null) {
+        valores.forEach((valor) => {
+            valor.addEventListener("click", () => {
+                descripcionValor.textContent = valor.dataset.descripcion;
+                valores.forEach((item) => {
+                    item.classList.remove("active");
+                });
+                valor.classList.add("active");
+            });
+        });
+    }
+});
 
 //SECCION CONTACTO//
 document.addEventListener("DOMContentLoaded", () => {
@@ -46,21 +79,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     motivo.addEventListener("change", () => {
-
         const textos = {
             consulta: "Escribí tu consulta...",
             pedido: "Contanos qué productos te gustaría pedir...",
             evento: "Contanos qué tipo de evento querés realizar...",
             otro: "Escribí tu mensaje..."
         };
-
         mensaje.placeholder = textos[motivo.value];
     });
 
     formulario.addEventListener("submit", (event) => {
-
         event.preventDefault();
-
         [nombre, email, mensaje].forEach(campo => {
             campo.classList.remove("is-invalid", "is-valid");
         });
@@ -73,21 +102,18 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             nombre.classList.add("is-valid");
         }
-
         if (!email.validity.valid) {
             email.classList.add("is-invalid");
             valido = false;
         } else {
             email.classList.add("is-valid");
         }
-
         if (mensaje.value.trim() === "") {
             mensaje.classList.add("is-invalid");
             valido = false;
         } else {
             mensaje.classList.add("is-valid");
         }
-
         if (!valido) {
             resultado.textContent =
                 "Por favor, completá correctamente los campos obligatorios.";
@@ -95,14 +121,11 @@ document.addEventListener("DOMContentLoaded", () => {
             resultado.className = "alert alert-danger mt-3";
             return;
         }
-
         resultado.textContent =
             `¡Gracias ${nombre.value.trim()}! Recibimos tu mensaje.`;
 
         resultado.className = "alert alert-success mt-3";
-
         formulario.reset();
         contador.textContent = "0/500 caracteres";
     });
-
 });

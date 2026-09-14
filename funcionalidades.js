@@ -28,3 +28,81 @@ if (btnRecomendacion !== null && textoRecomendacion !== null) {
     
 }
 });
+
+
+//SECCION CONTACTO//
+document.addEventListener("DOMContentLoaded", () => {
+
+    const formulario = document.getElementById("form-contacto");
+    const nombre = document.getElementById("nombre");
+    const email = document.getElementById("email");
+    const motivo = document.getElementById("motivo");
+    const mensaje = document.getElementById("mensaje");
+    const resultado = document.getElementById("mensaje-formulario");
+    const contador = document.getElementById("contador-mensaje");
+
+    mensaje.addEventListener("input", () => {
+        contador.textContent = `${mensaje.value.length}/500 caracteres`;
+    });
+
+    motivo.addEventListener("change", () => {
+
+        const textos = {
+            consulta: "Escribí tu consulta...",
+            pedido: "Contanos qué productos te gustaría pedir...",
+            evento: "Contanos qué tipo de evento querés realizar...",
+            otro: "Escribí tu mensaje..."
+        };
+
+        mensaje.placeholder = textos[motivo.value];
+    });
+
+    formulario.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        [nombre, email, mensaje].forEach(campo => {
+            campo.classList.remove("is-invalid", "is-valid");
+        });
+
+        let valido = true;
+
+        if (nombre.value.trim() === "") {
+            nombre.classList.add("is-invalid");
+            valido = false;
+        } else {
+            nombre.classList.add("is-valid");
+        }
+
+        if (!email.validity.valid) {
+            email.classList.add("is-invalid");
+            valido = false;
+        } else {
+            email.classList.add("is-valid");
+        }
+
+        if (mensaje.value.trim() === "") {
+            mensaje.classList.add("is-invalid");
+            valido = false;
+        } else {
+            mensaje.classList.add("is-valid");
+        }
+
+        if (!valido) {
+            resultado.textContent =
+                "Por favor, completá correctamente los campos obligatorios.";
+
+            resultado.className = "alert alert-danger mt-3";
+            return;
+        }
+
+        resultado.textContent =
+            `¡Gracias ${nombre.value.trim()}! Recibimos tu mensaje.`;
+
+        resultado.className = "alert alert-success mt-3";
+
+        formulario.reset();
+        contador.textContent = "0/500 caracteres";
+    });
+
+});

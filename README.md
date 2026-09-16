@@ -19,6 +19,7 @@ Café Aroma es una página web de una cafetería donde se puede conocer el negoc
 - Git
 - GitHub
 - Boostrap
+- Java Script
 
 ## Donde utilizamos Flexbox? 📏
 

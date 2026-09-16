@@ -228,3 +228,23 @@ footer {
     } 
 }
 */
+html {
+    font-size: 14px;
+}
+#productos .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#productos .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.22) !important;
+}
+
+#productos .card-img-top {
+    transition: transform 0.35s ease;
+    cursor: pointer;
+}
+
+#productos .card:hover .card-img-top {
+    transform: scale(1.08);
+}

@@ -361,6 +361,118 @@
             </div>
 
         </section>
+        <!-- INICIO DEL CARRITO DE COMPRAS -->
+
+<!-- Botón flotante para abrir el carrito -->
+<button
+    id="btn-abrir-carrito"
+    type="button"
+    class="btn btn-danger position-fixed bottom-0 end-0 m-4 shadow z-3"
+    data-bs-toggle="modal"
+    data-bs-target="#modalCarrito"
+    aria-label="Abrir carrito de compras"
+>
+    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+
+    <span
+        id="cantidad-carrito"
+        class="badge rounded-pill bg-dark"
+    >
+        0
+    </span>
+</button>
+
+<!-- Modal del carrito -->
+<div
+    class="modal fade"
+    id="modalCarrito"
+    tabindex="-1"
+    aria-labelledby="tituloModalCarrito"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+        <div class="modal-content">
+
+            <!-- Encabezado -->
+            <div class="modal-header text-black" style="background-color: #d9b38c;">
+
+                <h2
+                    class="modal-title fs-4"
+                    id="tituloModalCarrito"
+                >
+                    Pedido para llevar
+                </h2>
+
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar"
+                ></button>
+
+            </div>
+
+            <!-- Contenido -->
+            <div class="modal-body">
+
+                <p
+                    id="carrito-vacio"
+                    class="text-secondary"
+                >
+                    Todavía no agregaste productos.
+                </p>
+
+                <div
+                    id="lista-carrito"
+                    class="list-group mb-3"
+                    aria-live="polite"
+                ></div>
+
+                <div
+                    class="d-flex justify-content-between align-items-center border-top pt-3"
+                >
+                    <strong class="fs-5">
+                        Total
+                    </strong>
+
+                    <strong
+                        id="total-carrito"
+                        class="fs-4 text-dark"
+                    >
+                        $0
+                    </strong>
+                </div>
+
+            </div>
+
+            <!-- Botones inferiores -->
+            <div class="modal-footer">
+
+                <button
+                    id="vaciar-carrito"
+                    type="button"
+                    class="btn btn-outline-danger"
+                >
+                    Vaciar carrito
+                </button>
+
+                <button
+                    id="finalizar-carrito"
+                    type="button"
+                    class="btn btn-dark"
+                >
+                    Continuar pedido
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- FIN DEL CARRITO DE COMPRAS -->
 
         <section id="servicios" class="py-5 bg-light">
 

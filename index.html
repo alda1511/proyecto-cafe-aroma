@@ -376,7 +376,7 @@
         <section id="servicios" class="py-5 bg-light">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="fw-bold mb-3">
+                    <h2 class="fw-bold mb-3" style="color: #5c3826;">
                         Nuestros servicios
                     </h2>
                     <p class="lead text-muted">
@@ -385,91 +385,111 @@
                     </p>
                 </div>
 
-                <div id="carouselServicios" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Servicio 1">
+                <div class="card border-0 shadow-sm rounded-4 p-4" style="background-color: #ead9cc;">
+                    <div id="carouselServicios" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Servicio 1"
+                                style="background-color: #000000;">
+                            </button>
+                            <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="1"
+                                aria-label="Servicio 2" style="background-color: #000000;">
+                            </button>
+                            <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="2"
+                                aria-label="Servicio 3" style="background-color: #000000;">
+                            </button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <article class="card border-0 mx-auto"
+                                    style="max-width: 600px; background-color: #ead9cc;">
+                                    <div class="card-body text-center p-5">
+                                        <h3 class="card-title h4 fw-bold">
+                                            Atención en el local
+                                        </h3>
+                                        <p class="card-text text-muted">
+                                            Disfrutá nuestros productos en un espacio cómodo,
+                                            agradable y pensado para compartir buenos momentos.
+                                        </p>
+                                        <button type="button" class="btn btn-dark" onclick="mostrarInfo(1)">
+                                            Más información
+                                        </button>
+                                        <div id="info1" style="display: none;" class="mt-3">
+                                            <p class="mb-1"><strong>Horarios:</strong></p>
+                                            <p class="mb-1">Lunes a viernes: 08:00 a 20:00 hs.</p>
+                                            <p class="mb-0">Sábados y domingos: 09:00 a 21:00 hs.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="carousel-item">
+                                <article class="card border-0 mx-auto"
+                                    style="max-width: 600px; background-color: #ead9cc;">
+                                    <div class="card-body text-center p-5">
+                                        <h3 class="card-title h4 fw-bold">
+                                            Pedidos para llevar
+                                        </h3>
+                                        <p class="card-text text-muted">
+                                            Podés pedir tus productos favoritos para llevar
+                                            y disfrutar del sabor de Café Aroma donde quieras.
+                                        </p>
+                                        <button type="button" class="btn btn-dark" onclick="mostrarInfo(2)">
+                                            Más información
+                                        </button>
+                                        <div id="info2" style="display: none;" class="mt-3">
+                                            <p class="mb-1"><strong>Pedidos:</strong></p>
+                                            <p class="mb-1">Podés realizar tu pedido durante nuestro horario de
+                                                atención.</p>
+                                            <p class="mb-0">Tiempo estimado: 15 a 20 minutos.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="carousel-item">
+                                <article class="card border-0 mx-auto"
+                                    style="max-width: 600px; background-color: #ead9cc;">
+                                    <div class="card-body text-center p-5">
+                                        <h3 class="card-title h4 fw-bold">
+                                            Pedidos para reuniones
+                                        </h3>
+                                        <p class="card-text text-muted">
+                                            Preparamos opciones de café y productos artesanales
+                                            para reuniones, eventos y ocasiones especiales.
+                                        </p>
+                                        <button type="button" class="btn btn-dark" onclick="mostrarInfo(3)">
+                                            Más información
+                                        </button>
+                                        <div id="info3" style="display: none;" class="mt-3">
+                                            <p class="mb-1"><strong>Reuniones y eventos:</strong></p>
+                                            <p class="mb-1">Realizamos pedidos para grupos de 10 personas o más.</p>
+                                            <p class="mb-0">Solicitar con al menos 48 horas de anticipación.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicios"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);">
+                            </span>
+                            <span class="visually-hidden">
+                                Anterior
+                            </span>
                         </button>
-                        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="1"
-                            aria-label="Servicio 2">
-                        </button>
-                        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="2"
-                            aria-label="Servicio 3">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselServicios"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);">
+                            </span>
+                            <span class="visually-hidden">
+                                Siguiente
+                            </span>
                         </button>
                     </div>
-
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <article class="card shadow-sm border-0 mx-auto" style="max-width: 600px;">
-                                <div class="card-body text-center p-5">
-                                    <h3 class="card-title h4 fw-bold">
-                                        Atención en el local
-                                    </h3>
-                                    <p class="card-text text-muted">
-                                        Disfrutá nuestros productos en un espacio cómodo,
-                                        agradable y pensado para compartir buenos momentos.
-                                    </p>
-                                    <a href="#contacto" class="btn btn-dark">
-                                        Visitanos
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="carousel-item">
-                            <article class="card shadow-sm border-0 mx-auto" style="max-width: 600px;">
-                                <div class="card-body text-center p-5">
-                                    <h3 class="card-title h4 fw-bold">
-                                        Pedidos para llevar
-                                    </h3>
-                                    <p class="card-text text-muted">
-                                        Podés pedir tus productos favoritos para llevar
-                                        y disfrutar del sabor de Café Aroma donde quieras.
-                                    </p>
-                                    <a href="#contacto" class="btn btn-dark">
-                                        Hacer un pedido
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="carousel-item">
-                            <article class="card shadow-sm border-0 mx-auto" style="max-width: 600px;">
-                                <div class="card-body text-center p-5">
-                                    <h3 class="card-title h4 fw-bold">
-                                        Pedidos para reuniones
-                                    </h3>
-                                    <p class="card-text text-muted">
-                                        Preparamos opciones de café y productos artesanales
-                                        para reuniones, eventos y ocasiones especiales.
-                                    </p>
-                                    <a href="#contacto" class="btn btn-dark">
-                                        Consultar
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicios"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true">
-                        </span>
-                        <span class="visually-hidden">
-                            Anterior
-                        </span>
-                    </button>
-
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselServicios"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true">
-                        </span>
-                        <span class="visually-hidden">
-                            Siguiente
-                        </span>
-                    </button>
                 </div>
-            </div>
         </section>
 
         <section id="contacto" class="py-5" aria-labelledby="titulo-contacto" style="background-color: #8b7062;">

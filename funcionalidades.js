@@ -313,6 +313,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+//SECCION SERVICIOS//
+function mostrarInfo(numero) {
+        let informacion = document.getElementById("info" + numero);
+
+        if (informacion.style.display === "none") {
+            informacion.style.display = "block";
+        } else {
+            informacion.style.display = "none";
+        }
+    }
+
 //SECCION CONTACTO//
 document.addEventListener("DOMContentLoaded", () => {
 

@@ -5,61 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café Aroma | Cafetería y productos artesanales</title>
-    <meta name="description" content="Café Aroma es una cafetería dedicada a ofrecer café de calidad, productos artesanales y un espacio agradable para disfrutar.">
-    <meta name="keywords" content="Café Aroma, cafetería, café, café artesanal, espresso, café con leche, medialunas, cafetería Tucumán">
+    <meta name="description"
+        content="Café Aroma es una cafetería dedicada a ofrecer café de calidad, productos artesanales y un espacio agradable para disfrutar.">
+    <meta name="keywords"
+        content="Café Aroma, cafetería, café, café artesanal, espresso, café con leche, medialunas, cafetería Tucumán">
     <meta name="author" content="Café Aroma">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Herr+Von+Muellerhoff&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <style>
-        #productos .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        #productos .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.22) !important;
-        }
-
-        #productos .card-img-top {
-            transition: transform 0.35s ease;
-            cursor: pointer;
-        }
-
-        #productos .card:hover .card-img-top {
-            transform: scale(1.08);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="funcionalidades.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="font-family: 'Merriweather', serif; background-color: #e8d8c8; color: #333;">
-    <header class="p-4" style="background-color: #6f4e37;">
+<body style="font-family: 'Raleway', sans-serif;">
+    <header class="p-1" style="background-color: #6f4e37;">
         <div class="container text-center">
-            <h1 class="display-2 mb-1" style="color: #f5f0eb; font-family: 'Qwitcher Grypen', cursive; font-weight: 700;"> Café Aroma </h1>
+            <h1 class="display-6" style="color: #f5f0eb; font-family: 'Gloock', cursive;"><i
+                    class="fa-solid fa-mug-hot fa-sm"></i> Café Aroma </h1>
         </div>
     </header>
 
-    <nav class="sticky-top d-flex justify-content-center flex-wrap gap-2 gap-md-4 py-2" style="background-color: #d9b38c;">
-        <a href="#inicio" class="text-decoration-none fw-bold fs-6 px-2 text-uppercase" style="color: #6f4e37;">Inicio</a>
-        <a href="#nosotros" class="text-decoration-none fw-bold fs-6 px-2 text-uppercase" style="color: #6f4e37;">Nosotros</a>
-        <a href="#productos" class="text-decoration-none fw-bold fs-6 px-2 text-uppercase" style="color: #6f4e37;">Productos</a>
-        <a href="#servicios" class="text-decoration-none fw-bold fs-6 px-2 text-uppercase" style="color: #6f4e37;">Servicios</a>
-        <a href="#contacto" class="text-decoration-none fw-bold fs-6 px-2 text-uppercase" style="color: #6f4e37;">Contacto</a>
+    <nav class="sticky-top d-flex py-3 px-4" style="background-color: #d9b38c;">
+
+        <div class="d-flex justify-content-center flex-wrap flex-grow-1 gap-2 gap-md-4">
+            <a href="#inicio" class="nav-link fw-bold text-uppercase" style="color: #6f4e37;">Inicio</a>
+            <a href="#nosotros" class="nav-link fw-bold text-uppercase" style="color: #6f4e37;">Nosotros</a>
+            <a href="#productos" class="nav-link fw-bold text-uppercase" style="color: #6f4e37;">Productos</a>
+            <a href="#servicios" class="nav-link fw-bold text-uppercase" style="color: #6f4e37;">Servicios</a>
+            <a href="#contacto" class="nav-link fw-bold text-uppercase" style="color: #6f4e37;">Contacto</a>
+        </div>
+
+        <button type="button" class="nav-link fw-bold" style="color: #6f4e37;" data-bs-toggle="modal"
+            data-bs-target="#Login">
+            <i class="fa-solid fa-user fa-lg"></i>
+        </button>
     </nav>
 
+    <div class="modal fade" id="Login" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: #f5f0eb;">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" style="color: #6f4e37;">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input type="email" class="form-control mb-3" placeholder="Correo electrónico">
+                        <input type="password" class="form-control mb-3" placeholder="Contraseña">
+                        <button type="button" class="btn fw-bold text-white" style="background-color: #6f4e37;"
+                            data-bs-dismiss="modal">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main>
-        <section id="inicio" class="p-5 mb-5 text-center border-0" style="background-color: #6f4e37;">
-            <h2 class="display-6 fw-bold mb-3" style="color: #f5f0eb;">Bienvenidos a Café Aroma</h2>
+        <section id="inicio" class="text-center p-0"
+            style="background-image: url('imagenes/blog-2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="bg-dark bg-opacity-75 w-100 px-3 py-5">
+                <h2 id="mensaje-bienvenida" class="display-6 fw-bold mb-2" style="color: #f5f0eb;">Bienvenidos a Café
+                    Aroma
+                </h2>
 
-            <p class="lead fw-normal mb-4" style="color: #d9b38c;"> Somos una cafetería dedicada a ofrecer café de
-                calidad y productos artesanales. </p>
+                <p class="fs-5 mb-2" style="color: #d9b38c;"> Somos una cafetería dedicada a ofrecer café de
+                    calidad y productos artesanales.</p>
 
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <p class="fs-5 mb-3" style="color: #f5f0eb;"> En Café Aroma buscamos crear un espacio cómodo y
-                        agradable donde nuestros clientes puedan disfrutar de un buen café, acompañados de productos
-                        frescos y deliciosos. </p>
-                    <p class="fs-5 mb-0" style="color: #ebd8c3;"> Nuestro objetivo es que cada visita sea una
-                        experiencia especial y que nuestros clientes puedan sentirse como en casa.</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <p class="fs-5 mb-0" style="color: #ebd8c3;"> Nuestro objetivo es que cada visita sea una
+                            experiencia especial y que nuestros clientes puedan sentirse como en casa.</p>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <button id="btn-recomendacion" class="btn fw-bold"
+                        style="background-color: #d9b38c; color: #6f4e37;">
+                        Sorprendeme <i class="fa-solid fa-caret-down"></i>
+                    </button>
+                    <div class="d-flex align-items-center justify-content-center mt-6" style="min-height: 80px;">
+                        <p id="texto-recomendacion" class="fs-5 fw-bold mb-0" style="color: #d9b38c;"></p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -68,9 +97,6 @@
 
             <div class="container">
                 <div class="text-center mb-5">
-                    <div class="mb-3">
-                        <span style="font-size: 2rem; color: #8b5e3c;"> ☕ </span>
-                    </div>
                     <h2 id="titulo-nosotros" class="display-5 fw-bold mb-3" style="color: #5c3826;">
                         Sobre Café Aroma
                     </h2>
@@ -79,9 +105,10 @@
                     </p>
                 </div>
 
-                <div class="row justify-content-center mb-5">
-                    <div class="col-12 col-lg-10">
-                        <article class="text-center rounded-4 shadow-sm p-4 p-md-5"
+                <div class="row g-4 align-items-stretch">
+
+                    <div class="col-12 col-lg-6">
+                        <article class="text-center rounded-4 shadow-sm p-4 p-md-5 h-100"
                             style="background-color: #ead9cc; color: #5c3826;">
 
                             <p class="lead mb-4">
@@ -93,21 +120,23 @@
                                 Trabajamos para ofrecer productos de calidad y una atención personalizada,
                                 buscando que cada cliente tenga una buena experiencia.
                             </p>
-
+                            <p id="texto-extra-nosotros" class="fs-5 mt-4 d-none">
+                                En Café Aroma buscamos combinar la tradición del café artesanal
+                                con un espacio moderno y cálido, donde cada visita sea una experiencia
+                                especial para nuestros clientes.
+                            </p>
+                            <button id="btn-nosotros" type="button" class="btn mt-4"
+                                style="background-color: #8b5e3c; color: white;">
+                                Conocé más sobre nosotros
+                            </button>
                         </article>
                     </div>
-                </div>
 
-                <div class="row g-4">
-                    <div class="col-12 col-md-6">
-                        <article class="card h-100 border-0 shadow-sm rounded-4 text-center"
+                    <div class="col-12 col-lg-6 d-flex flex-column gap-4">
+                        <article class="card flex-fill border-0 shadow-sm rounded-4 text-center"
                             style="background-color: #ead9cc;">
-
                             <div class="card-body p-4 p-lg-5">
-                                <div class="d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle"
-                                    style="width: 85px; height: 85px; background-color: #966643; color: white; font-size: 2.2rem;">
-                                    🎯
-                                </div>
+                                <i class="fa-solid fa-bullseye" style="color: #966643; font-size: 2.5rem;"></i>
                                 <h3 class="h2 fw-bold mb-3" style="color: #5c3826;">
                                     Nuestro objetivo
                                 </h3>
@@ -118,49 +147,52 @@
                                 </p>
                             </div>
                         </article>
-                    </div>
 
-                    <div class="col-12 col-md-6">
-                        <article class="card h-100 border-0 shadow-sm rounded-4 text-center"
+                        <article class="card flex-fill border-0 shadow-sm rounded-4 text-center"
                             style="background-color: #f4dfe0;">
 
-                            <div class="card-body p-4 p-lg-5">
-                                <div class="d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle"
-                                    style="width: 85px; height: 85px; background-color: #d8898f; color: white; font-size: 2.2rem;">
-                                    ♥
-                                </div>
-                                <h3 class="h2 fw-bold mb-3" style="color: #5c3826;">
+                            <div class="card-body p-3 p-lg-4">
+                                <i class="fa-regular fa-heart mb-3" style="color: #d8898f; font-size: 2.2rem;"></i>
+                                <h3 class="h2 fw-bold mb-2" style="color: #5c3826;">
                                     Nuestros valores
                                 </h3>
-
-                                <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-                                    <span class="badge rounded-pill px-4 py-3 fs-6 fw-normal"
-                                        style="background-color: #edc9cb; color: #4d3024;">
+                                <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                                    <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros"
+                                        data-descripcion="Seleccionamos productos de calidad para ofrecer una mejor experiencia."
+                                        style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
                                         Calidad
                                     </span>
-                                    <span class="badge rounded-pill px-4 py-3 fs-6 fw-normal"
-                                        style="background-color: #edc9cb; color: #4d3024;">
+                                    <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros"
+                                        data-descripcion="Buscamos brindar una atención amable y personalizada a cada cliente."
+                                        style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
                                         Atención al cliente
                                     </span>
-                                    <span class="badge rounded-pill px-4 py-3 fs-6 fw-normal"
-                                        style="background-color: #edc9cb; color: #4d3024;">
+                                    <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros"
+                                        data-descripcion="Trabajamos con productos frescos para mantener la calidad de nuestras preparaciones."
+                                        style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
                                         Productos frescos
                                     </span>
-                                    <span class="badge rounded-pill px-4 py-3 fs-6 fw-normal"
-                                        style="background-color: #edc9cb; color: #4d3024;">
+                                    <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros"
+                                        data-descripcion="Estamos comprometidos con ofrecer una buena experiencia en cada visita."
+                                        style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
                                         Compromiso
                                     </span>
-                                    <span class="badge rounded-pill px-4 py-3 fs-6 fw-normal"
-                                        style="background-color: #edc9cb; color: #4d3024;">
+                                    <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros"
+                                        data-descripcion="Trabajamos de manera responsable para mantener la confianza de nuestros clientes."
+                                        style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
                                         Responsabilidad
                                     </span>
                                 </div>
+                                <p id="descripcion-valor" class="mt-3 mb-0 fs-6" style="color: #6b4532;">
+                                    Seleccioná uno de nuestros valores para conocer más.
+                                </p>
                             </div>
                         </article>
                     </div>
                 </div>
             </div>
         </section>
+
         <section id="productos" class="container py-5 my-5 rounded-4 shadow-sm" style="background-color: #f5f0eb;">
 
             <div class="text-center mb-5">
@@ -179,38 +211,30 @@
                     <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
                         <img src="imagenes/img1.jpg" class="card-img-top object-fit-cover"
                             alt="Café espresso artesanal servido en una taza" style="height: 220px;">
-
                         <div class="card-body d-flex flex-column text-center p-4">
-
                             <h3 class="card-title h5 fw-bold mb-3" style="color: #6f4e37;">
                                 Café Espresso
                             </h3>
-
                             <p class="card-text flex-grow-1">
                                 Café intenso y aromático, preparado con granos
                                 seleccionados para disfrutar su sabor.
                             </p>
-
                             <p class="fw-bold fs-5 mb-0" style="color: #6f4e37;">
                                 $2000
                             </p>
                         </div>
                     </article>
-
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
-
                     <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-
                         <img src="imagenes/img9.jpg" class="card-img-top object-fit-cover"
                             alt="Café con leche caliente servido en una taza" style="height: 220px;">
 
                         <div class="card-body d-flex flex-column text-center p-4">
-
                             <h3 class="card-title h5 fw-bold mb-3" style="color: #6f4e37;">
                                 Café con leche
                             </h3>
-
                             <p class="card-text flex-grow-1">
                                 Una combinación de café y leche caliente,
                                 ideal para comenzar el día.
@@ -220,210 +244,255 @@
                             </p>
                         </div>
                     </article>
-
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
-
                     <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-
                         <img src="imagenes/img3.jpg" class="card-img-top object-fit-cover"
                             alt="Medialunas recién horneadas de Café Aroma" style="height: 220px;">
 
                         <div class="card-body d-flex flex-column text-center p-4">
-
                             <h3 class="card-title h5 fw-bold mb-3" style="color: #6f4e37;">
                                 Medialunas
                             </h3>
-
                             <p class="card-text flex-grow-1">
                                 Medialunas recién horneadas, ideales para
                                 acompañar nuestros cafés.
                             </p>
-
                             <p class="fw-bold fs-5 mb-0" style="color: #6f4e37;">
                                 $500
                             </p>
-
                         </div>
-
                     </article>
-
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
-
                     <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-
                         <img src="imagenes/img4.jpg" class="card-img-top object-fit-cover"
                             alt="Taza de café americano artesanal de Café Aroma" style="height: 220px;">
 
                         <div class="card-body d-flex flex-column text-center p-4">
-
                             <h3 class="card-title h5 fw-bold mb-3" style="color: #6f4e37;">
                                 Café Americano
                             </h3>
-
                             <p class="card-text flex-grow-1">
                                 Café suave y equilibrado para quienes prefieren
                                 disfrutar una bebida de sabor más ligero.
                             </p>
-
                             <p class="fw-bold fs-5 mb-0" style="color: #6f4e37;">
                                 $2200
                             </p>
-
                         </div>
-
                     </article>
-
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
-
                     <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-
                         <img src="imagenes/img5.jpg" class="card-img-top object-fit-cover"
                             alt="Café frío artesanal preparado por Café Aroma" style="height: 220px;">
 
                         <div class="card-body d-flex flex-column text-center p-4">
-
                             <h3 class="card-title h5 fw-bold mb-3" style="color: #6f4e37;">
                                 Café Frío
                             </h3>
-
                             <p class="card-text flex-grow-1">
                                 Una opción refrescante para disfrutar el sabor
                                 del café en los días más calurosos.
                             </p>
-
                             <p class="fw-bold fs-5 mb-0" style="color: #6f4e37;">
                                 $2800
                             </p>
                         </div>
                     </article>
-
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-
                     <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-
                         <img src="imagenes/img6.jpg" class="card-img-top object-fit-cover"
                             alt="Productos de panadería artesanal frescos de Café Aroma" style="height: 220px;">
 
                         <div class="card-body d-flex flex-column text-center p-4">
-
                             <h3 class="card-title h5 fw-bold mb-3" style="color: #6f4e37;">
                                 Panificados
                             </h3>
-
                             <p class="card-text flex-grow-1">
                                 Productos de panadería frescos para acompañar
                                 tu café favorito.
                             </p>
-
                             <p class="fw-bold fs-5 mb-0" style="color: #6f4e37;">
                                 Desde $500
                             </p>
-
                         </div>
                     </article>
                 </div>
             </div>
-
         </section>
 
+        <button id="btn-abrir-carrito" type="button" class="btn btn-danger position-fixed bottom-0 end-0 m-4 shadow z-3"
+            data-bs-toggle="modal" data-bs-target="#modalCarrito" aria-label="Abrir carrito de compras">
+            <i class="fa-solid fa-cart-shopping fa-xl"></i>
+
+            <span id="cantidad-carrito" class="badge rounded-pill bg-dark">
+                0
+            </span>
+        </button>
+
+        <div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="tituloModalCarrito" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header text-black" style="background-color: #d9b38c;">
+                        <h2 class="modal-title fs-4" id="tituloModalCarrito">
+                            Pedido para llevar
+                        </h2>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p id="carrito-vacio" class="text-secondary">
+                            Todavía no agregaste productos.
+                        </p>
+                        <div id="lista-carrito" class="list-group mb-3" aria-live="polite"></div>
+                        <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                            <strong class="fs-5">
+                                Total
+                            </strong>
+                            <strong id="total-carrito" class="fs-4 text-dark">
+                                $0
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="vaciar-carrito" type="button" class="btn btn-outline-danger">
+                            Vaciar carrito
+                        </button>
+                        <button id="finalizar-carrito" type="button" class="btn btn-dark">
+                            Continuar pedido
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section id="servicios" class="py-5 bg-light">
-
             <div class="container">
-               
                 <div class="text-center mb-5">
-
-                    <h2 class="fw-bold mb-3">
+                    <h2 class="fw-bold mb-3" style="color: #5c3826;">
                         Nuestros servicios
                     </h2>
-
                     <p class="lead text-muted">
                         En Café Aroma ofrecemos diferentes opciones para que disfrutes
                         de nuestro café y productos artesanales de la manera que prefieras.
                     </p>
-
                 </div>
 
-                <div class="row g-4">
+                <div class="card border-0 shadow-sm rounded-4 p-4" style="background-color: #ead9cc;">
+                    <div id="carouselServicios" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Servicio 1"
+                                style="background-color: #000000;">
+                            </button>
+                            <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="1"
+                                aria-label="Servicio 2" style="background-color: #000000;">
+                            </button>
+                            <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="2"
+                                aria-label="Servicio 3" style="background-color: #000000;">
+                            </button>
+                        </div>
 
-                    <div class="col-12 col-md-6 col-lg-4">
-
-                        <article class="card h-100 shadow-sm border-0">
-
-                            <div class="card-body text-center p-4">
-
-                                <h3 class="card-title h4 fw-bold">
-                                    ☕ Atención en el local
-                                </h3>
-
-                                <p class="card-text text-muted">
-                                    Disfrutá nuestros productos en un espacio cómodo,
-                                    agradable y pensado para compartir buenos momentos.
-                                </p>
-
-                                <a href="#contacto" class="btn btn-dark">
-                                    Visitanos
-                                </a>
-
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <article class="card border-0 mx-auto"
+                                    style="max-width: 600px; background-color: #ead9cc;">
+                                    <div class="card-body text-center p-5">
+                                        <h3 class="card-title h4 fw-bold">
+                                            Atención en el local
+                                        </h3>
+                                        <p class="card-text text-muted">
+                                            Disfrutá nuestros productos en un espacio cómodo,
+                                            agradable y pensado para compartir buenos momentos.
+                                        </p>
+                                        <button type="button" class="btn btn-dark" onclick="mostrarInfo(1)">
+                                            Más información
+                                        </button>
+                                        <div id="info1" style="display: none;" class="mt-3">
+                                            <p class="mb-1"><strong>Horarios:</strong></p>
+                                            <p class="mb-1">Lunes a viernes: 08:00 a 20:00 hs.</p>
+                                            <p class="mb-0">Sábados y domingos: 09:00 a 21:00 hs.</p>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
 
-                        </article>
-
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-
-                        <article class="card h-100 shadow-sm border-0">
-
-                            <div class="card-body text-center p-4">
-
-                                <h3 class="card-title h4 fw-bold">
-                                    🥡 Pedidos para llevar
-                                </h3>
-
-                                <p class="card-text text-muted">
-                                    Podés pedir tus productos favoritos para llevar
-                                    y disfrutar del sabor de Café Aroma donde quieras.
-                                </p>
-
-                                <a href="#contacto" class="btn btn-dark">
-                                    Hacer un pedido
-                                </a>
-
+                            <div class="carousel-item">
+                                <article class="card border-0 mx-auto"
+                                    style="max-width: 600px; background-color: #ead9cc;">
+                                    <div class="card-body text-center p-5">
+                                        <h3 class="card-title h4 fw-bold">
+                                            Pedidos para llevar
+                                        </h3>
+                                        <p class="card-text text-muted">
+                                            Podés pedir tus productos favoritos para llevar
+                                            y disfrutar del sabor de Café Aroma donde quieras.
+                                        </p>
+                                        <button type="button" class="btn btn-dark" onclick="mostrarInfo(2)">
+                                            Más información
+                                        </button>
+                                        <div id="info2" style="display: none;" class="mt-3">
+                                            <p class="mb-1"><strong>Pedidos:</strong></p>
+                                            <p class="mb-1">Podés realizar tu pedido durante nuestro horario de
+                                                atención.</p>
+                                            <p class="mb-0">Tiempo estimado: 15 a 20 minutos.</p>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
-                    </div>
 
-                    <div class="col-12 col-md-6 col-lg-4">
-
-                        <article class="card h-100 shadow-sm border-0">
-
-                            <div class="card-body text-center p-4">
-
-                                <h3 class="card-title h4 fw-bold">
-                                    🎉 Pedidos para reuniones
-                                </h3>
-
-                                <p class="card-text text-muted">
-                                    Preparamos opciones de café y productos artesanales
-                                    para reuniones, eventos y ocasiones especiales.
-                                </p>
-
-                                <a href="#contacto" class="btn btn-dark">
-                                    Consultar
-                                </a>
-
+                            <div class="carousel-item">
+                                <article class="card border-0 mx-auto"
+                                    style="max-width: 600px; background-color: #ead9cc;">
+                                    <div class="card-body text-center p-5">
+                                        <h3 class="card-title h4 fw-bold">
+                                            Pedidos para reuniones
+                                        </h3>
+                                        <p class="card-text text-muted">
+                                            Preparamos opciones de café y productos artesanales
+                                            para reuniones, eventos y ocasiones especiales.
+                                        </p>
+                                        <button type="button" class="btn btn-dark" onclick="mostrarInfo(3)">
+                                            Más información
+                                        </button>
+                                        <div id="info3" style="display: none;" class="mt-3">
+                                            <p class="mb-1"><strong>Reuniones y eventos:</strong></p>
+                                            <p class="mb-1">Realizamos pedidos para grupos de 10 personas o más.</p>
+                                            <p class="mb-0">Solicitar con al menos 48 horas de anticipación.</p>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicios"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);">
+                            </span>
+                            <span class="visually-hidden">
+                                Anterior
+                            </span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselServicios"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);">
+                            </span>
+                            <span class="visually-hidden">
+                                Siguiente
+                            </span>
+                        </button>
                     </div>
                 </div>
-            </div>
         </section>
 
-        <section id="contacto" class="py-5 bg-light" aria-labelledby="titulo-contacto">
+        <section id="contacto" class="py-5" aria-labelledby="titulo-contacto" style="background-color: #8b7062;">
 
             <div class="container">
 
@@ -432,39 +501,32 @@
                         Contacto
                     </h2>
 
-                    <p class="lead text-secondary mx-auto" style="max-width: 700px;">
+                    <p class="lead text-black mx-auto" style="max-width: 700px;">
                         Comunicate con Café Aroma para realizar consultas, hacer pedidos
                         o conocer más sobre nuestra cafetería y nuestros productos.
                     </p>
                 </div>
-
                 <div class="row g-4">
-
                     <div class="col-12 col-lg-5">
-
                         <article class="card h-100 border-0 shadow-sm">
-
                             <div class="card-body p-4 p-md-5">
-
                                 <h3 class="card-title h4 fw-bold mb-4">
                                     Encontranos
                                 </h3>
-
                                 <p class="text-secondary mb-4">
                                     Estamos para ayudarte. Podés comunicarte con nosotros
                                     por teléfono, correo electrónico o visitarnos en nuestra
                                     cafetería.
                                 </p>
-
                                 <address class="mb-0">
-
                                     <div class="d-flex align-items-start mb-4">
-                                        <div class="me-3 fs-4" aria-hidden="true">
-                                            ☎️
+                                        <div class="me-3 fs-4 text-danger" aria-hidden="true">
+                                            <i class="fa-solid fa-tty"></i>
                                         </div>
 
                                         <div>
                                             <strong class="d-block">Teléfono</strong>
+
                                             <a href="tel:+543811234567" class="text-decoration-none text-secondary">
                                                 381-1234567
                                             </a>
@@ -472,12 +534,13 @@
                                     </div>
 
                                     <div class="d-flex align-items-start mb-4">
-                                        <div class="me-3 fs-4" aria-hidden="true">
-                                            ✉️
+                                        <div class="me-3 fs-4 text-danger" aria-hidden="true">
+                                            <i class="fa-regular fa-envelope"></i>
                                         </div>
 
                                         <div>
                                             <strong class="d-block">Email</strong>
+
                                             <a href="mailto:cafe.aroma@gmail.com"
                                                 class="text-decoration-none text-secondary">
                                                 cafe.aroma@gmail.com
@@ -485,47 +548,43 @@
                                         </div>
                                     </div>
 
+
                                     <div class="d-flex align-items-start">
-                                        <div class="me-3 fs-4" aria-hidden="true">
-                                            📍
+                                        <div class="me-3 fs-4 text-danger" aria-hidden="true">
+                                            <i class="fa-solid fa-map-pin"></i>
                                         </div>
 
                                         <div>
                                             <strong class="d-block">Dirección</strong>
+
                                             <span class="text-secondary">
                                                 San Martín 123
                                             </span>
                                         </div>
                                     </div>
                                 </address>
+
                             </div>
                         </article>
                     </div>
-
                     <div class="col-12 col-lg-7">
-
                         <article class="card border-0 shadow-sm">
-
                             <div class="card-body p-4 p-md-5">
-
                                 <h3 class="h4 fw-bold mb-2">
                                     Envíanos tu mensaje
                                 </h3>
-
                                 <p class="text-secondary mb-4">
                                     Completá el formulario y nos pondremos en contacto
                                     con vos.
                                 </p>
 
-                                <form action="#" method="post">
+                                <form id="form-contacto" action="#" method="post" novalidate>
 
                                     <div class="row g-3">
-
                                         <div class="col-12 col-md-6">
                                             <label for="nombre" class="form-label fw-semibold">
                                                 Nombre
                                             </label>
-
                                             <input type="text" class="form-control" id="nombre" name="nombre"
                                                 placeholder="Ingresá tu nombre" autocomplete="name" required>
                                         </div>
@@ -534,7 +593,6 @@
                                             <label for="email" class="form-label fw-semibold">
                                                 Email
                                             </label>
-
                                             <input type="email" class="form-control" id="email" name="email"
                                                 placeholder="Ingresá tu email" autocomplete="email" required>
                                         </div>
@@ -543,7 +601,6 @@
                                             <label for="telefono" class="form-label fw-semibold">
                                                 Teléfono
                                             </label>
-
                                             <input type="tel" class="form-control" id="telefono" name="telefono"
                                                 placeholder="Ingresá tu teléfono" autocomplete="tel">
                                         </div>
@@ -557,31 +614,38 @@
                                                 <option value="consulta">
                                                     Consulta
                                                 </option>
-
                                                 <option value="pedido">
                                                     Pedido
                                                 </option>
-
                                                 <option value="evento">
                                                     Evento o reunión
                                                 </option>
-
                                                 <option value="otro">
                                                     Otro
                                                 </option>
                                             </select>
                                         </div>
-
                                         <div class="col-12">
                                             <label for="mensaje" class="form-label fw-semibold">
                                                 Mensaje
                                             </label>
 
                                             <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
-                                                placeholder="Escribí tu mensaje" required></textarea>
-                                        </div>
+                                                maxlength="500" placeholder="Escribí tu mensaje" required></textarea>
 
+                                            <div class="text-end mt-1">
+                                                <small id="contador-mensaje" class="text-secondary">
+                                                    0/500 caracteres
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+
+                                            <div id="mensaje-formulario" class="mt-2" role="alert" aria-live="polite">
+                                            </div>
+                                        </div>
                                         <div class="col-12 text-md-end">
+
                                             <button type="submit" class="btn btn-dark btn-lg px-4">
                                                 Enviar mensaje
                                             </button>
@@ -591,23 +655,26 @@
                             </div>
                         </article>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <footer class="bg-dark text-white py-4">
+        <footer class="bg-dark text-white py-4">
 
-                        <div class="container text-center">
+            <div class="container text-center">
 
-                            <h2 class="h4 fw-bold mb-2">
-                                Café Aroma
-                            </h2>
+                <h2 class="h4 fw-bold mb-2">
+                    Café Aroma
+                </h2>
 
-                            <p class="text-white-50 mb-2">
-                                Un buen café empieza con buenos momentos.
-                            </p>
+                <p class="text-white-50 mb-2">
+                    Un buen café empieza con buenos momentos.
+                </p>
 
-                            <p class="small text-white-50 mb-0">
-                                &copy; 2026 Café Aroma - Todos los derechos reservados.
-                            </p>
-
-                    </footer>
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-                    </script>
+                <p class="small text-white-50 mb-0">
+                    &copy; 2026 Café Aroma - Todos los derechos reservados.
+                </p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+        </script>

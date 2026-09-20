@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const titulo = document.getElementById("mensaje-bienvenida");
     const horaActual = new Date().getHours();
     
-    if (horaActual >= 6 && horaActual < 12) {
+    if (titulo && horaActual >= 6 && horaActual < 12) {
         titulo.textContent = "¡Buenos días! Bienvenidos a Café Aroma";
-    } else if (horaActual >= 12 && horaActual < 19) {
+    } else if (titulo && horaActual >= 12 && horaActual < 19) {
         titulo.textContent = "¡Buenas tardes! Bienvenidos a Café Aroma";
-    } else {
+    } else if (titulo) {
         titulo.textContent = "¡Buenas noches! Bienvenidos a Café Aroma";
     }
 
@@ -28,257 +28,8 @@ if (btnRecomendacion !== null && textoRecomendacion !== null) {
     
 }
 });
-// SECCION PRODUCTOS//
-document.addEventListener("DOMContentLoaded", () => {
-    const seleccionar = (selector) => document.querySelector(selector);
-    const CLAVE = "carritoCafeAroma";
+// Productos se carga por separado desde productos.js.
 
-    const lista = seleccionar("#lista-carrito");
-    const cantidad = seleccionar("#cantidad-carrito");
-    const total = seleccionar("#total-carrito");
-    const avisoVacio = seleccionar("#carrito-vacio");
-    const botonVaciar = seleccionar("#vaciar-carrito");
-    const botonFinalizar = seleccionar("#finalizar-carrito");
-
-    let carrito = JSON.parse(localStorage.getItem(CLAVE)) || [];
-
-    const formatearPrecio = (precio) =>
-        precio.toLocaleString("es-AR", {
-            style: "currency",
-            currency: "ARS",
-            maximumFractionDigits: 0
-        });
-
-    const guardarCarrito = () => {
-        localStorage.setItem(CLAVE, JSON.stringify(carrito));
-    };
-
-    const actualizarCarrito = () => {
-        lista.innerHTML = carrito
-            .map(
-                (producto, indice) => `
-                    <div class="list-group-item d-flex flex-column flex-md-row
-                        justify-content-between align-items-md-center gap-3">
-
-                        <div>
-                            <strong>${producto.nombre}</strong>
-
-                            <small class="d-block text-secondary">
-                                ${formatearPrecio(producto.precio)} cada uno
-                            </small>
-                        </div>
-
-                        <div class="d-flex align-items-center gap-2">
-
-                            <button
-                                class="btn btn-sm btn-outline-secondary"
-                                data-accion="restar"
-                                data-indice="${indice}"
-                            >
-                                −
-                            </button>
-
-                            <span class="fw-bold">
-                                ${producto.cantidad}
-                            </span>
-
-                            <button
-                                class="btn btn-sm btn-outline-secondary"
-                                data-accion="sumar"
-                                data-indice="${indice}"
-                            >
-                                +
-                            </button>
-
-                            <strong class="ms-2">
-                                ${formatearPrecio(
-                                    producto.precio * producto.cantidad
-                                )}
-                            </strong>
-
-                            <button
-                                class="btn btn-sm btn-outline-danger"
-                                data-accion="eliminar"
-                                data-indice="${indice}"
-                            >
-                                ×
-                            </button>
-
-                        </div>
-                    </div>
-                `
-            )
-            .join("");
-
-        const cantidadTotal = carrito.reduce(
-            (suma, producto) => suma + producto.cantidad,
-            0
-        );
-
-        const precioTotal = carrito.reduce(
-            (suma, producto) =>
-                suma + producto.precio * producto.cantidad,
-            0
-        );
-
-        cantidad.textContent = cantidadTotal;
-        total.textContent = formatearPrecio(precioTotal);
-
-        avisoVacio.classList.toggle(
-            "d-none",
-            carrito.length > 0
-        );
-
-        botonVaciar.disabled = carrito.length === 0;
-        botonFinalizar.disabled = carrito.length === 0;
-
-        guardarCarrito();
-    };
-
-    const agregarProducto = (nombre, precio) => {
-        const producto = carrito.find(
-            (item) => item.nombre === nombre
-        );
-
-        producto
-            ? producto.cantidad++
-            : carrito.push({
-                nombre,
-                precio,
-                cantidad: 1
-            });
-
-        actualizarCarrito();
-    };
-
-    /*
-        Agrega automáticamente los botones a las tarjetas.
-    */
-
-    document
-        .querySelectorAll("#productos .card")
-        .forEach((tarjeta) => {
-            const cuerpo = tarjeta.querySelector(".card-body");
-            const titulo = tarjeta.querySelector("h3");
-            const precio = tarjeta.querySelector(
-                ".fw-bold.fs-5.mb-0"
-            );
-
-            if (!cuerpo || !titulo || !precio) {
-                return;
-            }
-
-            const boton = document.createElement("button");
-
-            boton.type = "button";
-            boton.className =
-                "btn btn-dark mt-3 btn-agregar-carrito";
-
-            boton.textContent = "Agregar al pedido";
-
-            boton.addEventListener("click", () => {
-                agregarProducto(
-                    titulo.textContent.trim(),
-                    Number(precio.textContent.replace(/\D/g, ""))
-                );
-
-                boton.textContent = "Agregado ✓";
-
-                setTimeout(() => {
-                    boton.textContent = "Agregar al pedido";
-                }, 800);
-            });
-
-            cuerpo.appendChild(boton);
-        });
-
-    /*
-        Sumar, restar y eliminar productos.
-    */
-
-    lista.addEventListener("click", (evento) => {
-        const boton = evento.target.closest(
-            "button[data-accion]"
-        );
-
-        if (!boton) {
-            return;
-        }
-
-        const indice = Number(boton.dataset.indice);
-        const accion = boton.dataset.accion;
-
-        if (accion === "sumar") {
-            carrito[indice].cantidad++;
-        }
-
-        if (accion === "restar") {
-            carrito[indice].cantidad--;
-        }
-
-        if (
-            accion === "eliminar" ||
-            carrito[indice].cantidad === 0
-        ) {
-            carrito.splice(indice, 1);
-        }
-
-        actualizarCarrito();
-    });
-
-    /*
-        Vaciar el carrito.
-    */
-
-    botonVaciar.addEventListener("click", () => {
-        carrito = [];
-        actualizarCarrito();
-    });
-
-    /*
-        Pasar el pedido al formulario.
-    */
-
-    botonFinalizar.addEventListener("click", () => {
-        const detalle = carrito
-            .map(
-                (producto) =>
-                    `${producto.nombre} x${producto.cantidad}`
-            )
-            .join(", ");
-
-        const precioTotal = carrito.reduce(
-            (suma, producto) =>
-                suma + producto.precio * producto.cantidad,
-            0
-        );
-
-        const motivo = seleccionar("#motivo");
-        const mensaje = seleccionar("#mensaje");
-
-        if (motivo && mensaje) {
-            motivo.value = "pedido";
-
-            mensaje.value =
-                `Hola, quiero pedir para llevar: ${detalle}. ` +
-                `Total estimado: ${formatearPrecio(precioTotal)}.`;
-        }
-
-        bootstrap.Modal
-            .getOrCreateInstance(
-                seleccionar("#modalCarrito")
-            )
-            .hide();
-
-        seleccionar("#contacto")?.scrollIntoView({
-            behavior: "smooth"
-        });
-
-        seleccionar("#nombre")?.focus();
-    });
-
-    actualizarCarrito();
-});
 //SECCION NOSOTROS//
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -317,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function mostrarInfo(numero) {
         let informacion = document.getElementById("info" + numero);
 
+        if (!informacion) return;
+
         if (informacion.style.display === "none") {
             informacion.style.display = "block";
         } else {
@@ -335,8 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultado = document.getElementById("mensaje-formulario");
     const contador = document.getElementById("contador-mensaje");
 
+    if (!formulario || !nombre || !email || !motivo || !mensaje || !resultado || !contador) return;
+
     mensaje.addEventListener("input", () => {
-        contador.textContent = `${mensaje.value.length}/500 caracteres`;
+        contador.textContent = `${mensaje.value.length}/${mensaje.maxLength} caracteres`;
     });
 
     motivo.addEventListener("change", () => {
@@ -383,10 +138,9 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
         resultado.textContent =
-            `¡Gracias ${nombre.value.trim()}! Recibimos tu mensaje.`;
+            `¡Gracias ${nombre.value.trim()}! Tu mensaje es válido. Esta demo no realiza envíos.`;
 
         resultado.className = "alert alert-success mt-3";
-        formulario.reset();
-        contador.textContent = "0/500 caracteres";
+        // Conservamos el mensaje: no hubo un envío real.
     });
 });

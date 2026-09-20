@@ -1,680 +1,3065 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Aroma | Cafetería y productos artesanales</title>
-    <meta name="description"
-        content="Café Aroma es una cafetería dedicada a ofrecer café de calidad, productos artesanales y un espacio agradable para disfrutar.">
-    <meta name="keywords"
-        content="Café Aroma, cafetería, café, café artesanal, espresso, café con leche, medialunas, cafetería Tucumán">
-    <meta name="author" content="Café Aroma">
-    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="funcionalidades.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body style="font-family: 'Raleway', sans-serif;">
-    <header class="p-1" style="background-color: #6f4e37;">
-        <div class="container text-center">
-            <h1 class="display-6" style="color: #f5f0eb; font-family: 'Gloock', cursive;"><i
-                    class="fa-solid fa-mug-hot fa-sm"></i> Café Aroma </h1>
-        </div>
-    </header>
-
-    <nav class="sticky-top d-flex py-3 px-4" style="background-color: #d9b38c;">
-
-        <div class="d-flex justify-content-center flex-wrap flex-grow-1 gap-2 gap-md-4">
-            <a href="#inicio" class="nav-link fw-bold text-uppercase" style="color: #6f4e37;">Inicio</a>
-            <a href="#nosotros" class="nav-link fw-bold text-uppercase" style="color: #6f4e37;">Nosotros</a>
-            <a href="#productos" class="nav-link fw-bold text-uppercase" style="color: #6f4e37;">Productos</a>
-            <a href="#servicios" class="nav-link fw-bold text-uppercase" style="color: #6f4e37;">Servicios</a>
-            <a href="#contacto" class="nav-link fw-bold text-uppercase" style="color: #6f4e37;">Contacto</a>
-        </div>
-
-        <button type="button" class="nav-link fw-bold" style="color: #6f4e37;" data-bs-toggle="modal"
-            data-bs-target="#Login">
-            <i class="fa-solid fa-user fa-lg"></i>
-        </button>
-    </nav>
-
-    <div class="modal fade" id="Login" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content" style="background-color: #f5f0eb;">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold" style="color: #6f4e37;">Iniciar Sesión</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <input type="email" class="form-control mb-3" placeholder="Correo electrónico">
-                        <input type="password" class="form-control mb-3" placeholder="Contraseña">
-                        <button type="button" class="btn fw-bold text-white" style="background-color: #6f4e37;"
-                            data-bs-dismiss="modal">Entrar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Café Aroma | Cafetería y productos artesanales
+  </title>
+  <meta content="Café Aroma es una cafetería dedicada a ofrecer café de calidad, productos artesanales y un espacio agradable para disfrutar." name="description"/>
+  <meta content="Café Aroma, cafetería, café, café artesanal, espresso, café con leche, medialunas, cafetería Tucumán" name="keywords"/>
+  <meta content="Café Aroma" name="author"/>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script defer="" src="funcionalidades.js">
+  </script>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="productos.js">
+  </script>
+ </head>
+ <body>
+  <header class="p-1" style="background-color: #6f4e37;">
+   <div class="container text-center">
+    <h1 class="display-6" style="color: #f5f0eb; ">
+     <i class="fa-solid fa-mug-hot fa-sm">
+     </i>
+     Café Aroma
+    </h1>
+   </div>
+  </header>
+  <nav class="sticky-top d-flex py-3 px-4" style="background-color: #d9b38c;">
+   <div class="d-flex justify-content-center flex-wrap flex-grow-1 gap-2 gap-md-4">
+    <a class="nav-link fw-bold text-uppercase" href="#inicio" style="color: #6f4e37;">
+     Inicio
+    </a>
+    <a class="nav-link fw-bold text-uppercase" href="#nosotros" style="color: #6f4e37;">
+     Nosotros
+    </a>
+    <a class="nav-link fw-bold text-uppercase" href="#productos" style="color: #6f4e37;">
+     Productos
+    </a>
+    <a class="nav-link fw-bold text-uppercase" href="#servicios" style="color: #6f4e37;">
+     Servicios
+    </a>
+    <a class="nav-link fw-bold text-uppercase" href="#contacto" style="color: #6f4e37;">
+     Contacto
+    </a>
+   </div>
+   <button class="nav-link fw-bold" data-bs-target="#Login" data-bs-toggle="modal" style="color: #6f4e37;" type="button">
+    <i class="fa-solid fa-user fa-lg">
+    </i>
+   </button>
+  </nav>
+  <div aria-hidden="true" class="modal fade" id="Login" tabindex="-1">
+   <div class="modal-dialog">
+    <div class="modal-content" style="background-color: #f5f0eb;">
+     <div class="modal-header">
+      <h5 class="modal-title fw-bold" style="color: #6f4e37;">
+       Iniciar Sesión
+      </h5>
+      <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button">
+      </button>
+     </div>
+     <div class="modal-body">
+      <form>
+       <input class="form-control mb-3" placeholder="Correo electrónico" type="email"/>
+       <input class="form-control mb-3" placeholder="Contraseña" type="password"/>
+       <button class="btn fw-bold text-white" data-bs-dismiss="modal" style="background-color: #6f4e37;" type="button">
+        Entrar
+       </button>
+      </form>
+     </div>
     </div>
-
-    <main>
-        <section id="inicio" class="text-center p-0"
-            style="background-image: url('imagenes/blog-2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-            <div class="bg-dark bg-opacity-75 w-100 px-3 py-5">
-                <h2 id="mensaje-bienvenida" class="display-6 fw-bold mb-2" style="color: #f5f0eb;">Bienvenidos a Café
+   </div>
+  </div>
+  <main>
+   <section class="text-center p-0" id="inicio" style="background-image: url('imagenes/blog-2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="bg-dark bg-opacity-75 w-100 px-3 py-5">
+     <h2 class="display-6 fw-bold mb-2" id="mensaje-bienvenida" style="color: #f5f0eb;">
+      Bienvenidos a Café
                     Aroma
-                </h2>
-
-                <p class="fs-5 mb-2" style="color: #d9b38c;"> Somos una cafetería dedicada a ofrecer café de
-                    calidad y productos artesanales.</p>
-
-                <div class="row justify-content-center">
-                    <div class="col-md-10">
-                        <p class="fs-5 mb-0" style="color: #ebd8c3;"> Nuestro objetivo es que cada visita sea una
-                            experiencia especial y que nuestros clientes puedan sentirse como en casa.</p>
-                    </div>
-                </div>
-
-                <div class="mt-4">
-                    <button id="btn-recomendacion" class="btn fw-bold"
-                        style="background-color: #d9b38c; color: #6f4e37;">
-                        Sorprendeme <i class="fa-solid fa-caret-down"></i>
-                    </button>
-                    <div class="d-flex align-items-center justify-content-center mt-6" style="min-height: 80px;">
-                        <p id="texto-recomendacion" class="fs-5 fw-bold mb-0" style="color: #d9b38c;"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="nosotros" class="py-5" style="background-color: #faf5f0;" aria-labelledby="titulo-nosotros">
-
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 id="titulo-nosotros" class="display-5 fw-bold mb-3" style="color: #5c3826;">
-                        Sobre Café Aroma
-                    </h2>
-                    <p class="lead mt-4 mx-auto" style="max-width: 850px; color: #6b4532;">
-                        Conocé nuestra cafetería y nuestra pasión por el café artesanal.
-                    </p>
-                </div>
-
-                <div class="row g-4 align-items-stretch">
-
-                    <div class="col-12 col-lg-6">
-                        <article class="text-center rounded-4 shadow-sm p-4 p-md-5 h-100"
-                            style="background-color: #ead9cc; color: #5c3826;">
-
-                            <p class="lead mb-4">
-                                <strong>Café Aroma</strong> nació con la idea de crear un lugar
+     </h2>
+     <p class="fs-5 mb-2" style="color: #d9b38c;">
+      Somos una cafetería dedicada a ofrecer café de
+                    calidad y productos artesanales.
+     </p>
+     <div class="row justify-content-center">
+      <div class="col-md-10">
+       <p class="fs-5 mb-0" style="color: #ebd8c3;">
+        Nuestro objetivo es que cada visita sea una
+                            experiencia especial y que nuestros clientes puedan sentirse como en casa.
+       </p>
+      </div>
+     </div>
+     <div class="mt-4">
+      <button class="btn fw-bold" id="btn-recomendacion" style="background-color: #d9b38c; color: #6f4e37;">
+       Sorprendeme
+       <i class="fa-solid fa-caret-down">
+       </i>
+      </button>
+      <div class="d-flex align-items-center justify-content-center mt-6" style="min-height: 80px;">
+       <p class="fs-5 fw-bold mb-0" id="texto-recomendacion" style="color: #d9b38c;">
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section aria-labelledby="titulo-nosotros" class="py-5" id="nosotros" style="background-color: #faf5f0;">
+    <div class="container">
+     <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold mb-3" id="titulo-nosotros" style="color: #5c3826;">
+       Sobre Café Aroma
+      </h2>
+      <p class="lead mt-4 mx-auto" style="max-width: 850px; color: #6b4532;">
+       Conocé nuestra cafetería y nuestra pasión por el café artesanal.
+      </p>
+     </div>
+     <div class="row g-4 align-items-stretch">
+      <div class="col-12 col-lg-6">
+       <article class="text-center rounded-4 shadow-sm p-4 p-md-5 h-100" style="background-color: #ead9cc; color: #5c3826;">
+        <p class="lead mb-4">
+         <strong>
+          Café Aroma
+         </strong>
+         nació con la idea de crear un lugar
                                 donde las personas puedan reunirse, compartir y disfrutar de un
                                 café preparado con dedicación.
-                            </p>
-                            <p class="mb-0 fs-5">
-                                Trabajamos para ofrecer productos de calidad y una atención personalizada,
+        </p>
+        <p class="mb-0 fs-5">
+         Trabajamos para ofrecer productos de calidad y una atención personalizada,
                                 buscando que cada cliente tenga una buena experiencia.
-                            </p>
-                            <p id="texto-extra-nosotros" class="fs-5 mt-4 d-none">
-                                En Café Aroma buscamos combinar la tradición del café artesanal
+        </p>
+        <p class="fs-5 mt-4 d-none" id="texto-extra-nosotros">
+         En Café Aroma buscamos combinar la tradición del café artesanal
                                 con un espacio moderno y cálido, donde cada visita sea una experiencia
                                 especial para nuestros clientes.
-                            </p>
-                            <button id="btn-nosotros" type="button" class="btn mt-4"
-                                style="background-color: #8b5e3c; color: white;">
-                                Conocé más sobre nosotros
-                            </button>
-                        </article>
-                    </div>
-
-                    <div class="col-12 col-lg-6 d-flex flex-column gap-4">
-                        <article class="card flex-fill border-0 shadow-sm rounded-4 text-center"
-                            style="background-color: #ead9cc;">
-                            <div class="card-body p-4 p-lg-5">
-                                <i class="fa-solid fa-bullseye" style="color: #966643; font-size: 2.5rem;"></i>
-                                <h3 class="h2 fw-bold mb-3" style="color: #5c3826;">
-                                    Nuestro objetivo
-                                </h3>
-                                <p class="fs-5 mb-0" style="color: #6b4532;">
-                                    Ofrecer café y productos artesanales de calidad
+        </p>
+        <button class="btn mt-4" id="btn-nosotros" style="background-color: #8b5e3c; color: white;" type="button">
+         Conocé más sobre nosotros
+        </button>
+       </article>
+      </div>
+      <div class="col-12 col-lg-6 d-flex flex-column gap-4">
+       <article class="card flex-fill border-0 shadow-sm rounded-4 text-center" style="background-color: #ead9cc;">
+        <div class="card-body p-4 p-lg-5">
+         <i class="fa-solid fa-bullseye" style="color: #966643; font-size: 2.5rem;">
+         </i>
+         <h3 class="h2 fw-bold mb-3" style="color: #5c3826;">
+          Nuestro objetivo
+         </h3>
+         <p class="fs-5 mb-0" style="color: #6b4532;">
+          Ofrecer café y productos artesanales de calidad
                                     en un ambiente cómodo, agradable y pensado
                                     para nuestros clientes.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="card flex-fill border-0 shadow-sm rounded-4 text-center"
-                            style="background-color: #f4dfe0;">
-
-                            <div class="card-body p-3 p-lg-4">
-                                <i class="fa-regular fa-heart mb-3" style="color: #d8898f; font-size: 2.2rem;"></i>
-                                <h3 class="h2 fw-bold mb-2" style="color: #5c3826;">
-                                    Nuestros valores
-                                </h3>
-                                <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
-                                    <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros"
-                                        data-descripcion="Seleccionamos productos de calidad para ofrecer una mejor experiencia."
-                                        style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
-                                        Calidad
-                                    </span>
-                                    <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros"
-                                        data-descripcion="Buscamos brindar una atención amable y personalizada a cada cliente."
-                                        style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
-                                        Atención al cliente
-                                    </span>
-                                    <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros"
-                                        data-descripcion="Trabajamos con productos frescos para mantener la calidad de nuestras preparaciones."
-                                        style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
-                                        Productos frescos
-                                    </span>
-                                    <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros"
-                                        data-descripcion="Estamos comprometidos con ofrecer una buena experiencia en cada visita."
-                                        style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
-                                        Compromiso
-                                    </span>
-                                    <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros"
-                                        data-descripcion="Trabajamos de manera responsable para mantener la confianza de nuestros clientes."
-                                        style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
-                                        Responsabilidad
-                                    </span>
-                                </div>
-                                <p id="descripcion-valor" class="mt-3 mb-0 fs-6" style="color: #6b4532;">
-                                    Seleccioná uno de nuestros valores para conocer más.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="productos" class="container py-5 my-5 rounded-4 shadow-sm" style="background-color: #f5f0eb;">
-
-            <div class="text-center mb-5">
-                <h2 class="display-6 fw-bold mb-3" style="color: #6f4e37;">
-                    Nuestros productos
-                </h2>
-
-                <p class="lead mx-auto mb-0" style="max-width: 650px; color: #555;">
-                    Conocé algunos de los productos que podés encontrar
-                    en Café Aroma.
-                </p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                        <img src="imagenes/img1.jpg" class="card-img-top object-fit-cover"
-                            alt="Café espresso artesanal servido en una taza" style="height: 220px;">
-                        <div class="card-body d-flex flex-column text-center p-4">
-                            <h3 class="card-title h5 fw-bold mb-3" style="color: #6f4e37;">
-                                Café Espresso
-                            </h3>
-                            <p class="card-text flex-grow-1">
-                                Café intenso y aromático, preparado con granos
-                                seleccionados para disfrutar su sabor.
-                            </p>
-                            <p class="fw-bold fs-5 mb-0" style="color: #6f4e37;">
-                                $2000
-                            </p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                        <img src="imagenes/img9.jpg" class="card-img-top object-fit-cover"
-                            alt="Café con leche caliente servido en una taza" style="height: 220px;">
-
-                        <div class="card-body d-flex flex-column text-center p-4">
-                            <h3 class="card-title h5 fw-bold mb-3" style="color: #6f4e37;">
-                                Café con leche
-                            </h3>
-                            <p class="card-text flex-grow-1">
-                                Una combinación de café y leche caliente,
-                                ideal para comenzar el día.
-                            </p>
-                            <p class="fw-bold fs-5 mb-0" style="color: #6f4e37;">
-                                $2500
-                            </p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                        <img src="imagenes/img3.jpg" class="card-img-top object-fit-cover"
-                            alt="Medialunas recién horneadas de Café Aroma" style="height: 220px;">
-
-                        <div class="card-body d-flex flex-column text-center p-4">
-                            <h3 class="card-title h5 fw-bold mb-3" style="color: #6f4e37;">
-                                Medialunas
-                            </h3>
-                            <p class="card-text flex-grow-1">
-                                Medialunas recién horneadas, ideales para
-                                acompañar nuestros cafés.
-                            </p>
-                            <p class="fw-bold fs-5 mb-0" style="color: #6f4e37;">
-                                $500
-                            </p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                        <img src="imagenes/img4.jpg" class="card-img-top object-fit-cover"
-                            alt="Taza de café americano artesanal de Café Aroma" style="height: 220px;">
-
-                        <div class="card-body d-flex flex-column text-center p-4">
-                            <h3 class="card-title h5 fw-bold mb-3" style="color: #6f4e37;">
-                                Café Americano
-                            </h3>
-                            <p class="card-text flex-grow-1">
-                                Café suave y equilibrado para quienes prefieren
-                                disfrutar una bebida de sabor más ligero.
-                            </p>
-                            <p class="fw-bold fs-5 mb-0" style="color: #6f4e37;">
-                                $2200
-                            </p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                        <img src="imagenes/img5.jpg" class="card-img-top object-fit-cover"
-                            alt="Café frío artesanal preparado por Café Aroma" style="height: 220px;">
-
-                        <div class="card-body d-flex flex-column text-center p-4">
-                            <h3 class="card-title h5 fw-bold mb-3" style="color: #6f4e37;">
-                                Café Frío
-                            </h3>
-                            <p class="card-text flex-grow-1">
-                                Una opción refrescante para disfrutar el sabor
-                                del café en los días más calurosos.
-                            </p>
-                            <p class="fw-bold fs-5 mb-0" style="color: #6f4e37;">
-                                $2800
-                            </p>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                        <img src="imagenes/img6.jpg" class="card-img-top object-fit-cover"
-                            alt="Productos de panadería artesanal frescos de Café Aroma" style="height: 220px;">
-
-                        <div class="card-body d-flex flex-column text-center p-4">
-                            <h3 class="card-title h5 fw-bold mb-3" style="color: #6f4e37;">
-                                Panificados
-                            </h3>
-                            <p class="card-text flex-grow-1">
-                                Productos de panadería frescos para acompañar
-                                tu café favorito.
-                            </p>
-                            <p class="fw-bold fs-5 mb-0" style="color: #6f4e37;">
-                                Desde $500
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <button id="btn-abrir-carrito" type="button" class="btn btn-danger position-fixed bottom-0 end-0 m-4 shadow z-3"
-            data-bs-toggle="modal" data-bs-target="#modalCarrito" aria-label="Abrir carrito de compras">
-            <i class="fa-solid fa-cart-shopping fa-xl"></i>
-
-            <span id="cantidad-carrito" class="badge rounded-pill bg-dark">
-                0
-            </span>
-        </button>
-
-        <div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="tituloModalCarrito" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header text-black" style="background-color: #d9b38c;">
-                        <h2 class="modal-title fs-4" id="tituloModalCarrito">
-                            Pedido para llevar
-                        </h2>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                            aria-label="Cerrar"></button>
-                    </div>
-
-                    <div class="modal-body">
-                        <p id="carrito-vacio" class="text-secondary">
-                            Todavía no agregaste productos.
-                        </p>
-                        <div id="lista-carrito" class="list-group mb-3" aria-live="polite"></div>
-                        <div class="d-flex justify-content-between align-items-center border-top pt-3">
-                            <strong class="fs-5">
-                                Total
-                            </strong>
-                            <strong id="total-carrito" class="fs-4 text-dark">
-                                $0
-                            </strong>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button id="vaciar-carrito" type="button" class="btn btn-outline-danger">
-                            Vaciar carrito
-                        </button>
-                        <button id="finalizar-carrito" type="button" class="btn btn-dark">
-                            Continuar pedido
-                        </button>
-                    </div>
-                </div>
-            </div>
+         </p>
         </div>
-
-        <section id="servicios" class="py-5 bg-light">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bold mb-3" style="color: #5c3826;">
-                        Nuestros servicios
-                    </h2>
-                    <p class="lead text-muted">
-                        En Café Aroma ofrecemos diferentes opciones para que disfrutes
+       </article>
+       <article class="card flex-fill border-0 shadow-sm rounded-4 text-center" style="background-color: #f4dfe0;">
+        <div class="card-body p-3 p-lg-4">
+         <i class="fa-regular fa-heart mb-3" style="color: #d8898f; font-size: 2.2rem;">
+         </i>
+         <h3 class="h2 fw-bold mb-2" style="color: #5c3826;">
+          Nuestros valores
+         </h3>
+         <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+          <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros" data-descripcion="Seleccionamos productos de calidad para ofrecer una mejor experiencia." style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
+           Calidad
+          </span>
+          <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros" data-descripcion="Buscamos brindar una atención amable y personalizada a cada cliente." style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
+           Atención al cliente
+          </span>
+          <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros" data-descripcion="Trabajamos con productos frescos para mantener la calidad de nuestras preparaciones." style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
+           Productos frescos
+          </span>
+          <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros" data-descripcion="Estamos comprometidos con ofrecer una buena experiencia en cada visita." style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
+           Compromiso
+          </span>
+          <span class="badge rounded-pill px-3 py-2 fs-6 fw-normal valor-nosotros" data-descripcion="Trabajamos de manera responsable para mantener la confianza de nuestros clientes." style="background-color: #edc9cb; color: #4d3024; cursor: pointer;">
+           Responsabilidad
+          </span>
+         </div>
+         <p class="mt-3 mb-0 fs-6" id="descripcion-valor" style="color: #6b4532;">
+          Seleccioná uno de nuestros valores para conocer más.
+         </p>
+        </div>
+       </article>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section aria-labelledby="titulo-productos" class="py-5" id="productos">
+    <div class="container">
+     <div class="row align-items-end g-4 mb-4">
+      <div class="col-lg-8">
+       <p class="aroma-eyebrow mb-2">
+        LA CARTA · CAFÉ AROMA
+       </p>
+       <h2 class="display-4 mb-3" id="titulo-productos">
+        Elegí. Sumá. Disfrutá.
+       </h2>
+       <p class="lead mb-0">
+        Tus favoritos de Café Aroma, en un solo pedido. Descubrí las promos o explorá nuestra carta.
+       </p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+       <button class="btn btn-aroma btn-lg" data-bs-target="#modalCarrito" data-bs-toggle="modal" type="button">
+        Ver mi pedido
+        <span class="badge bg-light text-dark ms-2" id="cantidad-productos">
+         0
+        </span>
+       </button>
+      </div>
+     </div>
+     <div class="d-none alert aroma-alerta-en-curso" id="aviso-pedido-en-curso">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+       <span id="texto-pedido-en-curso">
+       </span>
+       <button class="btn btn-aroma" data-bs-target="#modalCarrito" data-bs-toggle="modal" type="button">
+        Ver estado del pedido
+       </button>
+      </div>
+     </div>
+     <div aria-labelledby="titulo-promos" class="mb-4">
+      <div class="d-flex justify-content-between align-items-end gap-3 mb-3">
+       <div>
+        <p class="aroma-eyebrow mb-1">
+         PARA COMPARTIR
+        </p>
+        <h3 class="h2 mb-0" id="titulo-promos">
+         Una buena pausa, por dos.
+        </h3>
+       </div>
+       <span class="small text-secondary">
+        6 promos
+       </span>
+      </div>
+      <div aria-label="Promociones de Café Aroma" aria-roledescription="carrusel" class="carousel slide aroma-promos" data-bs-interval="false" id="promos-productos" role="region">
+       <div class="carousel-inner rounded-4">
+        <div aria-label="1 de 6" aria-roledescription="diapositiva" class="carousel-item active" role="group">
+         <article class="row g-0">
+          <div class="col-md-6 aroma-promo-foto">
+           <img alt="Foto ilustrativa de cafetería para Promo 1" class="w-100 h-100 object-fit-cover" height="600" loading="eager" src="imagenes/promo-1.jpg" width="800"/>
+           <span class="aroma-foto-nota">
+            Imagen ilustrativa
+           </span>
+          </div>
+          <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center aroma-promo-cuerpo">
+           <p class="aroma-eyebrow mb-2">
+            MOMENTOS PARA COMPARTIR
+           </p>
+           <h4 class="display-6 mb-3">
+            Promo 1
+           </h4>
+           <p class="mb-4">
+            2 infusiones, 2 medialunas con jamón y queso, 2 yogurts con granola y 2 jugos de naranja.
+           </p>
+           <div class="d-flex flex-wrap align-items-center gap-3 mt-auto">
+            <strong class="fs-2" data-precio-promo="promo-1">
+             $21.000
+            </strong>
+            <button aria-label="Agregar Promo 1 al pedido" class="btn btn-aroma" data-agregar="promo-1" type="button">
+             Agregar promo
+            </button>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div aria-label="2 de 6" aria-roledescription="diapositiva" class="carousel-item" role="group">
+         <article class="row g-0">
+          <div class="col-md-6 aroma-promo-foto">
+           <img alt="Foto ilustrativa de cafetería para Promo 2" class="w-100 h-100 object-fit-cover" height="600" loading="lazy" src="imagenes/promo-2.jpg" width="800"/>
+           <span class="aroma-foto-nota">
+            Imagen ilustrativa
+           </span>
+          </div>
+          <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center aroma-promo-cuerpo">
+           <p class="aroma-eyebrow mb-2">
+            MOMENTOS PARA COMPARTIR
+           </p>
+           <h4 class="display-6 mb-3">
+            Promo 2
+           </h4>
+           <p class="mb-4">
+            2 infusiones, 2 tostadas, huevos revueltos, jamón y queso y 2 jugos de naranja.
+           </p>
+           <div class="d-flex flex-wrap align-items-center gap-3 mt-auto">
+            <strong class="fs-2" data-precio-promo="promo-2">
+             $22.000
+            </strong>
+            <button aria-label="Agregar Promo 2 al pedido" class="btn btn-aroma" data-agregar="promo-2" type="button">
+             Agregar promo
+            </button>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div aria-label="3 de 6" aria-roledescription="diapositiva" class="carousel-item" role="group">
+         <article class="row g-0">
+          <div class="col-md-6 aroma-promo-foto">
+           <img alt="Foto ilustrativa de cafetería para Promo 3" class="w-100 h-100 object-fit-cover" height="600" loading="lazy" src="imagenes/promo-3.jpg" width="800"/>
+           <span class="aroma-foto-nota">
+            Imagen ilustrativa
+           </span>
+          </div>
+          <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center aroma-promo-cuerpo">
+           <p class="aroma-eyebrow mb-2">
+            MOMENTOS PARA COMPARTIR
+           </p>
+           <h4 class="display-6 mb-3">
+            Promo 3
+           </h4>
+           <p class="mb-4">
+            2 infusiones, 2 cuadrados dulces, tostado de jamón y queso y 2 ensaladas de frutas.
+           </p>
+           <div class="d-flex flex-wrap align-items-center gap-3 mt-auto">
+            <strong class="fs-2" data-precio-promo="promo-3">
+             $23.000
+            </strong>
+            <button aria-label="Agregar Promo 3 al pedido" class="btn btn-aroma" data-agregar="promo-3" type="button">
+             Agregar promo
+            </button>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div aria-label="4 de 6" aria-roledescription="diapositiva" class="carousel-item" role="group">
+         <article class="row g-0">
+          <div class="col-md-6 aroma-promo-foto">
+           <img alt="Foto ilustrativa de cafetería para Promo 4" class="w-100 h-100 object-fit-cover" height="600" loading="lazy" src="imagenes/promo-4.jpg" width="800"/>
+           <span class="aroma-foto-nota">
+            Imagen ilustrativa
+           </span>
+          </div>
+          <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center aroma-promo-cuerpo">
+           <p class="aroma-eyebrow mb-2">
+            MOMENTOS PARA COMPARTIR
+           </p>
+           <h4 class="display-6 mb-3">
+            Promo 4
+           </h4>
+           <p class="mb-4">
+            2 infusiones, 4 pancakes de avena, banana y miel y 2 yogurts con granola.
+           </p>
+           <div class="d-flex flex-wrap align-items-center gap-3 mt-auto">
+            <strong class="fs-2" data-precio-promo="promo-4">
+             $24.000
+            </strong>
+            <button aria-label="Agregar Promo 4 al pedido" class="btn btn-aroma" data-agregar="promo-4" type="button">
+             Agregar promo
+            </button>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div aria-label="5 de 6" aria-roledescription="diapositiva" class="carousel-item" role="group">
+         <article class="row g-0">
+          <div class="col-md-6 aroma-promo-foto">
+           <img alt="Foto ilustrativa de cafetería para Promo 5" class="w-100 h-100 object-fit-cover" height="600" loading="lazy" src="imagenes/promo-5.jpg" width="800"/>
+           <span class="aroma-foto-nota">
+            Imagen ilustrativa
+           </span>
+          </div>
+          <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center aroma-promo-cuerpo">
+           <p class="aroma-eyebrow mb-2">
+            MOMENTOS PARA COMPARTIR
+           </p>
+           <h4 class="display-6 mb-3">
+            Promo 5
+           </h4>
+           <p class="mb-4">
+            2 licuados o smoothies y tostado de jamón y queso.
+           </p>
+           <div class="d-flex flex-wrap align-items-center gap-3 mt-auto">
+            <strong class="fs-2" data-precio-promo="promo-5">
+             $18.000
+            </strong>
+            <button aria-label="Agregar Promo 5 al pedido" class="btn btn-aroma" data-agregar="promo-5" type="button">
+             Agregar promo
+            </button>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div aria-label="6 de 6" aria-roledescription="diapositiva" class="carousel-item" role="group">
+         <article class="row g-0">
+          <div class="col-md-6 aroma-promo-foto">
+           <img alt="Foto ilustrativa de cafetería para Promo Keto" class="w-100 h-100 object-fit-cover" height="600" loading="lazy" src="imagenes/promo-6.jpg" width="800"/>
+           <span class="aroma-foto-nota">
+            Imagen ilustrativa
+           </span>
+          </div>
+          <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center aroma-promo-cuerpo">
+           <p class="aroma-eyebrow mb-2">
+            MOMENTOS PARA COMPARTIR
+           </p>
+           <h4 class="display-6 mb-3">
+            Promo Keto
+           </h4>
+           <p class="mb-4">
+            2 infusiones, huevo revuelto, palta, panceta, cherries, queso en cubos y tostadas.
+           </p>
+           <div class="d-flex flex-wrap align-items-center gap-3 mt-auto">
+            <strong class="fs-2" data-precio-promo="promo-keto">
+             $26.000
+            </strong>
+            <button aria-label="Agregar Promo Keto al pedido" class="btn btn-aroma" data-agregar="promo-keto" type="button">
+             Agregar promo
+            </button>
+           </div>
+          </div>
+         </article>
+        </div>
+       </div>
+       <div class="d-flex justify-content-between align-items-center gap-3 p-3 aroma-carousel-controles">
+        <button aria-label="Promoción anterior" class="btn btn-outline-secondary" data-bs-slide="prev" data-bs-target="#promos-productos" type="button">
+         ← Anterior
+        </button>
+        <span class="small" id="estado-promos" role="status">
+         Promo 1 de 6
+        </span>
+        <button aria-label="Promoción siguiente" class="btn btn-outline-secondary" data-bs-slide="next" data-bs-target="#promos-productos" type="button">
+         Siguiente →
+        </button>
+       </div>
+      </div>
+     </div>
+     <div class="aroma-pedido-intro p-4 rounded-4">
+      <ol aria-label="Cómo preparar tu pedido" class="pedido-pasos list-unstyled mb-4">
+       <li>
+        <span>
+         01
+        </span>
+        <strong>
+         Elegí tus favoritos
+        </strong>
+       </li>
+       <li>
+        <span>
+         02
+        </span>
+        <strong>
+         Revisá tu pedido
+        </strong>
+       </li>
+       <li>
+        <span>
+         03
+        </span>
+        <strong>
+         Prepará tu pedido
+        </strong>
+       </li>
+      </ol>
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+       <div>
+        <h3 class="h4 mb-1">
+         ¿Qué te gustaría pedir hoy?
+        </h3>
+        <p class="mb-0 text-secondary">
+         Cafés, meriendas, platos y algo rico para compartir.
+        </p>
+       </div>
+       <button aria-controls="carta-productos" aria-expanded="false" class="btn btn-aroma btn-lg" data-bs-target="#carta-productos" data-bs-toggle="collapse" id="btn-ver-carta" type="button">
+        Ver carta y armar pedido
+       </button>
+      </div>
+     </div>
+     <div aria-labelledby="titulo-carta" class="collapse" id="carta-productos">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4 pt-4">
+       <div>
+        <p class="aroma-eyebrow mb-1">
+         ARMÁ TU PEDIDO
+        </p>
+        <h3 class="h2 mb-0" id="titulo-carta">
+         Nuestra carta
+        </h3>
+       </div>
+       <button class="btn btn-aroma" data-bs-target="#modalCarrito" data-bs-toggle="modal" type="button">
+        Revisar pedido ·
+        <span id="total-resumen">
+         $0
+        </span>
+       </button>
+      </div>
+      <div class="aroma-toolbar p-3 p-md-4 mb-4">
+       <div class="row g-3 mb-3">
+        <div class="col-md-8">
+         <label class="form-label fw-semibold" for="buscar-producto">
+          ¿Qué te gustaría disfrutar?
+         </label>
+         <input aria-controls="catalogo-productos" class="form-control" id="buscar-producto" placeholder="Buscá café, Nutella, pizzas…" type="search"/>
+        </div>
+        <div class="col-md-4">
+         <label class="form-label fw-semibold" for="orden-productos">
+          Ordenar por
+         </label>
+         <select aria-controls="catalogo-productos" class="form-select" id="orden-productos">
+          <option value="original">
+           Orden de la carta
+          </option>
+          <option value="menor">
+           Menor precio
+          </option>
+          <option value="mayor">
+           Mayor precio
+          </option>
+          <option value="nombre">
+           Nombre: A–Z
+          </option>
+         </select>
+        </div>
+       </div>
+       <div aria-label="Filtrar por categoría" class="d-flex flex-wrap gap-2" id="filtros-productos" role="group">
+        <button aria-pressed="true" class="btn btn-filtro active" data-categoria="todos" type="button">
+         Todos
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="calientes" type="button">
+         Cafetería
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="frios" type="button">
+         Cafés fríos
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="panaderia" type="button">
+         Panadería
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="desayunos" type="button">
+         Desayunos y meriendas
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="promos" type="button">
+         Promos y cumpleaños
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="pasteleria" type="button">
+         Pastelería
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="refrescantes" type="button">
+         Refrescantes
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="smoothies" type="button">
+         Smoothies
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="principales" type="button">
+         Platos principales
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="pizzas" type="button">
+         Pizzas
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="sandwiches" type="button">
+         Sándwiches
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="guarniciones" type="button">
+         Ensaladas y guarniciones
+        </button>
+        <button aria-pressed="false" class="btn btn-filtro" data-categoria="bebidas" type="button">
+         Bebidas
+        </button>
+       </div>
+      </div>
+      <p class="small text-secondary" id="resultado-productos" role="status">
+       94 productos y opciones en la carta
+      </p>
+      <div class="row g-4" id="catalogo-productos">
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Café Espresso" data-precio="3500" data-producto="espresso">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFÉ CALIENTE
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Café Espresso
+          </h3>
+          <p class="card-text flex-grow-1">
+           Café intenso y aromático, preparado con granos
+                                seleccionados para disfrutar su sabor.
+          </p>
+          <p class="aroma-precio fs-4 fw-bold mb-3">
+           $3.500
+          </p>
+          <button aria-label="Agregar Café Espresso al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="espresso" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Café con leche" data-precio="4500" data-producto="con-leche">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFÉ CALIENTE
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Café con leche
+          </h3>
+          <p class="card-text flex-grow-1">
+           Una combinación de café y leche caliente,
+                                ideal para comenzar el día.
+          </p>
+          <p class="aroma-precio fs-4 fw-bold mb-3">
+           $4.500
+          </p>
+          <button aria-label="Agregar Café con leche al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="con-leche" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="panaderia" data-desde="false" data-nombre="Medialunas" data-precio="1500" data-producto="medialunas">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PANADERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Medialunas
+          </h3>
+          <p class="card-text flex-grow-1">
+           Medialunas recién horneadas, ideales para
+                                acompañar nuestros cafés.
+          </p>
+          <p class="aroma-precio fs-4 fw-bold mb-3">
+           $1.500
+          </p>
+          <button aria-label="Agregar Medialunas al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="medialunas" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Café Americano" data-precio="3800" data-producto="americano">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFÉ CALIENTE
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Café Americano
+          </h3>
+          <p class="card-text flex-grow-1">
+           Café suave y equilibrado para quienes prefieren
+                                disfrutar una bebida de sabor más ligero.
+          </p>
+          <p class="aroma-precio fs-4 fw-bold mb-3">
+           $3.800
+          </p>
+          <button aria-label="Agregar Café Americano al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="americano" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="frios" data-desde="false" data-nombre="Café Frío" data-precio="5000" data-producto="frio">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFÉ FRÍO
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Café Frío
+          </h3>
+          <p class="card-text flex-grow-1">
+           Una opción refrescante para disfrutar el sabor
+                                del café en los días más calurosos.
+          </p>
+          <p class="aroma-precio fs-4 fw-bold mb-3">
+           $5.000
+          </p>
+          <button aria-label="Agregar Café Frío al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="frio" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="panaderia" data-desde="false" data-nombre="Panificados" data-precio="1500" data-producto="panificados">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PANADERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Panificados
+          </h3>
+          <p class="card-text flex-grow-1">
+           Unidad de panificado simple. Consultá las variedades disponibles.
+          </p>
+          <p class="aroma-precio fs-4 fw-bold mb-3">
+           $1.500
+          </p>
+          <button aria-label="Agregar Panificados al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="panificados" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Jarrita" data-precio="3800" data-producto="jarrita">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFETERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Jarrita
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $3.800
+          </p>
+          <button aria-label="Agregar Jarrita al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="jarrita" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Submarino" data-precio="4800" data-producto="submarino">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFETERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Submarino
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $4.800
+          </p>
+          <button aria-label="Agregar Submarino al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="submarino" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Capuccino" data-precio="5000" data-producto="capuccino">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFETERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Capuccino
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.000
+          </p>
+          <button aria-label="Agregar Capuccino al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="capuccino" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Café doble" data-precio="4200" data-producto="cafe-doble">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFETERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Café doble
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $4.200
+          </p>
+          <button aria-label="Agregar Café doble al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="cafe-doble" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Chocolatada" data-precio="4500" data-producto="chocolatada">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFETERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Chocolatada
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $4.500
+          </p>
+          <button aria-label="Agregar Chocolatada al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="chocolatada" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Té / mate" data-precio="3200" data-producto="te-mate">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFETERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Té / mate
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $3.200
+          </p>
+          <button aria-label="Agregar Té / mate al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="te-mate" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Latte vainilla" data-precio="5500" data-producto="latte-vainilla">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFETERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Latte vainilla
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.500
+          </p>
+          <button aria-label="Agregar Latte vainilla al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="latte-vainilla" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Latte caramel" data-precio="5500" data-producto="latte-caramel">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFETERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Latte caramel
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.500
+          </p>
+          <button aria-label="Agregar Latte caramel al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="latte-caramel" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Latte caramel macchiato" data-precio="6000" data-producto="latte-caramel-macchiato">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFETERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Latte caramel macchiato
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.000
+          </p>
+          <button aria-label="Agregar Latte caramel macchiato al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="latte-caramel-macchiato" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="calientes" data-desde="false" data-nombre="Latte Nutella" data-precio="6500" data-producto="latte-nutella">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFETERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Latte Nutella
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.500
+          </p>
+          <button aria-label="Agregar Latte Nutella al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="latte-nutella" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="frios" data-desde="false" data-nombre="Iced coffee" data-precio="4500" data-producto="iced-coffee">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFÉS FRÍOS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Iced coffee
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $4.500
+          </p>
+          <button aria-label="Agregar Iced coffee al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="iced-coffee" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="frios" data-desde="false" data-nombre="Iced latte" data-precio="5500" data-producto="iced-latte">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFÉS FRÍOS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Iced latte
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.500
+          </p>
+          <button aria-label="Agregar Iced latte al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="iced-latte" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="frios" data-desde="false" data-nombre="Frapuccino" data-precio="6500" data-producto="frapuccino">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           CAFÉS FRÍOS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Frapuccino
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.500
+          </p>
+          <button aria-label="Agregar Frapuccino al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="frapuccino" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="desayunos" data-desde="false" data-nombre="Avocado" data-precio="10500" data-producto="avocado">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           DESAYUNOS Y MERIENDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Avocado
+          </h3>
+          <p class="card-text flex-grow-1">
+           Tostón, huevo revuelto, palta y queso crema. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $10.500
+          </p>
+          <button aria-label="Agregar Avocado al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="avocado" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="desayunos" data-desde="false" data-nombre="Tradicional" data-precio="6500" data-producto="tradicional">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           DESAYUNOS Y MERIENDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Tradicional
+          </h3>
+          <p class="card-text flex-grow-1">
+           Medialunas o tortillas. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.500
+          </p>
+          <button aria-label="Agregar Tradicional al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="tradicional" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="desayunos" data-desde="false" data-nombre="Light" data-precio="7500" data-producto="light">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           DESAYUNOS Y MERIENDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Light
+          </h3>
+          <p class="card-text flex-grow-1">
+           Pan tostado, queso crema y mermelada. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $7.500
+          </p>
+          <button aria-label="Agregar Light al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="light" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="desayunos" data-desde="false" data-nombre="Mafalda" data-precio="8500" data-producto="mafalda">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           DESAYUNOS Y MERIENDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Mafalda
+          </h3>
+          <p class="card-text flex-grow-1">
+           Dos medialunas con jamón y queso. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $8.500
+          </p>
+          <button aria-label="Agregar Mafalda al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="mafalda" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="desayunos" data-desde="false" data-nombre="De campo" data-precio="7500" data-producto="de-campo">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           DESAYUNOS Y MERIENDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           De campo
+          </h3>
+          <p class="card-text flex-grow-1">
+           Tostón, dulce de leche y manteca. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $7.500
+          </p>
+          <button aria-label="Agregar De campo al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="de-campo" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="desayunos" data-desde="false" data-nombre="Desayuno americano" data-precio="11500" data-producto="desayuno-americano">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           DESAYUNOS Y MERIENDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Desayuno americano
+          </h3>
+          <p class="card-text flex-grow-1">
+           Tostón, huevo revuelto, panceta ahumada y queso crema. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $11.500
+          </p>
+          <button aria-label="Agregar Desayuno americano al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="desayuno-americano" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="desayunos" data-desde="false" data-nombre="Proteico" data-precio="10500" data-producto="proteico">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           DESAYUNOS Y MERIENDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Proteico
+          </h3>
+          <p class="card-text flex-grow-1">
+           Tostón, huevo revuelto, jamón y queso. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $10.500
+          </p>
+          <button aria-label="Agregar Proteico al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="proteico" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="desayunos" data-desde="false" data-nombre="Fit" data-precio="11000" data-producto="fit">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           DESAYUNOS Y MERIENDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Fit
+          </h3>
+          <p class="card-text flex-grow-1">
+           Pancake de avena, banana, durazno y miel, con ensalada de frutas. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $11.000
+          </p>
+          <button aria-label="Agregar Fit al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="fit" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="desayunos" data-desde="false" data-nombre="Saludable" data-precio="9000" data-producto="saludable">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           DESAYUNOS Y MERIENDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Saludable
+          </h3>
+          <p class="card-text flex-grow-1">
+           Yogurt con granola y miel. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $9.000
+          </p>
+          <button aria-label="Agregar Saludable al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="saludable" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="desayunos" data-desde="false" data-nombre="Keto Bowl" data-precio="12000" data-producto="keto-bowl">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           DESAYUNOS Y MERIENDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Keto Bowl
+          </h3>
+          <p class="card-text flex-grow-1">
+           Huevo revuelto, palta, cherries salteados, queso y panceta en cubos. Pan opcional. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $12.000
+          </p>
+          <button aria-label="Agregar Keto Bowl al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="keto-bowl" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="desayunos" data-desde="false" data-nombre="Dolce" data-precio="8500" data-producto="dolce">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           DESAYUNOS Y MERIENDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Dolce
+          </h3>
+          <p class="card-text flex-grow-1">
+           Cuadrado dulce: brownie, pastafrola, budín o crumble de manzana. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $8.500
+          </p>
+          <button aria-label="Agregar Dolce al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="dolce" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="desayunos" data-desde="false" data-nombre="French toast" data-precio="10500" data-producto="french-toast">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           DESAYUNOS Y MERIENDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           French toast
+          </h3>
+          <p class="card-text flex-grow-1">
+           Tostón cocinado en leche, huevo y miel, con frutas de estación. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $10.500
+          </p>
+          <button aria-label="Agregar French toast al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="french-toast" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="promos" data-desde="false" data-nombre="Promo 1" data-precio="21000" data-producto="promo-1">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PROMOS Y CUMPLEAÑOS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Promo 1
+          </h3>
+          <p class="card-text flex-grow-1">
+           2 infusiones, 2 medialunas con jamón y queso, 2 yogurts con granola y 2 jugos de naranja.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $21.000
+          </p>
+          <button aria-label="Agregar Promo 1 al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="promo-1" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="promos" data-desde="false" data-nombre="Promo 2" data-precio="22000" data-producto="promo-2">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PROMOS Y CUMPLEAÑOS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Promo 2
+          </h3>
+          <p class="card-text flex-grow-1">
+           2 infusiones, 2 tostadas, huevos revueltos, jamón y queso y 2 jugos de naranja.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $22.000
+          </p>
+          <button aria-label="Agregar Promo 2 al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="promo-2" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="promos" data-desde="false" data-nombre="Promo 3" data-precio="23000" data-producto="promo-3">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PROMOS Y CUMPLEAÑOS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Promo 3
+          </h3>
+          <p class="card-text flex-grow-1">
+           2 infusiones, 2 cuadrados dulces, tostado de jamón y queso y 2 ensaladas de frutas.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $23.000
+          </p>
+          <button aria-label="Agregar Promo 3 al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="promo-3" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="promos" data-desde="false" data-nombre="Promo 4" data-precio="24000" data-producto="promo-4">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PROMOS Y CUMPLEAÑOS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Promo 4
+          </h3>
+          <p class="card-text flex-grow-1">
+           2 infusiones, 4 pancakes de avena, banana y miel y 2 yogurts con granola.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $24.000
+          </p>
+          <button aria-label="Agregar Promo 4 al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="promo-4" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="promos" data-desde="false" data-nombre="Promo 5" data-precio="18000" data-producto="promo-5">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PROMOS Y CUMPLEAÑOS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Promo 5
+          </h3>
+          <p class="card-text flex-grow-1">
+           2 licuados o smoothies y tostado de jamón y queso.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $18.000
+          </p>
+          <button aria-label="Agregar Promo 5 al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="promo-5" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="promos" data-desde="false" data-nombre="Promo Keto" data-precio="26000" data-producto="promo-keto">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PROMOS Y CUMPLEAÑOS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Promo Keto
+          </h3>
+          <p class="card-text flex-grow-1">
+           2 infusiones, huevo revuelto, palta, panceta, cherries, queso en cubos y tostadas.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $26.000
+          </p>
+          <button aria-label="Agregar Promo Keto al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="promo-keto" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="promos" data-desde="false" data-nombre="Cumpleaños para 5" data-precio="55000" data-producto="cumpleanos-para-5">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PROMOS Y CUMPLEAÑOS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Cumpleaños para 5
+          </h3>
+          <p class="card-text flex-grow-1">
+           5 infusiones, 5 medialunas, 5 sándwiches de jamón y queso, 5 porciones de brownie y 5 vasitos de jugo.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $55.000
+          </p>
+          <button aria-label="Agregar Cumpleaños para 5 al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="cumpleanos-para-5" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="promos" data-desde="false" data-nombre="Cumpleaños para 10" data-precio="85000" data-producto="cumpleanos-para-10">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PROMOS Y CUMPLEAÑOS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Cumpleaños para 10
+          </h3>
+          <p class="card-text flex-grow-1">
+           10 medialunas o tortillas, 10 sándwiches de jamón y queso, 5 porciones de pastafrola, 5 de brownie y 1 jarra de limonada o jugo de naranja.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $85.000
+          </p>
+          <button aria-label="Agregar Cumpleaños para 10 al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="cumpleanos-para-10" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pasteleria" data-desde="false" data-nombre="Croissant con Nutella" data-precio="6500" data-producto="croissant-con-nutella">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PASTELERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Croissant con Nutella
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por unidad o porción individual.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.500
+          </p>
+          <button aria-label="Agregar Croissant con Nutella al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="croissant-con-nutella" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pasteleria" data-desde="false" data-nombre="Croissant con dulce de leche" data-precio="5500" data-producto="croissant-con-dulce-de-leche">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PASTELERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Croissant con dulce de leche
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por unidad o porción individual.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.500
+          </p>
+          <button aria-label="Agregar Croissant con dulce de leche al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="croissant-con-dulce-de-leche" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pasteleria" data-desde="false" data-nombre="Croissant con crema pastelera" data-precio="5500" data-producto="croissant-con-crema-pastelera">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PASTELERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Croissant con crema pastelera
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por unidad o porción individual.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.500
+          </p>
+          <button aria-label="Agregar Croissant con crema pastelera al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="croissant-con-crema-pastelera" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pasteleria" data-desde="false" data-nombre="Croissant con jamón y queso" data-precio="6500" data-producto="croissant-con-jamon-y-queso">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PASTELERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Croissant con jamón y queso
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por unidad o porción individual.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.500
+          </p>
+          <button aria-label="Agregar Croissant con jamón y queso al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="croissant-con-jamon-y-queso" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pasteleria" data-desde="false" data-nombre="Budín de limón glaseado" data-precio="4000" data-producto="budin-de-limon-glaseado">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PASTELERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Budín de limón glaseado
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por unidad o porción individual.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $4.000
+          </p>
+          <button aria-label="Agregar Budín de limón glaseado al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="budin-de-limon-glaseado" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pasteleria" data-desde="false" data-nombre="Brownie" data-precio="4500" data-producto="brownie">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PASTELERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Brownie
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por unidad o porción individual.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $4.500
+          </p>
+          <button aria-label="Agregar Brownie al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="brownie" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pasteleria" data-desde="false" data-nombre="Brownie con Nutella" data-precio="6000" data-producto="brownie-con-nutella">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PASTELERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Brownie con Nutella
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por unidad o porción individual.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.000
+          </p>
+          <button aria-label="Agregar Brownie con Nutella al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="brownie-con-nutella" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pasteleria" data-desde="false" data-nombre="Pastafrola" data-precio="4000" data-producto="pastafrola">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PASTELERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Pastafrola
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por unidad o porción individual.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $4.000
+          </p>
+          <button aria-label="Agregar Pastafrola al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="pastafrola" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pasteleria" data-desde="false" data-nombre="Crumble de manzana" data-precio="5000" data-producto="crumble-de-manzana">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PASTELERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Crumble de manzana
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por unidad o porción individual.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.000
+          </p>
+          <button aria-label="Agregar Crumble de manzana al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="crumble-de-manzana" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pasteleria" data-desde="false" data-nombre="Panqueque con Nutella" data-precio="6000" data-producto="panqueque-con-nutella">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PASTELERÍA
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Panqueque con Nutella
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por unidad o porción individual.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.000
+          </p>
+          <button aria-label="Agregar Panqueque con Nutella al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="panqueque-con-nutella" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="refrescantes" data-desde="false" data-nombre="Limonada clásica" data-precio="5000" data-producto="limonada-clasica">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           REFRESCANTES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Limonada clásica
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por vaso. Para jarra, indicar en observaciones.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.000
+          </p>
+          <button aria-label="Agregar Limonada clásica al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="limonada-clasica" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="refrescantes" data-desde="false" data-nombre="Limonada de menta y jengibre" data-precio="5500" data-producto="limonada-de-menta-y-jengibre">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           REFRESCANTES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Limonada de menta y jengibre
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por vaso. Para jarra, indicar en observaciones.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.500
+          </p>
+          <button aria-label="Agregar Limonada de menta y jengibre al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="limonada-de-menta-y-jengibre" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="refrescantes" data-desde="false" data-nombre="Limonada de frutos rojos" data-precio="6000" data-producto="limonada-de-frutos-rojos">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           REFRESCANTES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Limonada de frutos rojos
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por vaso. Para jarra, indicar en observaciones.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.000
+          </p>
+          <button aria-label="Agregar Limonada de frutos rojos al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="limonada-de-frutos-rojos" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="refrescantes" data-desde="false" data-nombre="Jugo de naranja" data-precio="5500" data-producto="jugo-de-naranja">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           REFRESCANTES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Jugo de naranja
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por vaso. Para jarra, indicar en observaciones.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.500
+          </p>
+          <button aria-label="Agregar Jugo de naranja al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="jugo-de-naranja" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="smoothies" data-desde="false" data-nombre="Smoothie Oreo" data-precio="6500" data-producto="smoothie-oreo">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           SMOOTHIES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Smoothie Oreo
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.500
+          </p>
+          <button aria-label="Agregar Smoothie Oreo al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="smoothie-oreo" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="smoothies" data-desde="false" data-nombre="Smoothie durazno" data-precio="6000" data-producto="smoothie-durazno">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           SMOOTHIES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Smoothie durazno
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.000
+          </p>
+          <button aria-label="Agregar Smoothie durazno al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="smoothie-durazno" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="smoothies" data-desde="false" data-nombre="Smoothie Nutella" data-precio="7000" data-producto="smoothie-nutella">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           SMOOTHIES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Smoothie Nutella
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $7.000
+          </p>
+          <button aria-label="Agregar Smoothie Nutella al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="smoothie-nutella" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="smoothies" data-desde="false" data-nombre="Smoothie banana split con galleta oblea" data-precio="6500" data-producto="smoothie-banana-split-con-galleta-oblea">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           SMOOTHIES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Smoothie banana split con galleta oblea
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.500
+          </p>
+          <button aria-label="Agregar Smoothie banana split con galleta oblea al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="smoothie-banana-split-con-galleta-oblea" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="smoothies" data-desde="false" data-nombre="Smoothie frutos rojos" data-precio="6500" data-producto="smoothie-frutos-rojos">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           SMOOTHIES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Smoothie frutos rojos
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.500
+          </p>
+          <button aria-label="Agregar Smoothie frutos rojos al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="smoothie-frutos-rojos" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="principales" data-desde="false" data-nombre="Milanesa clásica" data-precio="14500" data-producto="milanesa-clasica">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PLATOS PRINCIPALES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Milanesa clásica
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $14.500
+          </p>
+          <button aria-label="Agregar Milanesa clásica al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="milanesa-clasica" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="principales" data-desde="false" data-nombre="Milanesa napolitana" data-precio="17000" data-producto="milanesa-napolitana">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PLATOS PRINCIPALES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Milanesa napolitana
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $17.000
+          </p>
+          <button aria-label="Agregar Milanesa napolitana al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="milanesa-napolitana" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="principales" data-desde="false" data-nombre="Suprema clásica" data-precio="14000" data-producto="suprema-clasica">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PLATOS PRINCIPALES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Suprema clásica
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $14.000
+          </p>
+          <button aria-label="Agregar Suprema clásica al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="suprema-clasica" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="principales" data-desde="false" data-nombre="Suprema napolitana" data-precio="16500" data-producto="suprema-napolitana">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PLATOS PRINCIPALES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Suprema napolitana
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $16.500
+          </p>
+          <button aria-label="Agregar Suprema napolitana al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="suprema-napolitana" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="principales" data-desde="false" data-nombre="Mexicano" data-precio="14000" data-producto="mexicano">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PLATOS PRINCIPALES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Mexicano
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultar preparación.
+          Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $14.000
+          </p>
+          <button aria-label="Agregar Mexicano al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="mexicano" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="principales" data-desde="false" data-nombre="Empanadas" data-precio="1800" data-producto="empanadas">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PLATOS PRINCIPALES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Empanadas
+          </h3>
+          <p class="card-text flex-grow-1">
+           De carne o pollo; variedad a confirmar.
+          Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $1.800
+          </p>
+          <button aria-label="Agregar Empanadas al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="empanadas" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="principales" data-desde="false" data-nombre="Pollo con crema y mostaza" data-precio="16500" data-producto="pollo-con-crema-y-mostaza">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PLATOS PRINCIPALES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Pollo con crema y mostaza
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $16.500
+          </p>
+          <button aria-label="Agregar Pollo con crema y mostaza al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="pollo-con-crema-y-mostaza" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="principales" data-desde="false" data-nombre="Pollo al limón" data-precio="16000" data-producto="pollo-al-limon">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PLATOS PRINCIPALES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Pollo al limón
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $16.000
+          </p>
+          <button aria-label="Agregar Pollo al limón al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="pollo-al-limon" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="principales" data-desde="false" data-nombre="Lomitos rellenos" data-precio="19000" data-producto="lomitos-rellenos">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PLATOS PRINCIPALES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Lomitos rellenos
+          </h3>
+          <p class="card-text flex-grow-1">
+           Jamón, queso y morrones.
+          Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $19.000
+          </p>
+          <button aria-label="Agregar Lomitos rellenos al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="lomitos-rellenos" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="principales" data-desde="false" data-nombre="Bombitas" data-precio="2500" data-producto="bombitas">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PLATOS PRINCIPALES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Bombitas
+          </h3>
+          <p class="card-text flex-grow-1">
+           De carne o queso; variedad a confirmar.
+          Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $2.500
+          </p>
+          <button aria-label="Agregar Bombitas al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="bombitas" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="principales" data-desde="false" data-nombre="Sorrentinos" data-precio="14000" data-producto="sorrentinos">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PLATOS PRINCIPALES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Sorrentinos
+          </h3>
+          <p class="card-text flex-grow-1">
+           De jamón y queso, con salsa rosa.
+          Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $14.000
+          </p>
+          <button aria-label="Agregar Sorrentinos al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="sorrentinos" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="principales" data-desde="false" data-nombre="Tallarines" data-precio="12000" data-producto="tallarines">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PLATOS PRINCIPALES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Tallarines
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultar salsa disponible.
+          Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $12.000
+          </p>
+          <button aria-label="Agregar Tallarines al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="tallarines" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pizzas" data-desde="false" data-nombre="Pizza muzzarella" data-precio="15000" data-producto="pizza-muzzarella">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PIZZAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Pizza muzzarella
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por pizza entera de 8 porciones, presentación propuesta para esta carta.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $15.000
+          </p>
+          <button aria-label="Agregar Pizza muzzarella al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="pizza-muzzarella" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pizzas" data-desde="false" data-nombre="Pizza napolitana" data-precio="17000" data-producto="pizza-napolitana">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PIZZAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Pizza napolitana
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por pizza entera de 8 porciones, presentación propuesta para esta carta.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $17.000
+          </p>
+          <button aria-label="Agregar Pizza napolitana al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="pizza-napolitana" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pizzas" data-desde="false" data-nombre="Pizza especial" data-precio="18000" data-producto="pizza-especial">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PIZZAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Pizza especial
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por pizza entera de 8 porciones, presentación propuesta para esta carta.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $18.000
+          </p>
+          <button aria-label="Agregar Pizza especial al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="pizza-especial" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="pizzas" data-desde="false" data-nombre="Pizza de ternera" data-precio="21000" data-producto="pizza-de-ternera">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           PIZZAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Pizza de ternera
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por pizza entera de 8 porciones, presentación propuesta para esta carta.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $21.000
+          </p>
+          <button aria-label="Agregar Pizza de ternera al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="pizza-de-ternera" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="sandwiches" data-desde="false" data-nombre="Baguette americano" data-precio="12500" data-producto="baguette-americano">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           SÁNDWICHES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Baguette americano
+          </h3>
+          <p class="card-text flex-grow-1">
+           Ternera, queso tybo, morrones, huevo y BBQ.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $12.500
+          </p>
+          <button aria-label="Agregar Baguette americano al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="baguette-americano" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="sandwiches" data-desde="false" data-nombre="Baguette especial de ternera" data-precio="12000" data-producto="baguette-especial-de-ternera">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           SÁNDWICHES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Baguette especial de ternera
+          </h3>
+          <p class="card-text flex-grow-1">
+           Ternera, queso tybo, lechuga, tomate y mayonesa.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $12.000
+          </p>
+          <button aria-label="Agregar Baguette especial de ternera al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="baguette-especial-de-ternera" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="sandwiches" data-desde="false" data-nombre="Baguette Aroma" data-precio="11500" data-producto="baguette-aroma">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           SÁNDWICHES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Baguette Aroma
+          </h3>
+          <p class="card-text flex-grow-1">
+           Queso blanco, jamón cocido, queso tybo y palta.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $11.500
+          </p>
+          <button aria-label="Agregar Baguette Aroma al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="baguette-aroma" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="sandwiches" data-desde="false" data-nombre="Miga de jamón y queso" data-precio="6500" data-producto="miga-de-jamon-y-queso">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           SÁNDWICHES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Miga de jamón y queso
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por porción de 3 triángulos, presentación propuesta para esta carta.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.500
+          </p>
+          <button aria-label="Agregar Miga de jamón y queso al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="miga-de-jamon-y-queso" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="sandwiches" data-desde="false" data-nombre="Miga de ternera y queso" data-precio="7500" data-producto="miga-de-ternera-y-queso">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           SÁNDWICHES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Miga de ternera y queso
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por porción de 3 triángulos, presentación propuesta para esta carta.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $7.500
+          </p>
+          <button aria-label="Agregar Miga de ternera y queso al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="miga-de-ternera-y-queso" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="sandwiches" data-desde="false" data-nombre="Miga de lechuga y tomate" data-precio="6000" data-producto="miga-de-lechuga-y-tomate">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           SÁNDWICHES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Miga de lechuga y tomate
+          </h3>
+          <p class="card-text flex-grow-1">
+           Precio por porción de 3 triángulos, presentación propuesta para esta carta.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.000
+          </p>
+          <button aria-label="Agregar Miga de lechuga y tomate al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="miga-de-lechuga-y-tomate" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="guarniciones" data-desde="false" data-nombre="Ensalada Aroma" data-precio="10500" data-producto="ensalada-aroma">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           ENSALADAS Y GUARNICIONES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Ensalada Aroma
+          </h3>
+          <p class="card-text flex-grow-1">
+           Mix de hojas verdes, palta, huevo, queso tybo y cherries.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $10.500
+          </p>
+          <button aria-label="Agregar Ensalada Aroma al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="ensalada-aroma" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="guarniciones" data-desde="false" data-nombre="Papas fritas" data-precio="6000" data-producto="papas-fritas">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           ENSALADAS Y GUARNICIONES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Papas fritas
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.000
+          </p>
+          <button aria-label="Agregar Papas fritas al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="papas-fritas" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="guarniciones" data-desde="false" data-nombre="Papas rústicas con provenzal" data-precio="6500" data-producto="papas-rusticas-con-provenzal">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           ENSALADAS Y GUARNICIONES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Papas rústicas con provenzal
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.500
+          </p>
+          <button aria-label="Agregar Papas rústicas con provenzal al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="papas-rusticas-con-provenzal" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="guarniciones" data-desde="false" data-nombre="Puré clásico o mixto" data-precio="5000" data-producto="pure-clasico-o-mixto">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           ENSALADAS Y GUARNICIONES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Puré clásico o mixto
+          </h3>
+          <p class="card-text flex-grow-1">
+           Variedad a confirmar.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.000
+          </p>
+          <button aria-label="Agregar Puré clásico o mixto al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="pure-clasico-o-mixto" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="guarniciones" data-desde="false" data-nombre="Ensalada mixta" data-precio="5000" data-producto="ensalada-mixta">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           ENSALADAS Y GUARNICIONES
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Ensalada mixta
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.000
+          </p>
+          <button aria-label="Agregar Ensalada mixta al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="ensalada-mixta" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="bebidas" data-desde="false" data-nombre="Agua" data-precio="2500" data-producto="agua">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           BEBIDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Agua
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $2.500
+          </p>
+          <button aria-label="Agregar Agua al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="agua" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="bebidas" data-desde="false" data-nombre="Agua con gas" data-precio="2500" data-producto="agua-con-gas">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           BEBIDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Agua con gas
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $2.500
+          </p>
+          <button aria-label="Agregar Agua con gas al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="agua-con-gas" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="bebidas" data-desde="false" data-nombre="Pepsi / Seven lata" data-precio="3000" data-producto="pepsi-seven-lata">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           BEBIDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Pepsi / Seven lata
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $3.000
+          </p>
+          <button aria-label="Agregar Pepsi / Seven lata al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="pepsi-seven-lata" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="bebidas" data-desde="false" data-nombre="Pepsi / Seven / Mirinda 1,5 L" data-precio="6000" data-producto="pepsi-seven-mirinda-1-5-l">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           BEBIDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Pepsi / Seven / Mirinda 1,5 L
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.000
+          </p>
+          <button aria-label="Agregar Pepsi / Seven / Mirinda 1,5 L al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="pepsi-seven-mirinda-1-5-l" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="bebidas" data-desde="false" data-nombre="Agua saborizada 330 ml" data-precio="2500" data-producto="agua-saborizada-330-ml">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           BEBIDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Agua saborizada 330 ml
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $2.500
+          </p>
+          <button aria-label="Agregar Agua saborizada 330 ml al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="agua-saborizada-330-ml" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="bebidas" data-desde="false" data-nombre="Quilmes lata" data-precio="4000" data-producto="quilmes-lata">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           BEBIDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Quilmes lata
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $4.000
+          </p>
+          <button aria-label="Agregar Quilmes lata al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="quilmes-lata" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="bebidas" data-desde="false" data-nombre="Quilmes botella" data-precio="6500" data-producto="quilmes-botella">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           BEBIDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Quilmes botella
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $6.500
+          </p>
+          <button aria-label="Agregar Quilmes botella al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="quilmes-botella" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="bebidas" data-desde="false" data-nombre="Stella Artois lata" data-precio="5000" data-producto="stella-artois-lata">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           BEBIDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Stella Artois lata
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $5.000
+          </p>
+          <button aria-label="Agregar Stella Artois lata al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="stella-artois-lata" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+       <div class="col-12 col-lg-6" data-categoria="bebidas" data-desde="false" data-nombre="Stella Artois 1 L" data-precio="8000" data-producto="stella-artois-1-l">
+        <article class="card h-100 border-0 aroma-card">
+         <div class="card-body d-flex flex-column p-4">
+          <p class="aroma-eyebrow small mb-2">
+           BEBIDAS
+          </p>
+          <h3 class="card-title h5 mb-2">
+           Stella Artois 1 L
+          </h3>
+          <p class="card-text flex-grow-1">
+           Consultá disponibilidad al preparar tu pedido.
+          </p>
+          <p class="aroma-precio fs-5 fw-bold mb-3">
+           $8.000
+          </p>
+          <button aria-label="Agregar Stella Artois 1 L al pedido" class="btn btn-aroma w-100 mt-auto" data-agregar="stella-artois-1-l" type="button">
+           + Agregar al pedido
+          </button>
+         </div>
+        </article>
+       </div>
+      </div>
+      <div aria-label="Páginas de productos" class="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-4" id="paginacion-productos">
+       <button class="btn btn-outline-secondary" id="pagina-anterior" type="button">
+        Anterior
+       </button>
+       <span id="pagina-actual" role="status">
+       </span>
+       <button class="btn btn-outline-secondary" id="pagina-siguiente" type="button">
+        Siguiente
+       </button>
+      </div>
+      <div class="text-center p-5 border rounded-4 d-none" id="sin-productos">
+       <h3 class="h4">
+        No encontramos esa combinación
+       </h3>
+       <p>
+        Probá otra búsqueda o volvé a ver toda la carta.
+       </p>
+       <button class="btn btn-aroma" id="limpiar-filtros" type="button">
+        Ver todos los productos
+       </button>
+      </div>
+      <p class="small text-secondary mt-4 mb-0">
+       Precios en pesos argentinos. Panificados: precio desde $500; variedad y precio final a confirmar.
+      </p>
+     </div>
+     <p aria-live="polite" class="aroma-aviso" id="aviso-productos" role="status">
+     </p>
+     <noscript>
+      <style>
+       #carta-productos.collapse { display: block; } #btn-ver-carta { display: none; }
+      </style>
+      <p class="alert alert-info mt-3">
+       Podés consultar la carta. Activá JavaScript para usar las promos y preparar tu pedido.
+      </p>
+     </noscript>
+    </div>
+   </section>
+   <button aria-label="Abrir carrito de compras" class="btn btn-aroma position-fixed bottom-0 start-0 m-3 shadow z-3" data-bs-target="#modalCarrito" data-bs-toggle="modal" id="btn-abrir-carrito" type="button">
+    <svg aria-hidden="true" fill="none" height="21" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" width="21" xmlns="http://www.w3.org/2000/svg">
+     <path d="M3 3h2l3 12h11l2-8H6">
+     </path>
+     <circle cx="9" cy="20" r="1">
+     </circle>
+     <circle cx="18" cy="20" r="1">
+     </circle>
+    </svg>
+    <span id="texto-carrito">
+     Mi pedido
+    </span>
+    <span class="badge rounded-pill bg-dark" id="cantidad-carrito">
+     0
+    </span>
+   </button>
+   <div aria-hidden="true" aria-labelledby="tituloModalCarrito" class="modal fade" id="modalCarrito" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+     <div class="modal-content">
+      <div class="modal-header text-black" style="background-color: #d9b38c;">
+       <h2 class="modal-title fs-4" id="tituloModalCarrito">
+        Tu pedido
+       </h2>
+       <button aria-label="Cerrar" class="btn-close" data-bs-dismiss="modal" type="button">
+       </button>
+      </div>
+      <div class="modal-body">
+       <div id="edicion-pedido">
+        <p class="text-secondary mb-3">
+         Revisá tus favoritos y elegí cómo querés disfrutar tu pedido.
+        </p>
+        <p class="text-secondary" id="carrito-vacio">
+         Todavía no agregaste productos.
+        </p>
+        <div class="list-group mb-3" id="lista-carrito">
+        </div>
+        <div class="d-flex justify-content-between align-items-center border-top pt-3 mb-4">
+         <strong>
+          Total estimado
+         </strong>
+         <strong class="fs-4" id="total-carrito">
+          $0
+         </strong>
+        </div>
+        <form id="datos-pedido" novalidate="">
+         <div class="aroma-datos-mesa rounded-3 p-3 p-sm-4">
+          <fieldset>
+           <legend class="form-label fw-bold fs-6">
+            ¿Dónde vas a disfrutar tu pedido?
+           </legend>
+           <div class="row g-2">
+            <div class="col-12 col-sm-6">
+             <input aria-controls="grupo-mesa" checked="" class="btn-check" id="modalidad-local" name="modalidad" required="" type="radio" value="local"/>
+             <label class="btn btn-modalidad w-100 py-3" for="modalidad-local">
+              Consumir en el local
+             </label>
+            </div>
+            <div class="col-12 col-sm-6">
+             <input aria-controls="grupo-mesa" class="btn-check" id="modalidad-llevar" name="modalidad" required="" type="radio" value="llevar"/>
+             <label class="btn btn-modalidad w-100 py-3" for="modalidad-llevar">
+              Para llevar
+             </label>
+            </div>
+           </div>
+          </fieldset>
+          <div class="mt-3" id="grupo-mesa">
+           <label class="form-label fw-bold" for="numero-mesa">
+            ¿En qué mesa estás?
+           </label>
+           <input aria-describedby="ayuda-mesa error-mesa" class="form-control" id="numero-mesa" inputmode="numeric" max="99" min="1" name="mesa" placeholder="Por ejemplo: 7" required="" step="1" type="number"/>
+           <div class="form-text" id="ayuda-mesa">
+            Ingresá un número de mesa del 1 al 99.
+           </div>
+           <div class="invalid-feedback" id="error-mesa">
+            Ingresá un número entero de mesa, entre 1 y 99.
+           </div>
+          </div>
+          <label class="form-label mt-3 fw-semibold" for="notas-pedido">
+           Observaciones
+           <span class="fw-normal">
+            (opcional)
+           </span>
+          </label>
+          <textarea aria-describedby="ayuda-notas" class="form-control" id="notas-pedido" maxlength="250" name="observaciones" placeholder="Por ejemplo: café sin azúcar." rows="2"></textarea>
+          <div class="form-text" id="ayuda-notas">
+           Hasta 250 caracteres. Los adicionales no se calculan automáticamente.
+          </div>
+         </div>
+        </form>
+        <p class="small text-secondary mt-3 mb-0">
+         Revisá los productos y la modalidad antes de preparar tu pedido.
+        </p>
+       </div>
+       <div class="d-none" id="pedido-preparacion">
+        <div class="alert aroma-alerta mb-4" id="alerta-pedido" role="alert">
+        </div>
+        <div class="text-center">
+         <div aria-hidden="true" class="aroma-taza">
+          <div class="aroma-vapor">
+           <span>
+           </span>
+           <span>
+           </span>
+           <span>
+           </span>
+          </div>
+          <svg fill="none" height="90" viewbox="0 0 110 90" width="110">
+           <path d="M20 25h58v26a23 23 0 0 1-23 23H43a23 23 0 0 1-23-23V25Z" fill="currentColor">
+           </path>
+           <path d="M80 31h8a12 12 0 0 1 0 24H78" stroke="currentColor" stroke-width="6">
+           </path>
+           <path d="M15 81h70" stroke="currentColor" stroke-linecap="round" stroke-width="5">
+           </path>
+          </svg>
+         </div>
+         <h3 class="h2 mb-2" id="titulo-preparacion" tabindex="-1">
+          Tu pedido se está preparando
+         </h3>
+         <p class="text-secondary">
+          Una buena pausa empieza con un buen café.
+         </p>
+         <p class="aroma-estado d-inline-flex align-items-center gap-2">
+          <span aria-hidden="true" class="spinner-border spinner-border-sm">
+          </span>
+          En preparación ·
+          <strong id="mesa-preparacion">
+          </strong>
+         </p>
+         <p class="small text-secondary mb-4" id="numero-pedido">
+         </p>
+        </div>
+        <div class="aroma-resumen rounded-3 p-3 p-sm-4">
+         <h4 class="h5 mb-3">
+          El resumen de tu pedido
+         </h4>
+         <p class="small mb-3">
+          Modalidad:
+          <strong id="destino-resumen">
+          </strong>
+         </p>
+         <ul class="list-unstyled mb-3" id="resumen-preparacion">
+         </ul>
+         <p class="small text-secondary text-break d-none" id="notas-preparacion">
+         </p>
+         <p class="d-flex justify-content-between border-top pt-3 mb-0">
+          <strong>
+           Total estimado
+          </strong>
+          <strong id="total-preparacion">
+          </strong>
+         </p>
+        </div>
+        <p class="small text-secondary mt-3 mb-0">
+         Podés cerrar esta ventana y volver a consultar el estado desde el carrito.
+        </p>
+       </div>
+       <p class="small mt-3 mb-0" id="aviso-carrito" role="status">
+       </p>
+      </div>
+      <div class="modal-footer">
+       <div class="d-flex flex-wrap gap-2 w-100 justify-content-end" id="acciones-carrito">
+        <button class="btn btn-outline-secondary" id="vaciar-carrito" type="button">
+         Vaciar carrito
+        </button>
+        <button class="btn btn-aroma" form="datos-pedido" id="finalizar-carrito" type="submit">
+         Preparar pedido
+        </button>
+       </div>
+       <div class="d-none d-flex flex-wrap gap-2 w-100 justify-content-end" id="acciones-preparacion">
+        <button class="btn btn-outline-secondary" data-bs-dismiss="modal" type="button">
+         Cerrar
+        </button>
+        <button class="btn btn-aroma" id="nuevo-pedido" type="button">
+         Iniciar otro pedido
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <section class="py-5 bg-light" id="servicios">
+    <div class="container">
+     <div class="text-center mb-5">
+      <h2 class="fw-bold mb-3" style="color: #5c3826;">
+       Nuestros servicios
+      </h2>
+      <p class="lead text-muted">
+       En Café Aroma ofrecemos diferentes opciones para que disfrutes
                         de nuestro café y productos artesanales de la manera que prefieras.
-                    </p>
-                </div>
-
-                <div class="card border-0 shadow-sm rounded-4 p-4" style="background-color: #ead9cc;">
-                    <div id="carouselServicios" class="carousel slide">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Servicio 1"
-                                style="background-color: #000000;">
-                            </button>
-                            <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="1"
-                                aria-label="Servicio 2" style="background-color: #000000;">
-                            </button>
-                            <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="2"
-                                aria-label="Servicio 3" style="background-color: #000000;">
-                            </button>
-                        </div>
-
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <article class="card border-0 mx-auto"
-                                    style="max-width: 600px; background-color: #ead9cc;">
-                                    <div class="card-body text-center p-5">
-                                        <h3 class="card-title h4 fw-bold">
-                                            Atención en el local
-                                        </h3>
-                                        <p class="card-text text-muted">
-                                            Disfrutá nuestros productos en un espacio cómodo,
+      </p>
+     </div>
+     <div class="card border-0 shadow-sm rounded-4 p-4" style="background-color: #ead9cc;">
+      <div class="carousel slide" id="carouselServicios">
+       <div class="carousel-indicators">
+        <button aria-current="true" aria-label="Servicio 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselServicios" style="background-color: #000000;" type="button">
+        </button>
+        <button aria-label="Servicio 2" data-bs-slide-to="1" data-bs-target="#carouselServicios" style="background-color: #000000;" type="button">
+        </button>
+        <button aria-label="Servicio 3" data-bs-slide-to="2" data-bs-target="#carouselServicios" style="background-color: #000000;" type="button">
+        </button>
+       </div>
+       <div class="carousel-inner">
+        <div class="carousel-item active">
+         <article class="card border-0 mx-auto" style="max-width: 600px; background-color: #ead9cc;">
+          <div class="card-body text-center p-5">
+           <h3 class="card-title h4 fw-bold">
+            Atención en el local
+           </h3>
+           <p class="card-text text-muted">
+            Disfrutá nuestros productos en un espacio cómodo,
                                             agradable y pensado para compartir buenos momentos.
-                                        </p>
-                                        <button type="button" class="btn btn-dark" onclick="mostrarInfo(1)">
-                                            Más información
-                                        </button>
-                                        <div id="info1" style="display: none;" class="mt-3">
-                                            <p class="mb-1"><strong>Horarios:</strong></p>
-                                            <p class="mb-1">Lunes a viernes: 08:00 a 20:00 hs.</p>
-                                            <p class="mb-0">Sábados y domingos: 09:00 a 21:00 hs.</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <div class="carousel-item">
-                                <article class="card border-0 mx-auto"
-                                    style="max-width: 600px; background-color: #ead9cc;">
-                                    <div class="card-body text-center p-5">
-                                        <h3 class="card-title h4 fw-bold">
-                                            Pedidos para llevar
-                                        </h3>
-                                        <p class="card-text text-muted">
-                                            Podés pedir tus productos favoritos para llevar
+           </p>
+           <button class="btn btn-dark" onclick="mostrarInfo(1)" type="button">
+            Más información
+           </button>
+           <div class="mt-3" id="info1" style="display: none;">
+            <p class="mb-1">
+             <strong>
+              Horarios:
+             </strong>
+            </p>
+            <p class="mb-1">
+             Lunes a viernes: 08:00 a 20:00 hs.
+            </p>
+            <p class="mb-0">
+             Sábados y domingos: 09:00 a 21:00 hs.
+            </p>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div class="carousel-item">
+         <article class="card border-0 mx-auto" style="max-width: 600px; background-color: #ead9cc;">
+          <div class="card-body text-center p-5">
+           <h3 class="card-title h4 fw-bold">
+            Pedidos para llevar
+           </h3>
+           <p class="card-text text-muted">
+            Podés pedir tus productos favoritos para llevar
                                             y disfrutar del sabor de Café Aroma donde quieras.
-                                        </p>
-                                        <button type="button" class="btn btn-dark" onclick="mostrarInfo(2)">
-                                            Más información
-                                        </button>
-                                        <div id="info2" style="display: none;" class="mt-3">
-                                            <p class="mb-1"><strong>Pedidos:</strong></p>
-                                            <p class="mb-1">Podés realizar tu pedido durante nuestro horario de
-                                                atención.</p>
-                                            <p class="mb-0">Tiempo estimado: 15 a 20 minutos.</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <div class="carousel-item">
-                                <article class="card border-0 mx-auto"
-                                    style="max-width: 600px; background-color: #ead9cc;">
-                                    <div class="card-body text-center p-5">
-                                        <h3 class="card-title h4 fw-bold">
-                                            Pedidos para reuniones
-                                        </h3>
-                                        <p class="card-text text-muted">
-                                            Preparamos opciones de café y productos artesanales
+           </p>
+           <button class="btn btn-dark" onclick="mostrarInfo(2)" type="button">
+            Más información
+           </button>
+           <div class="mt-3" id="info2" style="display: none;">
+            <p class="mb-1">
+             <strong>
+              Pedidos:
+             </strong>
+            </p>
+            <p class="mb-1">
+             Podés realizar tu pedido durante nuestro horario de
+                                                atención.
+            </p>
+            <p class="mb-0">
+             Tiempo estimado: 15 a 20 minutos.
+            </p>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div class="carousel-item">
+         <article class="card border-0 mx-auto" style="max-width: 600px; background-color: #ead9cc;">
+          <div class="card-body text-center p-5">
+           <h3 class="card-title h4 fw-bold">
+            Pedidos para reuniones
+           </h3>
+           <p class="card-text text-muted">
+            Preparamos opciones de café y productos artesanales
                                             para reuniones, eventos y ocasiones especiales.
-                                        </p>
-                                        <button type="button" class="btn btn-dark" onclick="mostrarInfo(3)">
-                                            Más información
-                                        </button>
-                                        <div id="info3" style="display: none;" class="mt-3">
-                                            <p class="mb-1"><strong>Reuniones y eventos:</strong></p>
-                                            <p class="mb-1">Realizamos pedidos para grupos de 10 personas o más.</p>
-                                            <p class="mb-0">Solicitar con al menos 48 horas de anticipación.</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicios"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);">
-                            </span>
-                            <span class="visually-hidden">
-                                Anterior
-                            </span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselServicios"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);">
-                            </span>
-                            <span class="visually-hidden">
-                                Siguiente
-                            </span>
-                        </button>
-                    </div>
-                </div>
-        </section>
-
-        <section id="contacto" class="py-5" aria-labelledby="titulo-contacto" style="background-color: #8b7062;">
-
-            <div class="container">
-
-                <div class="text-center mb-5">
-                    <h2 id="titulo-contacto" class="display-5 fw-bold text-dark">
-                        Contacto
-                    </h2>
-
-                    <p class="lead text-black mx-auto" style="max-width: 700px;">
-                        Comunicate con Café Aroma para realizar consultas, hacer pedidos
+           </p>
+           <button class="btn btn-dark" onclick="mostrarInfo(3)" type="button">
+            Más información
+           </button>
+           <div class="mt-3" id="info3" style="display: none;">
+            <p class="mb-1">
+             <strong>
+              Reuniones y eventos:
+             </strong>
+            </p>
+            <p class="mb-1">
+             Realizamos pedidos para grupos de 10 personas o más.
+            </p>
+            <p class="mb-0">
+             Solicitar con al menos 48 horas de anticipación.
+            </p>
+           </div>
+          </div>
+         </article>
+        </div>
+       </div>
+       <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselServicios" type="button">
+        <span aria-hidden="true" class="carousel-control-prev-icon" style="filter: invert(1);">
+        </span>
+        <span class="visually-hidden">
+         Anterior
+        </span>
+       </button>
+       <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselServicios" type="button">
+        <span aria-hidden="true" class="carousel-control-next-icon" style="filter: invert(1);">
+        </span>
+        <span class="visually-hidden">
+         Siguiente
+        </span>
+       </button>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section aria-labelledby="titulo-contacto" class="py-5" id="contacto" style="background-color: #8b7062;">
+    <div class="container">
+     <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold text-dark" id="titulo-contacto">
+       Contacto
+      </h2>
+      <p class="lead text-black mx-auto" style="max-width: 700px;">
+       Comunicate con Café Aroma para realizar consultas, hacer pedidos
                         o conocer más sobre nuestra cafetería y nuestros productos.
-                    </p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-12 col-lg-5">
-                        <article class="card h-100 border-0 shadow-sm">
-                            <div class="card-body p-4 p-md-5">
-                                <h3 class="card-title h4 fw-bold mb-4">
-                                    Encontranos
-                                </h3>
-                                <p class="text-secondary mb-4">
-                                    Estamos para ayudarte. Podés comunicarte con nosotros
+      </p>
+     </div>
+     <div class="row g-4">
+      <div class="col-12 col-lg-5">
+       <article class="card h-100 border-0 shadow-sm">
+        <div class="card-body p-4 p-md-5">
+         <h3 class="card-title h4 fw-bold mb-4">
+          Encontranos
+         </h3>
+         <p class="text-secondary mb-4">
+          Estamos para ayudarte. Podés comunicarte con nosotros
                                     por teléfono, correo electrónico o visitarnos en nuestra
                                     cafetería.
-                                </p>
-                                <address class="mb-0">
-                                    <div class="d-flex align-items-start mb-4">
-                                        <div class="me-3 fs-4 text-danger" aria-hidden="true">
-                                            <i class="fa-solid fa-tty"></i>
-                                        </div>
-
-                                        <div>
-                                            <strong class="d-block">Teléfono</strong>
-
-                                            <a href="tel:+543811234567" class="text-decoration-none text-secondary">
-                                                381-1234567
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex align-items-start mb-4">
-                                        <div class="me-3 fs-4 text-danger" aria-hidden="true">
-                                            <i class="fa-regular fa-envelope"></i>
-                                        </div>
-
-                                        <div>
-                                            <strong class="d-block">Email</strong>
-
-                                            <a href="mailto:cafe.aroma@gmail.com"
-                                                class="text-decoration-none text-secondary">
-                                                cafe.aroma@gmail.com
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="d-flex align-items-start">
-                                        <div class="me-3 fs-4 text-danger" aria-hidden="true">
-                                            <i class="fa-solid fa-map-pin"></i>
-                                        </div>
-
-                                        <div>
-                                            <strong class="d-block">Dirección</strong>
-
-                                            <span class="text-secondary">
-                                                San Martín 123
-                                            </span>
-                                        </div>
-                                    </div>
-                                </address>
-
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-lg-7">
-                        <article class="card border-0 shadow-sm">
-                            <div class="card-body p-4 p-md-5">
-                                <h3 class="h4 fw-bold mb-2">
-                                    Envíanos tu mensaje
-                                </h3>
-                                <p class="text-secondary mb-4">
-                                    Completá el formulario y nos pondremos en contacto
+         </p>
+         <address class="mb-0">
+          <div class="d-flex align-items-start mb-4">
+           <div aria-hidden="true" class="me-3 fs-4 text-danger">
+            <i class="fa-solid fa-tty">
+            </i>
+           </div>
+           <div>
+            <strong class="d-block">
+             Teléfono
+            </strong>
+            <a class="text-decoration-none text-secondary" href="tel:+543811234567">
+             381-1234567
+            </a>
+           </div>
+          </div>
+          <div class="d-flex align-items-start mb-4">
+           <div aria-hidden="true" class="me-3 fs-4 text-danger">
+            <i class="fa-regular fa-envelope">
+            </i>
+           </div>
+           <div>
+            <strong class="d-block">
+             Email
+            </strong>
+            <a class="text-decoration-none text-secondary" href="mailto:cafe.aroma@gmail.com">
+             cafe.aroma@gmail.com
+            </a>
+           </div>
+          </div>
+          <div class="d-flex align-items-start">
+           <div aria-hidden="true" class="me-3 fs-4 text-danger">
+            <i class="fa-solid fa-map-pin">
+            </i>
+           </div>
+           <div>
+            <strong class="d-block">
+             Dirección
+            </strong>
+            <span class="text-secondary">
+             San Martín 123
+            </span>
+           </div>
+          </div>
+         </address>
+        </div>
+       </article>
+      </div>
+      <div class="col-12 col-lg-7">
+       <article class="card border-0 shadow-sm">
+        <div class="card-body p-4 p-md-5">
+         <h3 class="h4 fw-bold mb-2">
+          Envíanos tu mensaje
+         </h3>
+         <p class="text-secondary mb-4">
+          Completá el formulario y nos pondremos en contacto
                                     con vos.
-                                </p>
-
-                                <form id="form-contacto" action="#" method="post" novalidate>
-
-                                    <div class="row g-3">
-                                        <div class="col-12 col-md-6">
-                                            <label for="nombre" class="form-label fw-semibold">
-                                                Nombre
-                                            </label>
-                                            <input type="text" class="form-control" id="nombre" name="nombre"
-                                                placeholder="Ingresá tu nombre" autocomplete="name" required>
-                                        </div>
-
-                                        <div class="col-12 col-md-6">
-                                            <label for="email" class="form-label fw-semibold">
-                                                Email
-                                            </label>
-                                            <input type="email" class="form-control" id="email" name="email"
-                                                placeholder="Ingresá tu email" autocomplete="email" required>
-                                        </div>
-
-                                        <div class="col-12 col-md-6">
-                                            <label for="telefono" class="form-label fw-semibold">
-                                                Teléfono
-                                            </label>
-                                            <input type="tel" class="form-control" id="telefono" name="telefono"
-                                                placeholder="Ingresá tu teléfono" autocomplete="tel">
-                                        </div>
-
-                                        <div class="col-12 col-md-6">
-                                            <label for="motivo" class="form-label fw-semibold">
-                                                Motivo de contacto
-                                            </label>
-
-                                            <select class="form-select" id="motivo" name="motivo">
-                                                <option value="consulta">
-                                                    Consulta
-                                                </option>
-                                                <option value="pedido">
-                                                    Pedido
-                                                </option>
-                                                <option value="evento">
-                                                    Evento o reunión
-                                                </option>
-                                                <option value="otro">
-                                                    Otro
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <div class="col-12">
-                                            <label for="mensaje" class="form-label fw-semibold">
-                                                Mensaje
-                                            </label>
-
-                                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
-                                                maxlength="500" placeholder="Escribí tu mensaje" required></textarea>
-
-                                            <div class="text-end mt-1">
-                                                <small id="contador-mensaje" class="text-secondary">
-                                                    0/500 caracteres
-                                                </small>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-
-                                            <div id="mensaje-formulario" class="mt-2" role="alert" aria-live="polite">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 text-md-end">
-
-                                            <button type="submit" class="btn btn-dark btn-lg px-4">
-                                                Enviar mensaje
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+         </p>
+         <form action="#" id="form-contacto" method="post" novalidate="">
+          <div class="row g-3">
+           <div class="col-12 col-md-6">
+            <label class="form-label fw-semibold" for="nombre">
+             Nombre
+            </label>
+            <input autocomplete="name" class="form-control" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required="" type="text"/>
+           </div>
+           <div class="col-12 col-md-6">
+            <label class="form-label fw-semibold" for="email">
+             Email
+            </label>
+            <input autocomplete="email" class="form-control" id="email" name="email" placeholder="Ingresá tu email" required="" type="email"/>
+           </div>
+           <div class="col-12 col-md-6">
+            <label class="form-label fw-semibold" for="telefono">
+             Teléfono
+            </label>
+            <input autocomplete="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingresá tu teléfono" type="tel"/>
+           </div>
+           <div class="col-12 col-md-6">
+            <label class="form-label fw-semibold" for="motivo">
+             Motivo de contacto
+            </label>
+            <select class="form-select" id="motivo" name="motivo">
+             <option value="consulta">
+              Consulta
+             </option>
+             <option value="pedido">
+              Pedido
+             </option>
+             <option value="evento">
+              Evento o reunión
+             </option>
+             <option value="otro">
+              Otro
+             </option>
+            </select>
+           </div>
+           <div class="col-12">
+            <label class="form-label fw-semibold" for="mensaje">
+             Mensaje
+            </label>
+            <textarea class="form-control" id="mensaje" maxlength="5000" name="mensaje" placeholder="Escribí tu mensaje" required="" rows="5"></textarea>
+            <div class="text-end mt-1">
+             <small class="text-secondary" id="contador-mensaje">
+              0/5000 caracteres
+             </small>
             </div>
-        </section>
-
-        <footer class="bg-dark text-white py-4">
-
-            <div class="container text-center">
-
-                <h2 class="h4 fw-bold mb-2">
-                    Café Aroma
-                </h2>
-
-                <p class="text-white-50 mb-2">
-                    Un buen café empieza con buenos momentos.
-                </p>
-
-                <p class="small text-white-50 mb-0">
-                    &copy; 2026 Café Aroma - Todos los derechos reservados.
-                </p>
+           </div>
+           <div class="col-12">
+            <div aria-live="polite" class="mt-2" id="mensaje-formulario" role="alert">
             </div>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-        </script>
+           </div>
+           <div class="col-12 text-md-end">
+            <button class="btn btn-dark btn-lg px-4" type="submit">
+             Enviar mensaje
+            </button>
+           </div>
+          </div>
+         </form>
+        </div>
+       </article>
+      </div>
+     </div>
+    </div>
+   </section>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+   </script>
+  </main>
+  <footer class="bg-dark text-white py-4">
+   <div class="container text-center">
+    <h2 class="h4 fw-bold mb-2">
+     Café Aroma
+    </h2>
+    <p class="text-white-50 mb-2">
+     Un buen café empieza con buenos momentos.
+    </p>
+    <p class="small text-white-50 mb-0">
+     © 2026 Café Aroma - Todos los derechos reservados.
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>

@@ -1,3 +1,4 @@
+/* TP2 ORIGINAL — CONSERVADO COMENTADO PARA LA REFACTORIZACIÓN TP3. */
 /*
 :root {
     --color-principal: #6f4e37;
@@ -8,243 +9,409 @@
     --espacio: 20px;
 }
 
-#productos { 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; 
-    text-align: center; 
-} 
- 
-#productos>h2 { 
-    grid-column: 1 / -1; 
-    color: var(--color-principal); 
-    margin-bottom: 5px; 
-} 
- 
-#productos p { 
-    margin-bottom: 15px; 
-    line-height: 1.6; 
-} 
- 
-#productos > p { 
-    grid-column: 1 / -1; 
-    max-width: 650px; 
-    margin: 0 auto 20px; 
-    text-align: center; 
-} 
- 
-#productos article { 
-    padding: 20px; 
-    border-radius: 8px; 
-    background-color: white; 
-} 
- 
-#productos img { 
-    width: 100%; 
-    max-width: 250px; 
-    height: auto; 
-    border-radius: 8px; 
-} 
- 
-#productos h3 { 
-    color: var(--color-principal); 
-    margin-top: 10px; 
-    margin-bottom: 10px; 
-} 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-#productos {
+body {
+    font-family: Merriweather, serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+header {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
     text-align: center;
+    padding: 40px 20px;
 }
 
-#productos h2 {
-    color: var(--color-principal);
-}
-
-#productos > p {
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-}
-
-#productos .card {
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#productos .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-}
-
-#productos .card-img-top {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-#productos .card-body {
+nav {
+    background-color: var(--color-secundario);
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    padding: 15px;
+    gap: 20px;
 }
 
-#productos .card-title {
-    color: var(--color-principal);
+nav a {
+    color: var(--color-texto);
+    text-decoration: none;
     font-weight: bold;
 }
 
-#productos .card-text {
+section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: var(--color-blanco);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#nosotros {
+    text-align: center;
+    background-color: var(--color-secundario);
+}
+
+#nosotros h2 {
+    color: var(--color-principal);
+    margin-bottom: var(--espacio);
+}
+
+#nosotros h3 {
+    color: var(--color-principal);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#nosotros p {
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+#nosotros ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+#nosotros li {
+    margin-bottom: 8px;
+}
+
+
+*/
+/* SECCIÓN PRODUCTOS *//*
+
+#productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+#productos>h2 {
+    grid-column: 1 / -1;
+    color: var(--color-principal);
+    margin-bottom: 5px;
+}
+
+#productos p {
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+#productos > p {
+    grid-column: 1 / -1;
+    max-width: 650px;
+    margin: 0 auto 10px;
+    text-align: center;
+}
+
+#productos article {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+
+*/
+/* Aqui se muestran las Imágenes *//*
+
+#productos img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+*/
+/* En esta parte se muestra el texto debajo de las imagenes con sus margenes y color *//*
+
+#productos h3 {
+    color: var(--color-principal);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+*/
+/* SECCIÓN SERVICIOS *//*
+
+#servicios {
+    text-align: center;
+}
+
+#servicios h2 {
+    color: var(--color-principal);
+    margin-bottom: var(--espacio);
+}
+
+#servicios>p {
+    margin-bottom: 20px;
     line-height: 1.6;
 }
- 
-#servicios { 
-    text-align: center; 
-} 
- 
-#servicios h2 { 
-    color: var(--color-principal); 
-    margin-bottom: var(--espacio); 
-} 
- 
-#servicios>p { 
-    margin-bottom: 20px; 
-    line-height: 1.6; 
-} 
- 
-#servicios article { 
-    background-color: var(--color-secundario); 
-    padding: 20px; 
-    margin-bottom: 20px; 
-    border-radius: 8px; 
-} 
- 
-#servicios h3 { 
-    color: var(--color-principal); 
-    margin-bottom: 10px; 
-} 
- 
-#servicios article p { 
-    line-height: 1.6; 
-} 
- 
-#contacto { 
-    text-align: center; 
-} 
- 
-#contacto h2 { 
-    color: var(--color-principal); 
-    margin-bottom: var(--espacio); 
-} 
- 
-#contacto p { 
-    margin-bottom: 15px; 
-    line-height: 1.6; 
-} 
- 
-#contacto address { 
-    background-color: var(--color-secundario); 
-    padding: 20px; 
-    margin: 20px 0; 
-    border-radius: 8px; 
-    font-style: normal; 
-} 
- 
-#contacto address strong { 
-    color: var(--color-principal); 
-} 
- 
-#contacto h3 { 
-    color: var(--color-principal); 
-    margin: 25px 0 15px; 
-} 
- 
-#contacto form { 
-    text-align: left; 
-} 
- 
-#contacto label { 
-    display: block; 
-    color: var(--color-principal); 
-    font-weight: bold; 
-    margin-bottom: 5px; 
-} 
- 
-#contacto input, 
-#contacto select, 
-#contacto textarea { 
-    width: 100%; 
-    padding: 10px; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    font-family: inherit; 
-} 
- 
-#contacto textarea { 
-    resize: vertical; 
-} 
- 
-#contacto button { 
-    background-color: var(--color-principal); 
-    color: var(--color-blanco); 
-    border: none; 
-    padding: 12px 20px; 
-    border-radius: 5px; 
-    font-family: inherit; 
-    font-weight: bold; 
-    cursor: pointer; 
-} 
- 
-#contacto button:hover { 
-    background-color: var(--color-secundario); 
-    color: var(--color-texto); 
-} 
- 
-footer { 
-    text-align: center; 
-} 
 
-@media (max-width: 500px) { 
-
-    nav { 
-        flex-direction: column; 
-        align-items: center; 
-    } 
-
-    #productos { 
-        grid-template-columns: 1fr; 
-    } 
-    
-
-    section { 
-        width: 95%; 
-        padding: 20px; 
-    } 
-
-    header h1 { 
-        font-size: 2em; 
-    } 
+#servicios article {
+    background-color: var(--color-secundario);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
+
+#servicios h3 {
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+#servicios article p {
+    line-height: 1.6;
+}
+
+
 */
-html {
-    font-size: 14px;
-}
-#productos .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* SECCIÓN CONTACTO *//*
+
+#contacto {
+    text-align: center;
 }
 
-#productos .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.22) !important;
+#contacto h2 {
+    color: var(--color-principal);
+    margin-bottom: var(--espacio);
 }
 
-#productos .card-img-top {
-    transition: transform 0.35s ease;
+#contacto p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+#contacto address {
+    background-color: var(--color-secundario);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-style: normal;
+}
+
+#contacto address strong {
+    color: var(--color-principal);
+}
+
+#contacto h3 {
+    color: var(--color-principal);
+    margin: 25px 0 15px;
+}
+
+#contacto form {
+    text-align: left;
+}
+
+#contacto label {
+    display: block;
+    color: var(--color-principal);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contacto input,
+#contacto select,
+#contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+#contacto textarea {
+    resize: vertical;
+}
+
+#contacto button {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: bold;
     cursor: pointer;
 }
 
-#productos .card:hover .card-img-top {
-    transform: scale(1.08);
+#contacto button:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
 }
+
+footer {
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    #productos {
+        grid-template-columns: 1fr;
+    }
+    section {
+        width: 95%;
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+*/
+
+/* EFECTOS PREVIOS COMPARTIDOS — CONSERVADOS, INACTIVOS.
+html { font-size: 14px; }
+#productos .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+#productos .card:hover { transform: translateY(-6px); box-shadow: 0 12px 25px rgba(0, 0, 0, 0.22) !important; }
+#productos .card-img-top { transition: transform 0.35s ease; cursor: pointer; }
+#productos .card:hover .card-img-top { transform: scale(1.08); }
+*/
+
+/* ESTILOS ACTIVOS — BOOTSTRAP + PERSONALIZACIÓN TP3/TP4 */
+:root {
+    --color-principal: #6f4e37;
+    --color-secundario: #d9b38c;
+    --color-fondo: #f5f0eb;
+    --color-blanco: #fff;
+    --color-texto: #35261e;
+    --espacio: 1.5rem;
+}
+html { font-size: 14px; }
+body { padding-bottom: 4.5rem; }
+* { box-sizing: border-box; }
+/* Bootstrap resuelve grilla, formularios y modal. Este archivo aporta identidad. */
+#productos {
+    --aroma-cafe: var(--color-principal);
+    --aroma-tinta: var(--color-texto);
+    color: var(--aroma-tinta);
+    background: var(--color-fondo);
+    scroll-margin-top: 100px;
+}
+#productos h2, #productos h3 { font-family: 'Gloock', Georgia, serif; }
+#productos .lead { color: #68564a; }
+#productos .aroma-eyebrow { color: #79583c; font-weight: 700; letter-spacing: .14em; font-size: .78rem; }
+#productos .aroma-toolbar { background: #fffaf5; border: 1px solid #dfd0c1; border-radius: 1rem; }
+#productos .form-control, #productos .form-select { min-height: 46px; border-color: #c2ad9a; }
+#productos .btn-filtro { border: 1px solid #ad8c70; color: #62442e; border-radius: 2rem; padding: .55rem 1.1rem; }
+#productos .btn-filtro.active, #productos .btn-filtro:hover { background: #6f4e37; color: white; }
+.btn-aroma {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #6f4e37;
+    --bs-btn-border-color: #6f4e37;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #503521;
+    --bs-btn-hover-border-color: #503521;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #503521;
+    --bs-btn-active-border-color: #503521;
+    --bs-btn-disabled-bg: #6f4e37;
+    --bs-btn-disabled-border-color: #6f4e37;
+    --bs-btn-disabled-color: #fff;
+    border-radius: .7rem;
+    min-height: 44px;
+}
+#productos .aroma-card { box-shadow: 0 4px 20px #35261e0a; transition: transform .25s ease, box-shadow .25s ease; }
+#productos .aroma-foto { height: 220px; overflow: hidden; background: #ead9cc; }
+#productos .card-img-top { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+#productos .card-text { color: #68564a; line-height: 1.7; }
+#productos .aroma-precio { color: #6f4e37; }
+#productos :focus-visible, #modalCarrito :focus-visible { outline: 3px solid #98600f; outline-offset: 3px; }
+#productos .aroma-aviso { position: fixed; bottom: 85px; left: 1rem; z-index: 1040; max-width: min(350px, calc(100vw - 2rem)); background: #35261e; color: #fff; padding: 1rem 1.3rem; border-radius: .8rem; opacity: 0; pointer-events: none; transition: opacity .2s; }
+#productos .aroma-aviso.visible { opacity: 1; }
+#modalCarrito .modal-content { border: 0; border-radius: 1rem; overflow: hidden; }
+#modalCarrito .modal-header { background: #d9b38c; }
+#modalCarrito .btn-sm { min-width: 36px; min-height: 36px; }
+@media (hover: hover) {
+    #productos .aroma-card:hover { transform: translateY(-5px); box-shadow: 0 12px 28px #35261e18; }
+    #productos .aroma-card:hover .card-img-top { transform: scale(1.04); }
+}
+@media (prefers-reduced-motion: reduce) {
+    #productos .aroma-card, #productos .card-img-top, #productos .aroma-aviso { transition: none; transform: none !important; }
+}
+
+/* Productos como flujo de pedido: Grid en pasos; Flexbox en Navbar y controles. */
+#productos .pedido-pasos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--espacio);
+}
+#productos .pedido-pasos li { display: flex; align-items: center; gap: .75rem; }
+#productos .pedido-pasos span { color: var(--color-principal); font-size: 1.5rem; font-family: Georgia, serif; }
+#productos .aroma-pedido-intro { background: var(--color-blanco); border: 1px solid #dfd0c1; }
+#productos .aroma-promos { background: #ead9cc; border: 1px solid #dfd0c1; border-radius: 1rem; overflow: hidden; }
+#productos .aroma-promo-foto { position: relative; min-height: min(48vh, 400px); }
+#productos .aroma-promo-foto img { position: absolute; inset: 0; }
+#productos .aroma-promo-cuerpo { min-height: 360px; }
+#productos .aroma-promo-cuerpo h4 { font-family: 'Gloock', Georgia, serif; color: var(--color-principal); }
+#productos .aroma-foto-nota { position: absolute; bottom: .75rem; left: .75rem; padding: .25rem .6rem; border-radius: .35rem; background: #35261ed9; color: white; font-size: .75rem; }
+#productos .aroma-carousel-controles { background: #fffaf5; }
+#productos .aroma-card { border-radius: .8rem; }
+#productos .aroma-card:hover { transform: none; box-shadow: 0 4px 20px #35261e0a; }
+#productos .aroma-card .card-text { font-size: .95rem; }
+#productos .aroma-card .aroma-precio { font-size: 1.35rem !important; }
+#productos .aroma-card [data-agregar] { width: auto !important; align-self: flex-start; }
+#btn-abrir-carrito { display: inline-flex; align-items: center; gap: .5rem; }
+#carta-productos { scroll-margin-top: 100px; }
+@media (max-width: 767.98px) {
+    #productos .pedido-pasos { grid-template-columns: 1fr; gap: .65rem; }
+    #productos .aroma-promo-foto { min-height: 220px; }
+    #productos .aroma-promo-cuerpo { min-height: 300px; }
+    #productos .display-4 { font-size: clamp(2.2rem, 8vw, 3.2rem); }
+    #productos #btn-ver-carta { width: 100%; }
+}
+
+/* Tipografía de cafetería y estado del pedido (solo HTML + CSS). */
+:root {
+    --fuente-titulos: 'Gloock', Georgia, serif;
+    --fuente-texto: 'Lora', Georgia, serif;
+    --bs-body-font-family: var(--fuente-texto);
+}
+body, button, input, select, textarea, .btn, .form-control, .form-select {
+    font-family: var(--fuente-texto);
+}
+h1, h2, h3, h4, #productos h2, #productos h3,
+#productos .aroma-promo-cuerpo h4, #modalCarrito .modal-title {
+    font-family: var(--fuente-titulos);
+}
+#modalCarrito { color: var(--color-texto); }
+#modalCarrito .modal-body { background: #fffdf9; }
+#modalCarrito .aroma-datos-mesa, #modalCarrito .aroma-resumen { background: var(--color-fondo); }
+#modalCarrito #numero-mesa { max-width: 190px; font-size: 1.2rem; }
+#modalCarrito .aroma-alerta { color: #274633; background: #e8efe5; border: 1px solid #a8bda5; }
+#modalCarrito .aroma-estado { padding: .65rem 1rem; border-radius: 2rem; color: var(--color-principal); background: #ead9cc; }
+#modalCarrito .aroma-taza { position: relative; width: 120px; padding-top: 40px; margin: .5rem auto 1rem; color: var(--color-principal); }
+#modalCarrito .aroma-vapor { position: absolute; top: 3px; left: 30px; display: flex; gap: 10px; }
+#modalCarrito .aroma-vapor span { display: block; width: 7px; height: 37px; border-radius: 50%; background: #aa8060; animation: aroma-vapor 2.2s ease-in-out infinite; }
+#modalCarrito .aroma-vapor span:nth-child(2) { animation-delay: .35s; }
+#modalCarrito .aroma-vapor span:nth-child(3) { animation-delay: .7s; }
+#modalCarrito #resumen-preparacion li { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: .65rem; }
+#modalCarrito #resumen-preparacion li span { min-width: 0; overflow-wrap: anywhere; }
+#modalCarrito #resumen-preparacion li strong { white-space: nowrap; }
+@keyframes aroma-vapor {
+    0% { transform: translateY(10px) scaleX(.7); opacity: 0; }
+    40% { opacity: .6; }
+    100% { transform: translateY(-16px) scaleX(1.15); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    #modalCarrito .aroma-vapor span, #modalCarrito .spinner-border { animation: none; }
+    #modalCarrito .aroma-vapor span { opacity: .45; }
+}
+#productos .aroma-alerta-en-curso { color: var(--color-texto); background: #ead9cc; border: 1px solid #cbb198; }
+
+/* Modalidad del pedido: radios nativos con estilo Bootstrap. */
+#modalCarrito .btn-modalidad { color: var(--color-principal); border: 1px solid #ad8c70; background: #fffdf9; }
+#modalCarrito .btn-check:checked + .btn-modalidad { color: #fff; background: var(--color-principal); border-color: var(--color-principal); }
+#modalCarrito .btn-check:focus-visible + .btn-modalidad { outline: 3px solid #98600f; outline-offset: 3px; }
+#modalCarrito .aroma-estado { flex-wrap: wrap; justify-content: center; }

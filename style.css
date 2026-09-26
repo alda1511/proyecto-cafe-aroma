@@ -248,3 +248,7 @@ html {
 #productos .card:hover .card-img-top {
     transform: scale(1.08);
 }
+
+#menu-principal .nav-link.active {
+    color: #fdf9f9 !important;
+}

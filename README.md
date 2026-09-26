@@ -9,11 +9,11 @@ Café Aroma es una landing page de una cafetería dedicada a ofrecer café de ca
 - Patricio Mattiuzzi
 - Santiago Lazarte
 
-## Descripción del Proyecto
+## Descripción del Proyecto 
 
 La página incluye una navegación principal, una sección de bienvenida, catálogo de productos, sección de servicios, carrito de compras, formulario de contacto y una ventana modal de inicio de sesión. 
 
-Ademas cuenta con: 
+Además cuenta con funcionalidades: 
 - Saludo de bienvenida dinámico que cambia automáticamente según la hora del día.   
 - Botón "Sorprendeme" que genera recomendaciones de menú al azar. 
 - Sección interactiva donde la descripción de los valores de la cafetería cambia al hacer clic.   
@@ -34,17 +34,30 @@ Ademas cuenta con:
 - Boostrap
 - JavaScript (Vanilla)
 - FontAwesome (Iconos)
+- GoogleFonts
 
+## Funcionalidades JS
+
+- Cambio automático del saludo de bienvenida según la franja horaria.
+- Generación aleatoria de recomendaciones de menú en la portada con el botón "Sorpréndeme".
+- Cálculo en tiempo real de totales y modificación de cantidades en el pedido.
+- Autocompletado del resumen del pedido directamente en el formulario de contacto.
+- Despliegue interactivo de textos adicionales en las secciones de nosotros y servicios.
+- Actualización dinámica de las descripciones de los valores de la cafetería al hacer clic.
+- Validación visual y de formato de los campos obligatorios del formulario de contacto.
+- Mensajes visuales de éxito o advertencia al intentar enviar el formulario.
+    
 ## Objetivo del Proyecto
 El objetivo principal es brindar una experiencia digital cálida y moderna para los amantes del Cafe. El sitio busca no solo informar sobre el local, sino también permitir a los usuarios interactuar con el menú y armar pedidos de forma intuitiva.
 
 ## Características Principales
 - Diseño Responsivo interfaz fluida adaptable a cualquier dispositivo móvil o de escritorio utilizando el sistema de grillas de Bootstrap 5.
-- Uso de etiquetas HTML5 [<header>, <nav>, <section>, <article>, <footer>] para mejorar la accesibilidad y el posicionamiento SEO.
+- Uso de etiquetas HTML5 `[header, nav, section, article, footer]` para mejorar la accesibilidad y el posicionamiento SEO.
 - Barra de navegación principal fijada en la parte superior (sticky-top) para facilitar el desplazamiento entre las distintas áreas del sitio.
 
 ## Estructura Principal 
--index.html [Estructura completa del sitio]
--style.css: [Estilos, responsive y componentes personalizados]
--script.js: [Saludo, carrito, información del proyecto] 
--img/: [Imágenes]
+- `index.html` [Estructura completa del sitio]
+- `style.css` [Estilos, responsive y componentes personalizados]
+- `script.js` [Saludo, carrito, información del proyecto] 
+- `img/` [Imágenes]
+

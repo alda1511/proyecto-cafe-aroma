@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const titulo = document.getElementById("mensaje-bienvenida");
     const horaActual = new Date().getHours();
     
-    if (titulo && horaActual >= 6 && horaActual < 12) {
+    if (horaActual >= 6 && horaActual < 12) {
         titulo.textContent = "¡Buenos días! Bienvenidos a Café Aroma";
-    } else if (titulo && horaActual >= 12 && horaActual < 19) {
+    } else if (horaActual >= 12 && horaActual < 19) {
         titulo.textContent = "¡Buenas tardes! Bienvenidos a Café Aroma";
-    } else if (titulo) {
+    } else {
         titulo.textContent = "¡Buenas noches! Bienvenidos a Café Aroma";
     }
 
@@ -28,8 +28,7 @@ if (btnRecomendacion !== null && textoRecomendacion !== null) {
     
 }
 });
-// Productos se carga por separado desde productos.js.
-
+// Productos está separado en productos.js y se carga únicamente desde carta.html.
 //SECCION NOSOTROS//
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -68,8 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function mostrarInfo(numero) {
         let informacion = document.getElementById("info" + numero);
 
-        if (!informacion) return;
-
         if (informacion.style.display === "none") {
             informacion.style.display = "block";
         } else {
@@ -88,10 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultado = document.getElementById("mensaje-formulario");
     const contador = document.getElementById("contador-mensaje");
 
-    if (!formulario || !nombre || !email || !motivo || !mensaje || !resultado || !contador) return;
-
     mensaje.addEventListener("input", () => {
-        contador.textContent = `${mensaje.value.length}/${mensaje.maxLength} caracteres`;
+        contador.textContent = `${mensaje.value.length}/500 caracteres`;
     });
 
     motivo.addEventListener("change", () => {
@@ -138,9 +133,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
         resultado.textContent =
-            `¡Gracias ${nombre.value.trim()}! Tu mensaje es válido. Esta demo no realiza envíos.`;
+            `¡Gracias ${nombre.value.trim()}! Recibimos tu mensaje.`;
 
         resultado.className = "alert alert-success mt-3";
-        // Conservamos el mensaje: no hubo un envío real.
+        formulario.reset();
+        contador.textContent = "0/500 caracteres";
     });
 });

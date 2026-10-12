@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Carta y pedidos | Café Aroma</title>
+  <meta name="description" content="Explorá la carta de Café Aroma: cafés, meriendas y platos. Buscá productos y armá un pedido de demostración."/>
+  <meta content="Café Aroma, cafetería, café, café artesanal, espresso, café con leche, medialunas, cafetería Tucumán" name="keywords"/>
+  <meta content="Café Aroma" name="author"/>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="productos.js"></script>
+ </head>
+ <body class="pagina-carta">
+  <header class="container py-4 d-flex flex-wrap align-items-center justify-content-between gap-3">
+   <h1 class="h2 mb-0">Café Aroma · Carta</h1>
+   <a href="index.html#productos" class="btn btn-outline-secondary">Volver al inicio</a>
+  </header>
+  <main>
+   <section aria-labelledby="titulo-productos" class="py-5" id="productos">
+    <div class="container">
+     <div class="row align-items-end g-4 mb-4">
+      <div class="col-lg-8">
+       <p class="small fw-bold text-uppercase mb-2">LA CARTA · CAFÉ AROMA</p>
+       <h2 class="display-4 mb-3" id="titulo-productos">Elegí. Sumá. Disfrutá.</h2>
+       <p class="lead mb-0">Tus favoritos de Café Aroma, en un solo pedido. Descubrí las promos o explorá nuestra carta.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+       <button class="btn btn-aroma btn-lg" data-bs-target="#modalCarrito" data-bs-toggle="modal" type="button">
+        Ver mi pedido
+        <span class="badge bg-light text-dark ms-2" id="cantidad-productos">0</span>
+       </button>
+      </div>
+     </div>
+     <div class="d-none alert alert-warning" id="aviso-pedido-en-curso">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+       <span id="texto-pedido-en-curso"></span>
+       <button class="btn btn-aroma" data-bs-target="#modalCarrito" data-bs-toggle="modal" type="button">Ver estado del pedido</button>
+      </div>
+     </div>
+     <div aria-labelledby="titulo-promos" class="mb-4">
+      <div class="d-flex justify-content-between align-items-end gap-3 mb-3">
+       <div>
+        <p class="small fw-bold text-uppercase mb-1">PARA COMPARTIR</p>
+        <h3 class="h2 mb-0" id="titulo-promos">Una buena pausa, por dos.</h3>
+       </div>
+       <span class="small text-secondary">6 promos</span>
+      </div>
+      <div aria-label="Promociones de Café Aroma" aria-roledescription="carrusel" class="carousel slide bg-body-tertiary border rounded-4 overflow-hidden" data-bs-interval="false" id="promos-productos" role="region">
+       <div class="carousel-inner rounded-4">
+        <div aria-label="1 de 6" aria-roledescription="diapositiva" class="carousel-item active" role="group">
+         <article class="row g-0">
+          <div class="col-md-6 position-relative">
+           <div class="ratio ratio-4x3">
+           <img alt="Foto ilustrativa de cafetería para Promo 1" class="w-100 h-100 object-fit-cover" height="600" loading="eager" src="imagenes/promo-1.jpg" width="800"/></div>
+           <span class="position-absolute bottom-0 start-0 m-2 badge text-bg-dark">Imagen ilustrativa</span>
+          </div>
+          <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+           <p class="small fw-bold text-uppercase mb-2">MOMENTOS PARA COMPARTIR</p>
+           <h4 class="display-6 mb-3">Promo 1</h4>
+           <p class="mb-4">2 infusiones, 2 medialunas con jamón y queso, 2 yogurts con granola y 2 jugos de naranja.</p>
+           <div class="d-flex flex-wrap align-items-center gap-3 mt-auto">
+            <strong class="fs-2" data-precio-promo="promo-1">$21.000</strong>
+            <button aria-label="Agregar Promo 1 al pedido" class="btn btn-aroma" data-agregar="promo-1" type="button">Agregar promo</button>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div aria-label="2 de 6" aria-roledescription="diapositiva" class="carousel-item" role="group">
+         <article class="row g-0">
+          <div class="col-md-6 position-relative">
+           <div class="ratio ratio-4x3">
+           <img alt="Foto ilustrativa de cafetería para Promo 2" class="w-100 h-100 object-fit-cover" height="600" loading="lazy" src="imagenes/promo-2.jpg" width="800"/></div>
+           <span class="position-absolute bottom-0 start-0 m-2 badge text-bg-dark">Imagen ilustrativa</span>
+          </div>
+          <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+           <p class="small fw-bold text-uppercase mb-2">MOMENTOS PARA COMPARTIR</p>
+           <h4 class="display-6 mb-3">Promo 2</h4>
+           <p class="mb-4">2 infusiones, 2 tostadas, huevos revueltos, jamón y queso y 2 jugos de naranja.</p>
+           <div class="d-flex flex-wrap align-items-center gap-3 mt-auto">
+            <strong class="fs-2" data-precio-promo="promo-2">$22.000</strong>
+            <button aria-label="Agregar Promo 2 al pedido" class="btn btn-aroma" data-agregar="promo-2" type="button">Agregar promo</button>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div aria-label="3 de 6" aria-roledescription="diapositiva" class="carousel-item" role="group">
+         <article class="row g-0">
+          <div class="col-md-6 position-relative">
+           <div class="ratio ratio-4x3">
+           <img alt="Foto ilustrativa de cafetería para Promo 3" class="w-100 h-100 object-fit-cover" height="600" loading="lazy" src="imagenes/promo-3.jpg" width="800"/></div>
+           <span class="position-absolute bottom-0 start-0 m-2 badge text-bg-dark">Imagen ilustrativa</span>
+          </div>
+          <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+           <p class="small fw-bold text-uppercase mb-2">MOMENTOS PARA COMPARTIR</p>
+           <h4 class="display-6 mb-3">Promo 3</h4>
+           <p class="mb-4">2 infusiones, 2 cuadrados dulces, tostado de jamón y queso y 2 ensaladas de frutas.</p>
+           <div class="d-flex flex-wrap align-items-center gap-3 mt-auto">
+            <strong class="fs-2" data-precio-promo="promo-3">$23.000</strong>
+            <button aria-label="Agregar Promo 3 al pedido" class="btn btn-aroma" data-agregar="promo-3" type="button">Agregar promo</button>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div aria-label="4 de 6" aria-roledescription="diapositiva" class="carousel-item" role="group">
+         <article class="row g-0">
+          <div class="col-md-6 position-relative">
+           <div class="ratio ratio-4x3">
+           <img alt="Foto ilustrativa de cafetería para Promo 4" class="w-100 h-100 object-fit-cover" height="600" loading="lazy" src="imagenes/promo-4.jpg" width="800"/></div>
+           <span class="position-absolute bottom-0 start-0 m-2 badge text-bg-dark">Imagen ilustrativa</span>
+          </div>
+          <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+           <p class="small fw-bold text-uppercase mb-2">MOMENTOS PARA COMPARTIR</p>
+           <h4 class="display-6 mb-3">Promo 4</h4>
+           <p class="mb-4">2 infusiones, 4 pancakes de avena, banana y miel y 2 yogurts con granola.</p>
+           <div class="d-flex flex-wrap align-items-center gap-3 mt-auto">
+            <strong class="fs-2" data-precio-promo="promo-4">$24.000</strong>
+            <button aria-label="Agregar Promo 4 al pedido" class="btn btn-aroma" data-agregar="promo-4" type="button">Agregar promo</button>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div aria-label="5 de 6" aria-roledescription="diapositiva" class="carousel-item" role="group">
+         <article class="row g-0">
+          <div class="col-md-6 position-relative">
+           <div class="ratio ratio-4x3">
+           <img alt="Foto ilustrativa de cafetería para Promo 5" class="w-100 h-100 object-fit-cover" height="600" loading="lazy" src="imagenes/promo-5.jpg" width="800"/></div>
+           <span class="position-absolute bottom-0 start-0 m-2 badge text-bg-dark">Imagen ilustrativa</span>
+          </div>
+          <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+           <p class="small fw-bold text-uppercase mb-2">MOMENTOS PARA COMPARTIR</p>
+           <h4 class="display-6 mb-3">Promo 5</h4>
+           <p class="mb-4">2 licuados o smoothies y tostado de jamón y queso.</p>
+           <div class="d-flex flex-wrap align-items-center gap-3 mt-auto">
+            <strong class="fs-2" data-precio-promo="promo-5">$18.000</strong>
+            <button aria-label="Agregar Promo 5 al pedido" class="btn btn-aroma" data-agregar="promo-5" type="button">Agregar promo</button>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div aria-label="6 de 6" aria-roledescription="diapositiva" class="carousel-item" role="group">
+         <article class="row g-0">
+          <div class="col-md-6 position-relative">
+           <div class="ratio ratio-4x3">
+           <img alt="Foto ilustrativa de cafetería para Promo Keto" class="w-100 h-100 object-fit-cover" height="600" loading="lazy" src="imagenes/promo-6.jpg" width="800"/></div>
+           <span class="position-absolute bottom-0 start-0 m-2 badge text-bg-dark">Imagen ilustrativa</span>
+          </div>
+          <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+           <p class="small fw-bold text-uppercase mb-2">MOMENTOS PARA COMPARTIR</p>
+           <h4 class="display-6 mb-3">Promo Keto</h4>
+           <p class="mb-4">2 infusiones, huevo revuelto, palta, panceta, cherries, queso en cubos y tostadas.</p>
+           <div class="d-flex flex-wrap align-items-center gap-3 mt-auto">
+            <strong class="fs-2" data-precio-promo="promo-keto">$26.000</strong>
+            <button aria-label="Agregar Promo Keto al pedido" class="btn btn-aroma" data-agregar="promo-keto" type="button">Agregar promo</button>
+           </div>
+          </div>
+         </article>
+        </div>
+       </div>
+       <div class="d-flex justify-content-between align-items-center gap-3 p-3 bg-white">
+        <button aria-label="Promoción anterior" class="btn btn-outline-secondary" data-bs-slide="prev" data-bs-target="#promos-productos" type="button">← Anterior</button>
+        <span class="small" id="estado-promos" role="status">Promo 1 de 6</span>
+        <button aria-label="Promoción siguiente" class="btn btn-outline-secondary" data-bs-slide="next" data-bs-target="#promos-productos" type="button">Siguiente →</button>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white border p-4 rounded-4">
+      <ol aria-label="Cómo preparar tu pedido" class="d-flex flex-column flex-md-row gap-3 justify-content-between list-unstyled mb-4">
+       <li>
+        <span>01</span>
+        <strong>Elegí tus favoritos</strong>
+       </li>
+       <li>
+        <span>02</span>
+        <strong>Revisá tu pedido</strong>
+       </li>
+       <li>
+        <span>03</span>
+        <strong>Prepará tu pedido</strong>
+       </li>
+      </ol>
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+       <div>
+        <h3 class="h4 mb-1">¿Qué te gustaría pedir hoy?</h3>
+        <p class="mb-0 text-secondary">Cafés, meriendas, platos y algo rico para compartir.</p>
+       </div>
+       <a class="btn btn-aroma btn-lg" href="#carta-productos">Explorar la carta</a>
+      </div>
+     </div>
+     <div aria-labelledby="titulo-carta" id="carta-productos">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4 pt-4">
+       <div>
+        <p class="small fw-bold text-uppercase mb-1">ARMÁ TU PEDIDO</p>
+        <h3 class="h2 mb-0" id="titulo-carta">Nuestra carta</h3>
+       </div>
+       <button class="btn btn-aroma" data-bs-target="#modalCarrito" data-bs-toggle="modal" type="button">
+        Revisar pedido ·
+        <span id="total-resumen">$0</span>
+       </button>
+      </div>
+      <div class="bg-white border rounded-4 p-3 p-md-4 mb-4">
+       <div class="row g-3 mb-3">
+        <div class="col-md-8">
+         <label class="form-label fw-semibold" for="buscar-producto">¿Qué te gustaría disfrutar?</label>
+         <input aria-controls="catalogo-productos" class="form-control" id="buscar-producto" placeholder="Buscá café, Nutella, pizzas…" type="search"/></div>
+        <div class="col-md-4">
+         <label class="form-label fw-semibold" for="orden-productos">Ordenar por</label>
+         <select aria-controls="catalogo-productos" class="form-select" id="orden-productos">
+          <option value="original">Orden de la carta</option>
+          <option value="menor">Menor precio</option>
+          <option value="mayor">Mayor precio</option>
+          <option value="nombre">Nombre: A–Z</option>
+         </select>
+        </div>
+       </div>
+       <div aria-label="Filtrar por categoría" class="d-flex flex-wrap gap-2" id="filtros-productos" role="group">
+        <button aria-pressed="true" class="btn btn-outline-secondary rounded-pill active" data-categoria="todos" type="button">Todos</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="calientes" type="button">Cafetería</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="frios" type="button">Cafés fríos</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="panaderia" type="button">Panadería</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="desayunos" type="button">Desayunos y meriendas</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="promos" type="button">Promos y cumpleaños</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="pasteleria" type="button">Pastelería</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="refrescantes" type="button">Refrescantes</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="smoothies" type="button">Smoothies</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="principales" type="button">Platos principales</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="pizzas" type="button">Pizzas</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="sandwiches" type="button">Sándwiches</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="guarniciones" type="button">Ensaladas y guarniciones</button>
+        <button aria-pressed="false" class="btn btn-outline-secondary rounded-pill" data-categoria="bebidas" type="button">Bebidas</button>
+       </div>
+      </div>
+      <p class="small text-secondary" id="resultado-productos" role="status">94 productos y opciones en la carta</p>
+      <div class="row g-4" id="catalogo-productos"></div>
+      <div aria-label="Páginas de productos" class="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-4" id="paginacion-productos">
+       <button class="btn btn-outline-secondary" id="pagina-anterior" type="button">Anterior</button>
+       <span id="pagina-actual" role="status"></span>
+       <button class="btn btn-outline-secondary" id="pagina-siguiente" type="button">Siguiente</button>
+      </div>
+      <div class="text-center p-5 border rounded-4 d-none" id="sin-productos">
+       <h3 class="h4">No encontramos esa combinación</h3>
+       <p>Probá otra búsqueda o volvé a ver toda la carta.</p>
+       <button class="btn btn-aroma" id="limpiar-filtros" type="button">Ver todos los productos</button>
+      </div>
+      <p class="small text-secondary mt-4 mb-0">Precios en pesos argentinos. Consultá disponibilidad y adicionales. Esta carta corresponde a una demo académica.</p>
+     </div>
+     <p aria-live="polite" class="aroma-aviso" id="aviso-productos" role="status"></p>
+     <noscript><p class="alert alert-info">Activá JavaScript para cargar el catálogo completo, filtrar productos y armar tu pedido.</p></noscript>
+    </div>
+   </section>
+   <button aria-label="Abrir carrito de compras" class="btn btn-aroma position-fixed bottom-0 start-0 m-3 shadow z-3" data-bs-target="#modalCarrito" data-bs-toggle="modal" id="btn-abrir-carrito" type="button">
+    <svg aria-hidden="true" fill="none" height="21" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="21" xmlns="http://www.w3.org/2000/svg">
+     <path d="M3 3h2l3 12h11l2-8H6"></path>
+     <circle cx="9" cy="20" r="1"></circle>
+     <circle cx="18" cy="20" r="1"></circle>
+    </svg>
+    <span id="texto-carrito">Mi pedido</span>
+    <span class="badge rounded-pill bg-dark" id="cantidad-carrito">0</span>
+   </button>
+   <div aria-hidden="true" aria-labelledby="tituloModalCarrito" class="modal fade" id="modalCarrito" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+     <div class="modal-content">
+      <div class="modal-header text-black" style="background-color: #d9b38c;">
+       <h2 class="modal-title fs-4" id="tituloModalCarrito">Tu pedido</h2>
+       <button aria-label="Cerrar" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+      </div>
+      <div class="modal-body">
+       <div id="edicion-pedido">
+        <p class="text-secondary mb-3">Demo académica: el pedido se simula en este navegador; no se envía al local ni se cobra. Revisá tus favoritos y elegí la modalidad.</p>
+        <p class="text-secondary" id="carrito-vacio">Todavía no agregaste productos.</p>
+        <div class="list-group mb-3" id="lista-carrito"></div>
+        <div class="d-flex justify-content-between align-items-center border-top pt-3 mb-4">
+         <strong>Total estimado</strong>
+         <strong class="fs-4" id="total-carrito">$0</strong>
+        </div>
+        <form id="datos-pedido" novalidate="">
+         <div class="bg-body-tertiary rounded-3 p-3 p-sm-4">
+          <fieldset>
+           <legend class="form-label fw-bold fs-6">¿Dónde vas a disfrutar tu pedido?</legend>
+           <div class="row g-2">
+            <div class="col-12 col-sm-6">
+             <input aria-controls="grupo-mesa" checked="" class="btn-check" id="modalidad-local" name="modalidad" required="" type="radio" value="local"/>
+             <label class="btn btn-outline-secondary w-100 py-3" for="modalidad-local">Consumir en el local</label>
+            </div>
+            <div class="col-12 col-sm-6">
+             <input aria-controls="grupo-mesa" class="btn-check" id="modalidad-llevar" name="modalidad" required="" type="radio" value="llevar"/>
+             <label class="btn btn-outline-secondary w-100 py-3" for="modalidad-llevar">Para llevar</label>
+            </div>
+           </div>
+          </fieldset>
+          <div class="mt-3" id="grupo-mesa">
+           <label class="form-label fw-bold" for="numero-mesa">¿En qué mesa estás?</label>
+           <input aria-describedby="ayuda-mesa error-mesa" class="form-control" id="numero-mesa" inputmode="numeric" max="99" min="1" name="mesa" placeholder="Por ejemplo: 7" required="" step="1" type="number"/>
+           <div class="form-text" id="ayuda-mesa">Ingresá un número de mesa del 1 al 99.</div>
+           <div class="invalid-feedback" id="error-mesa">Ingresá un número entero de mesa, entre 1 y 99.</div>
+          </div>
+          <label class="form-label mt-3 fw-semibold" for="notas-pedido">
+           Observaciones
+           <span class="fw-normal">(opcional)</span>
+          </label>
+          <textarea aria-describedby="ayuda-notas" class="form-control" id="notas-pedido" maxlength="250" name="observaciones" placeholder="Por ejemplo: café sin azúcar." rows="2"></textarea>
+          <div class="form-text" id="ayuda-notas">Hasta 250 caracteres. Los adicionales no se calculan automáticamente.</div>
+         </div>
+        </form>
+        <p class="small text-secondary mt-3 mb-0">Revisá los productos y la modalidad antes de preparar tu pedido.</p>
+       </div>
+       <div class="d-none" id="pedido-preparacion">
+        <div class="alert alert-success mb-4" id="alerta-pedido" role="alert"></div>
+        <div class="text-center">
+         <div aria-hidden="true" class="text-center my-3">
+          <svg fill="none" height="90" viewBox="0 0 110 90" width="110">
+           <path d="M20 25h58v26a23 23 0 0 1-23 23H43a23 23 0 0 1-23-23V25Z" fill="currentColor"></path>
+           <path d="M80 31h8a12 12 0 0 1 0 24H78" stroke="currentColor" stroke-width="6"></path>
+           <path d="M15 81h70" stroke="currentColor" stroke-linecap="round" stroke-width="5"></path>
+          </svg>
+         </div>
+         <h3 class="h2 mb-2" id="titulo-preparacion" tabindex="-1">Tu pedido se está preparando</h3>
+         <p class="text-secondary">Una buena pausa empieza con un buen café.</p>
+         <p class="flex-wrap justify-content-center rounded-pill bg-body-tertiary p-3 d-inline-flex align-items-center gap-2">
+          <span aria-hidden="true" class="spinner-border spinner-border-sm"></span>
+          En preparación ·
+          <strong id="mesa-preparacion"></strong>
+         </p>
+         <p class="small text-secondary mb-4" id="numero-pedido"></p>
+        </div>
+        <div class="bg-body-tertiary rounded-3 p-3 p-sm-4">
+         <h4 class="h5 mb-3">El resumen de tu pedido</h4>
+         <p class="small mb-3">
+          Modalidad:
+          <strong id="destino-resumen"></strong>
+         </p>
+         <ul class="list-unstyled mb-3" id="resumen-preparacion"></ul>
+         <p class="small text-secondary text-break d-none" id="notas-preparacion"></p>
+         <p class="d-flex justify-content-between border-top pt-3 mb-0">
+          <strong>Total estimado</strong>
+          <strong id="total-preparacion"></strong>
+         </p>
+        </div>
+        <p class="small text-secondary mt-3 mb-0">Podés cerrar esta ventana y volver a consultar el estado desde el carrito.</p>
+       </div>
+       <p class="small mt-3 mb-0" id="aviso-carrito" role="status"></p>
+      </div>
+      <div class="modal-footer">
+       <div class="d-flex flex-wrap gap-2 w-100 justify-content-end" id="acciones-carrito">
+        <button class="btn btn-outline-secondary" id="vaciar-carrito" type="button">Vaciar carrito</button>
+        <button class="btn btn-aroma" form="datos-pedido" id="finalizar-carrito" type="submit">Preparar pedido</button>
+       </div>
+       <div class="d-none d-flex flex-wrap gap-2 w-100 justify-content-end" id="acciones-preparacion">
+        <button class="btn btn-outline-secondary" data-bs-dismiss="modal" type="button">Cerrar</button>
+        <button class="btn btn-aroma" id="nuevo-pedido" type="button">Iniciar otro pedido</button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </main>
+  <footer class="text-center py-4">Café Aroma · Precios en pesos argentinos · Demo académica</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <template id="plantilla-producto">
+   <div class="col-12 col-md-6 col-lg-4">
+    <article class="card h-100 border-0 shadow-sm rounded-4">
+     <div class="card-body d-flex flex-column p-4">
+      <h3 class="h5 card-title"></h3>
+      <p class="card-text text-secondary flex-grow-1"></p>
+      <strong class="aroma-precio fs-5 mb-3"></strong>
+      <button class="btn btn-aroma align-self-start" type="button">Agregar</button>
+     </div>
+    </article>
+   </div>
+  </template>
+  <script id="datos-catalogo" type="application/json">
+{
+  "descripciones": [
+    "Café intenso y aromático, preparado con granos seleccionados para disfrutar su sabor.",
+    "Una combinación de café y leche caliente, ideal para comenzar el día.",
+    "Medialunas recién horneadas, ideales para acompañar nuestros cafés.",
+    "Café suave y equilibrado para quienes prefieren disfrutar una bebida de sabor más ligero.",
+    "Una opción refrescante para disfrutar el sabor del café en los días más calurosos.",
+    "Unidad de panificado simple. Consultá las variedades disponibles.",
+    "Consultá disponibilidad al preparar tu pedido.",
+    "Tostón, huevo revuelto, palta y queso crema. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.",
+    "Medialunas o tortillas. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.",
+    "Pan tostado, queso crema y mermelada. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.",
+    "Dos medialunas con jamón y queso. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.",
+    "Tostón, dulce de leche y manteca. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.",
+    "Tostón, huevo revuelto, panceta ahumada y queso crema. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.",
+    "Tostón, huevo revuelto, jamón y queso. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.",
+    "Pancake de avena, banana, durazno y miel, con ensalada de frutas. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.",
+    "Yogurt con granola y miel. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.",
+    "Huevo revuelto, palta, cherries salteados, queso y panceta en cubos. Pan opcional. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.",
+    "Cuadrado dulce: brownie, pastafrola, budín o crumble de manzana. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.",
+    "Tostón cocinado en leche, huevo y miel, con frutas de estación. Incluye una infusión y jugo de naranja. Consultar leche vegetal (adicional) y opciones de pan.",
+    "2 infusiones, 2 medialunas con jamón y queso, 2 yogurts con granola y 2 jugos de naranja.",
+    "2 infusiones, 2 tostadas, huevos revueltos, jamón y queso y 2 jugos de naranja.",
+    "2 infusiones, 2 cuadrados dulces, tostado de jamón y queso y 2 ensaladas de frutas.",
+    "2 infusiones, 4 pancakes de avena, banana y miel y 2 yogurts con granola.",
+    "2 licuados o smoothies y tostado de jamón y queso.",
+    "2 infusiones, huevo revuelto, palta, panceta, cherries, queso en cubos y tostadas.",
+    "5 infusiones, 5 medialunas, 5 sándwiches de jamón y queso, 5 porciones de brownie y 5 vasitos de jugo.",
+    "10 medialunas o tortillas, 10 sándwiches de jamón y queso, 5 porciones de pastafrola, 5 de brownie y 1 jarra de limonada o jugo de naranja.",
+    "Precio por unidad o porción individual.",
+    "Precio por vaso. Para jarra, indicar en observaciones.",
+    "Consultá disponibilidad al preparar tu pedido. Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.",
+    "Consultar preparación. Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.",
+    "De carne o pollo; variedad a confirmar. Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.",
+    "Jamón, queso y morrones. Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.",
+    "De carne o queso; variedad a confirmar. Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.",
+    "De jamón y queso, con salsa rosa. Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.",
+    "Consultar salsa disponible. Precio por unidad para empanadas y bombitas; por plato para las demás opciones. Guarnición aparte.",
+    "Precio por pizza entera de 8 porciones, presentación propuesta para esta carta.",
+    "Ternera, queso tybo, morrones, huevo y BBQ.",
+    "Ternera, queso tybo, lechuga, tomate y mayonesa.",
+    "Queso blanco, jamón cocido, queso tybo y palta.",
+    "Precio por porción de 3 triángulos, presentación propuesta para esta carta.",
+    "Mix de hojas verdes, palta, huevo, queso tybo y cherries.",
+    "Variedad a confirmar."
+  ],
+  "productos": [
+    ["espresso", "Café Espresso", "calientes", 3500, 0],
+    ["con-leche", "Café con leche", "calientes", 4500, 1],
+    ["medialunas", "Medialunas", "panaderia", 1500, 2],
+    ["americano", "Café Americano", "calientes", 3800, 3],
+    ["frio", "Café Frío", "frios", 5000, 4],
+    ["panificados", "Panificados", "panaderia", 1500, 5],
+    ["jarrita", "Jarrita", "calientes", 3800, 6],
+    ["submarino", "Submarino", "calientes", 4800, 6],
+    ["capuccino", "Capuccino", "calientes", 5000, 6],
+    ["cafe-doble", "Café doble", "calientes", 4200, 6],
+    ["chocolatada", "Chocolatada", "calientes", 4500, 6],
+    ["te-mate", "Té / mate", "calientes", 3200, 6],
+    ["latte-vainilla", "Latte vainilla", "calientes", 5500, 6],
+    ["latte-caramel", "Latte caramel", "calientes", 5500, 6],
+    ["latte-caramel-macchiato", "Latte caramel macchiato", "calientes", 6000, 6],
+    ["latte-nutella", "Latte Nutella", "calientes", 6500, 6],
+    ["iced-coffee", "Iced coffee", "frios", 4500, 6],
+    ["iced-latte", "Iced latte", "frios", 5500, 6],
+    ["frapuccino", "Frapuccino", "frios", 6500, 6],
+    ["avocado", "Avocado", "desayunos", 10500, 7],
+    ["tradicional", "Tradicional", "desayunos", 6500, 8],
+    ["light", "Light", "desayunos", 7500, 9],
+    ["mafalda", "Mafalda", "desayunos", 8500, 10],
+    ["de-campo", "De campo", "desayunos", 7500, 11],
+    ["desayuno-americano", "Desayuno americano", "desayunos", 11500, 12],
+    ["proteico", "Proteico", "desayunos", 10500, 13],
+    ["fit", "Fit", "desayunos", 11000, 14],
+    ["saludable", "Saludable", "desayunos", 9000, 15],
+    ["keto-bowl", "Keto Bowl", "desayunos", 12000, 16],
+    ["dolce", "Dolce", "desayunos", 8500, 17],
+    ["french-toast", "French toast", "desayunos", 10500, 18],
+    ["promo-1", "Promo 1", "promos", 21000, 19],
+    ["promo-2", "Promo 2", "promos", 22000, 20],
+    ["promo-3", "Promo 3", "promos", 23000, 21],
+    ["promo-4", "Promo 4", "promos", 24000, 22],
+    ["promo-5", "Promo 5", "promos", 18000, 23],
+    ["promo-keto", "Promo Keto", "promos", 26000, 24],
+    ["cumpleanos-para-5", "Cumpleaños para 5", "promos", 55000, 25],
+    ["cumpleanos-para-10", "Cumpleaños para 10", "promos", 85000, 26],
+    ["croissant-con-nutella", "Croissant con Nutella", "pasteleria", 6500, 27],
+    ["croissant-con-dulce-de-leche", "Croissant con dulce de leche", "pasteleria", 5500, 27],
+    ["croissant-con-crema-pastelera", "Croissant con crema pastelera", "pasteleria", 5500, 27],
+    ["croissant-con-jamon-y-queso", "Croissant con jamón y queso", "pasteleria", 6500, 27],
+    ["budin-de-limon-glaseado", "Budín de limón glaseado", "pasteleria", 4000, 27],
+    ["brownie", "Brownie", "pasteleria", 4500, 27],
+    ["brownie-con-nutella", "Brownie con Nutella", "pasteleria", 6000, 27],
+    ["pastafrola", "Pastafrola", "pasteleria", 4000, 27],
+    ["crumble-de-manzana", "Crumble de manzana", "pasteleria", 5000, 27],
+    ["panqueque-con-nutella", "Panqueque con Nutella", "pasteleria", 6000, 27],
+    ["limonada-clasica", "Limonada clásica", "refrescantes", 5000, 28],
+    ["limonada-de-menta-y-jengibre", "Limonada de menta y jengibre", "refrescantes", 5500, 28],
+    ["limonada-de-frutos-rojos", "Limonada de frutos rojos", "refrescantes", 6000, 28],
+    ["jugo-de-naranja", "Jugo de naranja", "refrescantes", 5500, 28],
+    ["smoothie-oreo", "Smoothie Oreo", "smoothies", 6500, 6],
+    ["smoothie-durazno", "Smoothie durazno", "smoothies", 6000, 6],
+    ["smoothie-nutella", "Smoothie Nutella", "smoothies", 7000, 6],
+    ["smoothie-banana-split-con-galleta-oblea", "Smoothie banana split con galleta oblea", "smoothies", 6500, 6],
+    ["smoothie-frutos-rojos", "Smoothie frutos rojos", "smoothies", 6500, 6],
+    ["milanesa-clasica", "Milanesa clásica", "principales", 14500, 29],
+    ["milanesa-napolitana", "Milanesa napolitana", "principales", 17000, 29],
+    ["suprema-clasica", "Suprema clásica", "principales", 14000, 29],
+    ["suprema-napolitana", "Suprema napolitana", "principales", 16500, 29],
+    ["mexicano", "Mexicano", "principales", 14000, 30],
+    ["empanadas", "Empanadas", "principales", 1800, 31],
+    ["pollo-con-crema-y-mostaza", "Pollo con crema y mostaza", "principales", 16500, 29],
+    ["pollo-al-limon", "Pollo al limón", "principales", 16000, 29],
+    ["lomitos-rellenos", "Lomitos rellenos", "principales", 19000, 32],
+    ["bombitas", "Bombitas", "principales", 2500, 33],
+    ["sorrentinos", "Sorrentinos", "principales", 14000, 34],
+    ["tallarines", "Tallarines", "principales", 12000, 35],
+    ["pizza-muzzarella", "Pizza muzzarella", "pizzas", 15000, 36],
+    ["pizza-napolitana", "Pizza napolitana", "pizzas", 17000, 36],
+    ["pizza-especial", "Pizza especial", "pizzas", 18000, 36],
+    ["pizza-de-ternera", "Pizza de ternera", "pizzas", 21000, 36],
+    ["baguette-americano", "Baguette americano", "sandwiches", 12500, 37],
+    ["baguette-especial-de-ternera", "Baguette especial de ternera", "sandwiches", 12000, 38],
+    ["baguette-aroma", "Baguette Aroma", "sandwiches", 11500, 39],
+    ["miga-de-jamon-y-queso", "Miga de jamón y queso", "sandwiches", 6500, 40],
+    ["miga-de-ternera-y-queso", "Miga de ternera y queso", "sandwiches", 7500, 40],
+    ["miga-de-lechuga-y-tomate", "Miga de lechuga y tomate", "sandwiches", 6000, 40],
+    ["ensalada-aroma", "Ensalada Aroma", "guarniciones", 10500, 41],
+    ["papas-fritas", "Papas fritas", "guarniciones", 6000, 6],
+    ["papas-rusticas-con-provenzal", "Papas rústicas con provenzal", "guarniciones", 6500, 6],
+    ["pure-clasico-o-mixto", "Puré clásico o mixto", "guarniciones", 5000, 42],
+    ["ensalada-mixta", "Ensalada mixta", "guarniciones", 5000, 6],
+    ["agua", "Agua", "bebidas", 2500, 6],
+    ["agua-con-gas", "Agua con gas", "bebidas", 2500, 6],
+    ["pepsi-seven-lata", "Pepsi / Seven lata", "bebidas", 3000, 6],
+    ["pepsi-seven-mirinda-1-5-l", "Pepsi / Seven / Mirinda 1,5 L", "bebidas", 6000, 6],
+    ["agua-saborizada-330-ml", "Agua saborizada 330 ml", "bebidas", 2500, 6],
+    ["quilmes-lata", "Quilmes lata", "bebidas", 4000, 6],
+    ["quilmes-botella", "Quilmes botella", "bebidas", 6500, 6],
+    ["stella-artois-lata", "Stella Artois lata", "bebidas", 5000, 6],
+    ["stella-artois-1-l", "Stella Artois 1 L", "bebidas", 8000, 6]
+  ]
+}
+  </script>
+ </body>
+</html>

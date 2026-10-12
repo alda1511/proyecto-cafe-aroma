@@ -28,8 +28,6 @@ if (btnRecomendacion !== null && textoRecomendacion !== null) {
     
 }
 });
-// Productos está separado en productos.js y se carga únicamente desde carta.html.
-//SECCION NOSOTROS//
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -63,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-//SECCION SERVICIOS//
 function mostrarInfo(numero) {
         let informacion = document.getElementById("info" + numero);
 
@@ -74,7 +71,6 @@ function mostrarInfo(numero) {
         }
     }
 
-//SECCION CONTACTO//
 document.addEventListener("DOMContentLoaded", () => {
 
     const formulario = document.getElementById("form-contacto");

@@ -253,20 +253,10 @@ html {
     color: #fdf9f9 !important;
 }
 
-/* CARTA: estilos propios; Bootstrap resuelve distribución y componentes. */
-.pagina-carta {
-    --color-principal: #6f4e37;
-    --color-secundario: #d9b38c;
-    --color-fondo: #f5f0eb;
-    --color-texto: #35261e;
-    --fuente-texto: 'Lora', Georgia, serif;
-    --bs-body-font-family: var(--fuente-texto);
-}
-.pagina-carta, .pagina-carta button, .pagina-carta input, .pagina-carta select, .pagina-carta textarea { font-family: var(--fuente-texto); }
-.pagina-carta h1, .pagina-carta h2, .pagina-carta h3, .pagina-carta h4 { font-family: 'Gloock', Georgia, serif; }
-.pagina-carta { padding-bottom: 5rem; }
-.pagina-carta #productos { color: var(--color-texto); background: var(--color-fondo); }
-.pagina-carta #productos, .pagina-carta #carta-productos { scroll-margin-top: 100px; }
+/* CARTA: Bootstrap organiza el diseño; aquí personalizamos los colores. */
+.pagina-carta { background: #f5f0eb; color: #35261e; font-family: 'Lora', Georgia, serif; }
+.pagina-carta h1, .pagina-carta h2, .pagina-carta h3 { font-family: 'Gloock', Georgia, serif; color: #6f4e37; }
+.pagina-carta .modal-header, .pagina-carta footer, .pagina-carta .toast { background: #d9b38c; color: #35261e; }
 .pagina-carta .btn-aroma {
     --bs-btn-color: white;
     --bs-btn-bg: #6f4e37;
@@ -281,22 +271,6 @@ html {
     --bs-btn-disabled-bg: #6f4e37;
     --bs-btn-disabled-border-color: #6f4e37;
 }
-.pagina-carta #productos .aroma-precio { color: var(--color-principal); }
-.pagina-carta #productos :focus-visible, .pagina-carta #modalCarrito :focus-visible { outline: 3px solid #98600f; outline-offset: 3px; }
-.pagina-carta .aroma-aviso {
-    position: fixed;
-    bottom: 85px;
-    left: 1rem;
-    z-index: 1040;
-    max-width: min(350px, calc(100vw - 2rem));
-    padding: 1rem;
-    border-radius: .5rem;
-    color: white;
-    background: #35261e;
-    opacity: 0;
-    pointer-events: none;
-}
-.pagina-carta .aroma-aviso.visible { opacity: 1; }
-
-/* Mantener las tarjetas de la carta sin el efecto hover del inicio. */
-.pagina-carta #productos .card:hover { transform: none; box-shadow: var(--bs-box-shadow-sm) !important; }
+.pagina-carta .producto-hover { transition: box-shadow .3s; }
+.pagina-carta #productos .producto-hover:hover,
+.pagina-carta #productos .producto-hover:focus-within { transform: none; box-shadow: 0 8px 20px #6f4e3740 !important; }
